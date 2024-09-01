@@ -387,6 +387,48 @@ q::after {
 .team-members__item {
   height: 500px;
   min-width: 450px;
+  position: relative;
+}
+.team-members__item .description-popover {
+  width: 100%;
+  position: absolute;
+  padding: 2rem;
+  background-color: #f749d4;
+  z-index: 9;
+  opacity: 0;
+  visibility: none;
+  transition: all 200ms ease-in;
+}
+.team-members__item .description-popover::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: #f749d4;
+  clip-path: path("M0 82L511 0L512 255H0V82Z");
+  position: absolute;
+  top: -50%;
+  left: 0;
+  z-index: -1;
+}
+.team-members__item .description-popover--2 {
+  top: 85%;
+}
+.team-members__item .description-popover--3 {
+  top: 70%;
+}
+.team-members__item .description-popover--5 {
+  top: 60%;
+}
+.team-members__item .description-popover--6 {
+  top: 45%;
+}
+@media screen and (max-width: 780px) {
+  .team-members__item .description-popover {
+    width: 350px;
+    left: 50%;
+    top: unset;
+    transform: translateX(-50%);
+  }
 }
 .team-members__item .person-detail {
   background-repeat: no-repeat;
@@ -648,6 +690,10 @@ q::after {
     width: 100%;
     height: 300px;
   }
+}
+.team-members__item:hover .description-popover {
+  opacity: 1;
+  visibility: visible;
 }
 
 .footer {

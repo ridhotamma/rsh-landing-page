@@ -13,14 +13,24 @@
 <body class="bg-blue">
   <div class="container">
     <nav class="navbar">
-      <span class="logo">
+      <a href="index.html" class="logo">
         <img width="124" src="./src/images/logo-white.svg" alt="logo white" />
-      </span>
-      <span class="hamburger-menu">
+      </a>
+
+      <div class="hamburger-menu">
         <span class="line"></span>
         <span class="line"></span>
         <span class="line"></span>
-      </span>
+      </div>
+      <div class="menu-container">
+        <ul class="menu-container__nav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="work.html">Work</a></li>
+          <li><a href="#">About Emperial Marketing</a></li>
+          <li><a href="team.html">Team</a></li>
+          <li><a href="newsletter.html">Newsletter</a></li>
+        </ul>
+      </div>
     </nav>
 
     <main>
@@ -171,16 +181,22 @@
 
       <footer class="footer bg-pink">
         <div class="footer__menu-top">
-          <div class="footer__logo">
+          <a href="index.html" class="footer__logo">
             <img width="190" src="./src/images/logo-blue.svg" alt="Footer Logo" />
-          </div>
+          </a>
           <div class="footer__nav">
             <ul class="footer__nav-list d-flex">
-              <li class="footer__nav-item">Home</li>
-              <li class="footer__nav-item">Work</li>
-              <li class="footer__nav-item">About Empirical Marketing</li>
-              <li class="footer__nav-item">Team</li>
-              <li class="footer__nav-item">Newsletter</li>
+              <li class="footer__nav-item">
+                <a href="index.html">Home</a>
+              </li>
+              <li class="footer__nav-item">
+                <a href="work.html">Work</a>
+              </li>
+              <li class="footer__nav-item">
+                <a href="#">About Empirical Marketing</a>
+              </li>
+              <li class="footer__nav-item"><a href="team.html">Team </a></li>
+              <li class="footer__nav-item"><a href="newsletter.html">Newsletter</a></li>
             </ul>
           </div>
           <div class="footer__contact">
@@ -199,6 +215,8 @@
   </div>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="./src/js/main.js"></script>
+
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       gsap.registerPlugin(ScrollTrigger);

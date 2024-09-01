@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+@font-face {
+  font-family: 'DunbarTall';
+  src: url('../fonts/DunbarTall-Medium.eot');
+  src: local('DunbarTall Medium'), local('DunbarTall-Medium'),
+    url('../fonts/DunbarTall-Medium.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/DunbarTall-Medium.woff2') format('woff2'),
+    url('../fonts/DunbarTall-Medium.woff') format('woff'),
+    url('../fonts/DunbarTall-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'DunbarTall Ultra';
+  src: url('../fonts/DunbarTall-Ultra.eot');
+  src: local('DunbarTall Ultra'), local('DunbarTall-Ultra'),
+    url('../fonts/DunbarTall-Ultra.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/DunbarTall-Ultra.woff2') format('woff2'),
+    url('../fonts/DunbarTall-Ultra.woff') format('woff'),
+    url('../fonts/DunbarTall-Ultra.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'DunbarTall';
+  src: url('../fonts/DunbarTall-Regular.eot');
+  src: local('DunbarTall'), local('DunbarTall-Regular'),
+    url('../fonts/DunbarTall-Regular.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/DunbarTall-Regular.woff2') format('woff2'),
+    url('../fonts/DunbarTall-Regular.woff') format('woff'),
+    url('../fonts/DunbarTall-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'DunbarTall ExBold';
+  src: url('../fonts/DunbarTall-ExtraBold.eot');
+  src: local('DunbarTall ExBold'), local('DunbarTall-ExtraBold'),
+    url('../fonts/DunbarTall-ExtraBold.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/DunbarTall-ExtraBold.woff2') format('woff2'),
+    url('../fonts/DunbarTall-ExtraBold.woff') format('woff'),
+    url('../fonts/DunbarTall-ExtraBold.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'DunbarTall';
+  src: url('../fonts/DunbarTall-Light.eot');
+  src: local('DunbarTall Light'), local('DunbarTall-Light'),
+    url('../fonts/DunbarTall-Light.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/DunbarTall-Light.woff2') format('woff2'),
+    url('../fonts/DunbarTall-Light.woff') format('woff'),
+    url('../fonts/DunbarTall-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'DunbarTall-Bold';
+  src: url('../fonts/DunbarTall-Bold.eot');
+  src: local('DunbarTall Bold'), local('DunbarTall-Bold'),
+    url('../fonts/DunbarTall-Bold.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/DunbarTall-Bold.woff2') format('woff2'),
+    url('../fonts/DunbarTall-Bold.woff') format('woff'),
+    url('../fonts/DunbarTall-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}

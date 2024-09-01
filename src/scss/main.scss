@@ -231,8 +231,8 @@
     font-size: 8rem;
   }
 
-  @media screen and (max-width: 760px) {
-    font-size: 4rem;
+  @media screen and (max-width: 780px) {
+    font-size: 3.5rem;
   }
 }
 
@@ -258,6 +258,7 @@
 
   @media screen and (max-width: 760px) {
     font-size: 1rem;
+    width: 75%;
   }
 }
 
@@ -726,6 +727,8 @@
   .gallery-item {
     position: relative;
     overflow: hidden;
+    background-color: transparent;
+    border-radius: 40px;
 
     img {
       display: block;
@@ -746,7 +749,6 @@
       justify-content: center;
       opacity: 0;
       transition: opacity 0.3s ease-in-out;
-      border-radius: 1rem;
     }
 
     &:hover .overlay {

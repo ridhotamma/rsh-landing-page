@@ -399,14 +399,18 @@ q::after {
   min-width: 450px;
   position: relative;
 }
+.team-members__item:nth-child(1), .team-members__item:nth-child(2), .team-members__item:nth-child(3) {
+  z-index: 3;
+}
 .team-members__item .description-popover {
   width: 100%;
   position: absolute;
   padding: 2rem;
   background-color: #f749d4;
+  color: #0000e0;
   z-index: 9;
   opacity: 0;
-  visibility: none;
+  visibility: hidden;
   transition: all 200ms ease-in;
 }
 .team-members__item .description-popover::before {
@@ -722,7 +726,6 @@ q::after {
   .footer__menu-top {
     flex-direction: column;
     gap: 2rem;
-    padding: 1rem 1rem;
     align-items: flex-start;
   }
 }
@@ -855,6 +858,11 @@ q::after {
   }
   .showcase-gallery .gallery-item .overlay-text .action {
     font-size: 0.8rem;
+  }
+}
+@media screen and (max-width: 780px) {
+  .showcase-gallery .gallery-item {
+    margin-bottom: 2rem;
   }
 }
 

@@ -144,7 +144,7 @@
   padding: 1rem 2rem;
   position: relative;
   z-index: 5;
-  
+
   &--fixed {
     position: fixed;
     left: 0;
@@ -302,14 +302,21 @@
     min-width: 450px;
     position: relative;
 
+    &:nth-child(1),
+    &:nth-child(2),
+    &:nth-child(3) {
+      z-index: 3;
+    }
+
     .description-popover {
       width: 100%;
       position: absolute;
       padding: 2rem;
       background-color: $color-pink;
+      color: $color-blue;
       z-index: 9;
       opacity: 0;
-      visibility: none;
+      visibility: hidden;
       transition: all 200ms ease-in;
 
       &::before {
@@ -655,7 +662,6 @@
     @media screen and (max-width: 780px) {
       flex-direction: column;
       gap: 2rem;
-      padding: 1rem 1rem;
       align-items: flex-start;
     }
   }
@@ -804,6 +810,10 @@
           font-size: 0.8rem;
         }
       }
+    }
+
+    @media screen and (max-width: 780px) {
+      margin-bottom: 2rem;
     }
   }
 }

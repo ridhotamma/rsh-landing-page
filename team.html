@@ -56,10 +56,10 @@
           <div class="person-detail person-detail--2">
             <div class="person-detail__description">
               <h5 class="person-detail__name text-yellow">
-                <span>Matt</span>
-                <span>Sabljak</span>
+                <span>Kurt</span>
+                <span>Ravenwood</span>
               </h5>
-              <p class="person-detail__position text-yellow">Position</p>
+              <p class="person-detail__position text-yellow">Partner, Executive Strategy Director</p>
             </div>
           </div>
           <div class="description-popover description-popover--2">
@@ -72,10 +72,10 @@
           <div class="person-detail person-detail--3">
             <div class="person-detail__description">
               <h5 class="person-detail__name text-yellow">
-                <span>Matt</span>
-                <span>Sabljak</span>
+                <span>Sam</span>
+                <span>Hogerton</span>
               </h5>
-              <p class="person-detail__position text-yellow">Position</p>
+              <p class="person-detail__position text-yellow">Partner, Executive Creative Director</p>
             </div>
           </div>
           <div class="description-popover description-popover--3">
@@ -89,10 +89,10 @@
           <div class="person-detail person-detail--4">
             <div class="person-detail__description">
               <h5 class="person-detail__name text-yellow">
-                <span>Matt</span>
-                <span>Sabljak</span>
+                <span>Jonathan</span>
+                <span>Gundlach</span>
               </h5>
-              <p class="person-detail__position text-yellow">Position</p>
+              <p class="person-detail__position text-yellow">Managing Director</p>
             </div>
           </div>
           <div class="description-popover description-popover--4">
@@ -106,10 +106,10 @@
           <div class="person-detail person-detail--5">
             <div class="person-detail__description">
               <h5 class="person-detail__name text-yellow">
-                <span>Matt</span>
-                <span>Sabljak</span>
+                <span>Jeff</span>
+                <span>Ohm</span>
               </h5>
-              <p class="person-detail__position text-yellow">Position</p>
+              <p class="person-detail__position text-yellow">Accounts Director</p>
             </div>
           </div>
           <div class="description-popover description-popover--5">
@@ -123,10 +123,10 @@
           <div class="person-detail person-detail--6">
             <div class="person-detail__description">
               <h5 class="person-detail__name text-yellow">
-                <span>Matt</span>
-                <span>Sabljak</span>
+                <span>Milly</span>
+                <span>Segovia</span>
               </h5>
-              <p class="person-detail__position text-yellow">Position</p>
+              <p class="person-detail__position text-yellow">Media Director</p>
             </div>
           </div>
           <div class="description-popover description-popover--6">
@@ -140,7 +140,7 @@
       <footer class="footer bg-pink">
         <div class="footer__menu-top">
           <div class="footer__logo">
-            <img width="190" src="./src/images/logo-white.svg" alt="Footer Logo" />
+            <img width="190" src="./src/images/logo-blue.svg" alt="Footer Logo" />
           </div>
           <div class="footer__nav">
             <ul class="footer__nav-list d-flex">
@@ -167,6 +167,68 @@
   </div>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      gsap.registerPlugin(ScrollTrigger);
+
+      gsap.from('.logo img', {
+        duration: 1.5,
+        opacity: 0,
+        y: -20,
+        ease: 'power2.out',
+      });
+
+      gsap.from('.main-title .left-word', {
+        duration: 1.5,
+        x: -100,
+        opacity: 0,
+        ease: 'power2.out',
+        delay: 0.5,
+      });
+
+      gsap.from('.main-title .right-word', {
+        duration: 1.5,
+        x: 100,
+        opacity: 0,
+        ease: 'power2.out',
+        delay: 0.7,
+      });
+
+      gsap.from('.main-subtitle p', {
+        duration: 1.5,
+        y: 20,
+        opacity: 0,
+        ease: 'power2.out',
+        delay: 1,
+      });
+
+      gsap.from('.team-members__item', {
+        scrollTrigger: {
+          trigger: '.team-members__item',
+          start: 'top 90%',
+          toggleActions: 'play none none none',
+        },
+        duration: 1.5,
+        opacity: 0,
+        y: 50,
+        stagger: 0.2,
+        ease: 'power2.out',
+      });
+
+      gsap.from('.footer', {
+        scrollTrigger: {
+          trigger: '.footer',
+          start: 'top 80%',
+          toggleActions: 'play none none none',
+        },
+        duration: 1.5,
+        y: 50,
+        opacity: 0,
+        ease: 'power2.out',
+      });
+    });
+
+  </script>
 </body>
 
 </html>

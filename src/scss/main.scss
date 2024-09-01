@@ -143,18 +143,24 @@
   background-color: $color-blue;
   padding: 1rem 2rem;
   position: relative;
+  z-index: 5;
+  
+  &--fixed {
+    position: fixed;
+    left: 0;
+  }
 
   .hamburger-menu {
     display: inline-block;
     cursor: pointer;
-    width: 30px;
-    height: 25px;
+    width: 25px;
+    height: 35px;
     position: relative;
 
     .line {
       display: block;
       width: 100%;
-      height: 4px;
+      height: 3px;
       background-color: $color-yellow;
       margin: 5px 0;
       transition: all 0.3s ease;
@@ -163,7 +169,7 @@
 
     &--active {
       .line:nth-child(1) {
-        transform: translateY(9px) rotate(45deg);
+        transform: translateY(8px) rotate(45deg);
       }
 
       .line:nth-child(2) {
@@ -171,7 +177,7 @@
       }
 
       .line:nth-child(3) {
-        transform: translateY(-9px) rotate(-45deg);
+        transform: translateY(-8px) rotate(-45deg);
       }
     }
   }
@@ -202,6 +208,10 @@
           color: #fff;
           text-decoration: none;
           font-size: 18px;
+          font-family: 'Poppins', sans-serif;
+          font-weight: 400;
+          font-style: normal;
+          text-transform: uppercase;
 
           &:hover {
             color: #ddd;
@@ -301,7 +311,7 @@
       opacity: 0;
       visibility: none;
       transition: all 200ms ease-in;
-      
+
       &::before {
         content: '';
         width: 100%;
@@ -801,24 +811,4 @@
 .y-divider {
   margin-top: 4rem;
   margin-bottom: 12rem;
-}
-
-.animation-container {
-  position: relative;
-  overflow: hidden;
-  width: 100%;
-  height: 100vh;
-}
-
-.slide {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 2rem;
-  background: #333;
-  color: #fff;
-  visibility: hidden;
 }

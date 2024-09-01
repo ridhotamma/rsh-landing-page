@@ -83,7 +83,6 @@ document.addEventListener('DOMContentLoaded', () => {
             letterI,
             {
                 scaleY: 4,
-                transformOrigin: 'bottom',
                 duration: 3,
             },
             '<'

@@ -180,6 +180,9 @@ body {
   font-size: 8vw;
   color: #f749d4;
 }
+.animation-container .scene__2 {
+  z-index: 2;
+}
 .animation-container .scene__2 .description {
   position: absolute;
   height: 100%;
@@ -253,6 +256,29 @@ body {
 .animation-container .scene__2 .circles .circle__6 {
   scale: 2.6;
   opacity: 0.3;
+}
+.animation-container .scene__3 {
+  z-index: 1;
+}
+.animation-container .scene__3 .circles {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateX(7%);
+}
+.animation-container .scene__3 .circles .circle {
+  background-color: #f749d4;
+  border-radius: 50%;
+  height: 400px;
+  width: 400px;
+  position: absolute;
+}
+.animation-container .scene__3 .circles .circle__main {
+  scale: 1;
 }
 .animation-container .scene__intro {
   position: absolute;

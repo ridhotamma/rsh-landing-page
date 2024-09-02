@@ -31,7 +31,7 @@ body {
       align-items: center;
       flex-direction: column;
       padding-bottom: 2rem;
-      
+
       h1,
       h2 {
         line-height: 0.85;
@@ -82,6 +82,8 @@ body {
     }
 
     &__2 {
+      z-index: 2;
+
       .description {
         position: absolute;
         height: 100%;
@@ -141,32 +143,59 @@ body {
 
           &__2 {
             scale: 1.2;
-            opacity: .3;
+            opacity: 0.3;
           }
 
           &__3 {
             scale: 1.5;
-            opacity: .3;
+            opacity: 0.3;
           }
 
           &__4 {
             scale: 1.6;
-            opacity: .3;
+            opacity: 0.3;
           }
 
           &__4 {
             scale: 1.8;
-            opacity: .3;
+            opacity: 0.3;
           }
 
           &__5 {
             scale: 2.2;
-            opacity: .3;
+            opacity: 0.3;
           }
 
           &__6 {
             scale: 2.6;
-            opacity: .3;
+            opacity: 0.3;
+          }
+        }
+      }
+    }
+
+    &__3 {
+      z-index: 1;
+
+      .circles {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        z-index: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transform: translateX(7%);
+
+        .circle {
+          background-color: $color-pink;
+          border-radius: 50%;
+          height: 400px;
+          width: 400px;
+          position: absolute;
+
+          &__main {
+            scale: 1;
           }
         }
       }

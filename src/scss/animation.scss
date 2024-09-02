@@ -19,10 +19,11 @@ body {
     z-index: 10;
   }
 
-  .slide {
+  .scene {
     position: absolute;
     width: 100%;
     height: 100%;
+    background-color: transparent;
 
     &__1 {
       display: flex;
@@ -30,21 +31,47 @@ body {
       align-items: center;
       flex-direction: column;
       padding-bottom: 2rem;
-
+      
       h1,
       h2 {
         line-height: 0.85;
       }
 
       h1 {
-        font-size: 30vw;
+        font-size: 33vw;
         color: $color-pink;
 
         .letter-i {
-          height: 22vw;
-          width: 8vw;
-          background-color: $color-pink;
           display: inline-block;
+          position: relative;
+
+          .text {
+            height: 24.5vw;
+            width: 8vw;
+            background-color: $color-pink;
+          }
+
+          .chevron {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: 3;
+            top: -100%;
+
+            div {
+              background-image: url('../images/chevron-up.svg');
+              width: 100%;
+              height: 100px;
+              background-repeat: no-repeat;
+              background-size: contain;
+              background-position: center;
+
+              &:nth-child(2),
+              &:nth-child(3) {
+                margin-top: -3rem;
+              }
+            }
+          }
         }
       }
 
@@ -54,19 +81,130 @@ body {
       }
     }
 
+    &__2 {
+      .description {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        z-index: 3;
+
+        .text {
+          &__1 {
+            font-size: 34vw;
+            text-transform: uppercase;
+            line-height: 0.9;
+            text-align: center;
+          }
+          &__2 {
+            font-size: 7vw;
+            text-transform: uppercase;
+            line-height: 0.9;
+            padding-left: 18%;
+            margin-bottom: 1rem;
+          }
+
+          &__3 {
+            font-size: 1rem;
+            padding-left: 18.5%;
+            padding-right: 50%;
+            margin-bottom: 1rem;
+          }
+
+          &__4 {
+            font-size: 1rem;
+            padding-left: 18.5%;
+            padding-right: 50%;
+          }
+        }
+      }
+
+      .circles {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        z-index: 2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transform: translateX(7%);
+
+        .circle {
+          background-color: $color-pink;
+          border-radius: 50%;
+          height: 400px;
+          width: 400px;
+          position: absolute;
+
+          &__1 {
+            scale: 1;
+          }
+
+          &__2 {
+            scale: 1.2;
+            opacity: .3;
+          }
+
+          &__3 {
+            scale: 1.5;
+            opacity: .3;
+          }
+
+          &__4 {
+            scale: 1.6;
+            opacity: .3;
+          }
+
+          &__4 {
+            scale: 1.8;
+            opacity: .3;
+          }
+
+          &__5 {
+            scale: 2.2;
+            opacity: .3;
+          }
+
+          &__6 {
+            scale: 2.6;
+            opacity: .3;
+          }
+        }
+      }
+    }
+
     &__intro {
       position: absolute;
 
       &--1 {
         top: 10%;
-        left: 20%;
-        width: 30%;
+        left: 35%;
+        width: 15%;
+        font-size: 1.4rem;
+        text-align: right;
       }
 
       &--2 {
-        top: -20%;
-        right: 5%;
-        width: 30%;
+        top: -5%;
+        right: 18%;
+        width: 18%;
+        font-size: 1.4rem;
+        text-align: left;
+      }
+
+      &--3 {
+        top: -35%;
+        font-size: 3rem;
+        height: 40%;
+        text-align: right;
+        line-height: 0.8;
+        left: 45%;
+        font-weight: bold;
+      }
+
+      &--vertical {
+        writing-mode: vertical-rl;
+        text-orientation: mixed;
+        transform: rotate(180deg);
       }
     }
   }

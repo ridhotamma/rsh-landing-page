@@ -1,4 +1,4 @@
-gsap.registerPlugin(ScrollTrigger, Flip);
+gsap.registerPlugin(ScrollTrigger);
 
 const body = document.body;
 const container = document.querySelector('.animation-container');

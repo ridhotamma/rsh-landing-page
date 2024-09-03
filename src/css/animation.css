@@ -228,8 +228,8 @@ body {
 .scene__2 .circles .circle {
   background-color: #f749d4;
   border-radius: 50%;
-  height: 400px;
-  width: 400px;
+  height: 28vw;
+  width: 28vw;
   position: absolute;
 }
 .scene__2 .circles .circle__1 {
@@ -271,98 +271,154 @@ body {
 .scene__3 .circles .circle {
   background-color: #f749d4;
   border-radius: 50%;
-  height: 400px;
-  width: 400px;
+  height: 28vw;
+  width: 28vw;
   position: absolute;
-}
-.scene__3 .circles .circle__main {
-  scale: 1;
 }
 .scene__3 .circles .circle__random {
   display: grid;
   place-items: center;
-  color: transparent;
   font-size: 10rem;
+  color: transparent;
 }
 .scene__3 .circles .circle__random:nth-child(1) {
-  transform: translateX(-400px);
-  margin-right: 4rem;
+  transform: translateX(-28vw);
+  margin-right: 4vw;
 }
 .scene__3 .circles .circle__random:nth-child(2) {
-  transform: translateX(-800px);
-  margin-right: 8rem;
+  transform: translateX(-56vw);
+  margin-right: 8vw;
   background-color: #11f3f3;
 }
 .scene__3 .circles .circle__random:nth-child(3) {
-  transform: translateX(-400px) translateY(-400px);
-  margin-right: 4rem;
-  margin-bottom: 4rem;
+  transform: translateX(-28vw) translateY(-28vw);
+  margin-right: 4vw;
+  margin-bottom: 4vw;
 }
 .scene__3 .circles .circle__random:nth-child(4) {
-  transform: translateX(-800px) translateY(-400px);
-  margin-right: 8rem;
-  margin-bottom: 4rem;
+  transform: translateX(-56vw) translateY(-28vw);
+  margin-right: 8vw;
+  margin-bottom: 4vw;
 }
 .scene__3 .circles .circle__random:nth-child(5) {
-  transform: translateX(-400px) translateY(400px);
-  margin-right: 4rem;
-  margin-top: 4rem;
+  transform: translateX(-28vw) translateY(28vw);
+  margin-right: 4vw;
+  margin-top: 4vw;
   background-color: #0000e0;
 }
 .scene__3 .circles .circle__random:nth-child(6) {
-  transform: translateX(-800px) translateY(400px);
-  margin-right: 8rem;
-  margin-top: 4rem;
+  transform: translateX(-56vw) translateY(28vw);
+  margin-right: 8vw;
+  margin-top: 4vw;
   background-color: #11f3f3;
 }
 .scene__3 .circles .circle__random:nth-child(7) {
-  transform: translateX(400px);
-  margin-left: 4rem;
+  transform: translateX(28vw);
+  margin-left: 4vw;
 }
 .scene__3 .circles .circle__random:nth-child(8) {
-  transform: translateX(400px) translateY(-400px);
-  margin-bottom: 4rem;
-  margin-left: 4rem;
+  transform: translateX(28vw) translateY(-28vw);
+  margin-bottom: 4vw;
+  margin-left: 4vw;
   background-color: #11f3f3;
 }
 .scene__3 .circles .circle__random:nth-child(9) {
-  transform: translateX(400px) translateY(400px);
-  margin-top: 4rem;
-  margin-left: 4rem;
+  transform: translateX(28vw) translateY(28vw);
+  margin-top: 4vw;
+  margin-left: 4vw;
 }
 .scene__3 .circles .circle__random:nth-child(10) {
-  transform: translateY(400px);
-  margin-top: 4rem;
+  transform: translateY(28vw);
+  margin-top: 4vw;
 }
 .scene__3 .circles .circle__random:nth-child(11) {
-  transform: translateY(-400px);
-  margin-bottom: 4rem;
+  transform: translateY(-28vw);
+  margin-bottom: 4vw;
   background-color: #0000e0;
+}
+.scene__3 .circles-vertical {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  left: 0;
+  top: 0;
+}
+.scene__3 .circles-vertical__inner {
+  height: 100%;
+  width: 3.5vw;
+  transform: translateX(10vw) translateY(-1.75vw);
+}
+.scene__3 .circles-vertical__inner .circle__dot {
+  background-color: #f749d4;
+  border-radius: 50%;
+  min-height: 3.5vw;
+  min-width: 3.5vw;
+  margin-bottom: 0.5rem;
+}
+.scene__3 .circles-vertical__inner .circle__replace {
+  background-color: #f749d4;
+  border-radius: 50%;
+  min-height: 3.5vw;
+  min-width: 3.5vw;
+  margin-bottom: 0.5rem;
+  background-color: red;
+}
+.scene__3 .test-box {
+  position: absolute;
+  right: 0%;
+  top: 0%;
+  background-color: gold;
+  width: 100px;
+  height: 100px;
+  z-index: 99;
+}
+.scene__3 .description {
+  height: 100%;
+  width: 100%;
+  padding-left: 20%;
+  padding-top: 20%;
+}
+.scene__3 .description .text__1 {
+  font-size: 6vw;
+  line-height: 1;
+  text-transform: uppercase;
+}
+.scene__3 .description .text__2 {
+  font-size: 12vw;
+  line-height: 0.8;
+  text-transform: uppercase;
+}
+.scene__3 .description .text__3 {
+  font-size: 1.4rem;
+  line-height: 1;
+  margin-top: 2rem;
+  width: 40%;
 }
 .scene__intro {
   position: absolute;
 }
 .scene__intro--1 {
-  top: 10%;
-  left: 35%;
-  width: 15%;
+  top: 0%;
+  right: 50vw;
+  width: 12%;
   font-size: 1.4rem;
   text-align: right;
 }
 .scene__intro--2 {
-  top: -5%;
-  right: 18%;
-  width: 18%;
+  top: -20%;
+  left: 65%;
+  width: 15%;
   font-size: 1.4rem;
   text-align: left;
 }
 .scene__intro--3 {
-  top: -35%;
+  top: -45%;
+  right: 50vw;
   font-size: 3rem;
   height: 40%;
   text-align: right;
   line-height: 0.8;
-  left: 45%;
   font-weight: bold;
 }
 .scene__intro--vertical {

@@ -1,4 +1,4 @@
-gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(ScrollTrigger, Flip);
 
 const body = document.body;
 const container = document.querySelector('.animation-container');
@@ -32,6 +32,7 @@ const tl = gsap.timeline({
     scrub: true,
     pin: true,
     end: '+=9000',
+    anticipatePin: true,
   },
 });
 
@@ -64,7 +65,7 @@ tl.fromTo(
     '<'
   )
   .to(letterI, {
-    scaleY: 3,
+    scaleY: 5,
     transformOrigin: 'bottom',
     duration: 3,
     ease: 'power4.inOut',
@@ -86,13 +87,13 @@ tl.fromTo(
       autoAlpha: 1,
       ease: 'power4.inOut',
     },
-    "<"
+    '<'
   )
   .to(scene1, { y: '40%', duration: 3, ease: 'power4.inOut' })
   .to(
     letterI,
     {
-      scaleY: 4,
+      scaleY: 8,
       duration: 3,
       ease: 'power4.inOut',
     },
@@ -110,7 +111,7 @@ tl.fromTo(
       autoAlpha: 1,
       ease: 'power4.inOut',
     },
-    "<"
+    '<'
   )
   .to(scene1, { y: '50%', duration: 3, ease: 'power4.inOut' })
   .fromTo(
@@ -125,7 +126,7 @@ tl.fromTo(
       autoAlpha: 1,
       ease: 'power4.inOut',
     },
-    "<"
+    '<'
   )
   .fromTo(
     intro3,
@@ -142,7 +143,8 @@ tl.fromTo(
     '<'
   )
   .to(scene1, { yPercent: 100, duration: 3, ease: 'power4.inOut' })
-  .to(letterI, { scaleY: 8, duration: 3, ease: 'power4.inOut' }, '<');
+  .to(letterI, { scaleY: 8, duration: 3, ease: 'power4.inOut' }, '<')
+  .set(chevronUp, { autoAlpha: 0 });
 
 // Scene 2
 tl.to(scene2, { autoAlpha: 1 })
@@ -184,7 +186,7 @@ tl.to(scene2, { autoAlpha: 1 })
     '-=1.5'
   )
   .to(body, { backgroundColor: '#11f3f3', duration: 6, ease: 'power4.inOut' })
-  .to(s2OuterCircles, { autoAlpha: 1, duration: 3, ease: 'power4.inOut' }, '<')
+  .to(s2OuterCircles, { autoAlpha: 1, duration: 5, ease: 'power4.inOut' }, '<')
   .to(s2OuterCircles, { yPercent: 100, duration: 6, ease: 'power4.inOut' }, '<')
   .to(
     document.querySelectorAll('.scene__2 .description'),
@@ -212,14 +214,14 @@ tl.to(body, { backgroundColor: '#f5e400', duration: 3 })
   .from('.scene__3 .circles .circle__random:nth-child(1)', {
     xPercent: 100,
     duration: 3,
-    margin: 0
+    margin: 0,
   })
   .from(
     '.scene__3 .circles .circle__random:nth-child(2)',
     {
       xPercent: -100,
       duration: 3,
-      margin: 0
+      margin: 0,
     },
     '<'
   )
@@ -229,7 +231,7 @@ tl.to(body, { backgroundColor: '#f5e400', duration: 3 })
       xPercent: 100,
       yPercent: 100,
       duration: 3,
-      margin: 0
+      margin: 0,
     },
     '<'
   )
@@ -239,7 +241,7 @@ tl.to(body, { backgroundColor: '#f5e400', duration: 3 })
       xPercent: 200,
       yPercent: 100,
       duration: 3,
-      margin: 0
+      margin: 0,
     },
     '<'
   )
@@ -248,7 +250,7 @@ tl.to(body, { backgroundColor: '#f5e400', duration: 3 })
     {
       yPercent: 100,
       duration: 3,
-      margin: 0
+      margin: 0,
     },
     '<'
   )
@@ -257,7 +259,7 @@ tl.to(body, { backgroundColor: '#f5e400', duration: 3 })
     {
       xPercent: -100,
       duration: 3,
-      margin: 0
+      margin: 0,
     },
     '<'
   )
@@ -266,7 +268,7 @@ tl.to(body, { backgroundColor: '#f5e400', duration: 3 })
     {
       xPercent: -100,
       duration: 3,
-      margin: 0
+      margin: 0,
     },
     '<'
   )
@@ -275,7 +277,7 @@ tl.to(body, { backgroundColor: '#f5e400', duration: 3 })
     {
       yPercent: -100,
       duration: 3,
-      margin: 0
+      margin: 0,
     },
     '<'
   )
@@ -285,7 +287,7 @@ tl.to(body, { backgroundColor: '#f5e400', duration: 3 })
       xPercent: -100,
       yPercent: -100,
       duration: 3,
-      margin: 0
+      margin: 0,
     },
     '<'
   )
@@ -294,7 +296,7 @@ tl.to(body, { backgroundColor: '#f5e400', duration: 3 })
     {
       yPercent: -100,
       duration: 3,
-      margin: 0
+      margin: 0,
     },
     '<'
   )
@@ -303,7 +305,56 @@ tl.to(body, { backgroundColor: '#f5e400', duration: 3 })
     {
       yPercent: -100,
       duration: 3,
-      margin: 0
+      margin: 0,
     },
     '<'
-  );
+  )
+  // SCENE 3 CIRCLES EXIT
+  .to(
+    [
+      '.scene__3 .circles .circle__random:nth-child(2)',
+      '.scene__3 .circles .circle__random:nth-child(5)',
+      '.scene__3 .circles .circle__random:nth-child(6)',
+    ],
+    { yPercent: -250, duration: 3 }
+  )
+  .to(
+    [
+      '.scene__3 .circles .circle__random:nth-child(2)',
+      '.scene__3 .circles .circle__random:nth-child(5)',
+      '.scene__3 .circles .circle__random:nth-child(6)',
+    ],
+    { scale: 0.4, backgroundColor: '#f749d4', duration: 3 },
+    '<'
+  )
+  .to(
+    [
+      '.scene__3 .circles .circle__random:nth-child(8)',
+      '.scene__3 .circles .circle__random:nth-child(11)',
+    ],
+    { yPercent: -100, xPercent: -100, backgroundColor: '#f749d4', duration: 3 },
+    '<'
+  )
+  .to(
+    letterI,
+    {
+      x: '50vw',
+      duration: 3,
+    },
+    '<'
+  )
+  .to(
+    letterI,
+    {
+      scaleX: 5,
+      duration: 3,
+    },
+    '<'
+  )
+  .to(body, { backgroundColor: '#0000e0', duration: 3 }, '<')
+  .from(
+    '.scene__3 .description > *',
+    { x: '100vw', duration: 3, autoAlpha: 0, stagger: 0.5 },
+    '<'
+  )
+  .from('.circles-vertical__inner', { x: '-20vw', duration: 3 }, '<');

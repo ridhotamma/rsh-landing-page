@@ -210,7 +210,9 @@ tl.to(scene2, { autoAlpha: 1 })
   .set(scene3, { autoAlpha: 1 });
 
 // scene 3
-tl.to(body, { backgroundColor: '#f5e400', duration: 3 })
+tl.set('.circle__replace', { autoAlpha: 0 })
+  .to(body, { backgroundColor: '#f5e400', duration: 3 })
+
   .from('.scene__3 .circles .circle__random:nth-child(1)', {
     xPercent: 100,
     duration: 3,
@@ -310,13 +312,26 @@ tl.to(body, { backgroundColor: '#f5e400', duration: 3 })
     '<'
   )
   // SCENE 3 CIRCLES EXIT
+  .set(
+    [
+      '.scene__3 .circles .circle__random:nth-child(1)',
+      '.scene__3 .circles .circle__random:nth-child(3)',
+      '.scene__3 .circles .circle__random:nth-child(4)',
+      '.scene__3 .circles .circle__random:nth-child(7)',
+      '.scene__3 .circles .circle__random:nth-child(9)',
+      '.scene__3 .circles .circle__random:nth-child(10)',
+      '.scene__3 .circles .circle__main',
+    ],
+    { autoAlpha: 0 }
+  )
   .to(
     [
       '.scene__3 .circles .circle__random:nth-child(2)',
       '.scene__3 .circles .circle__random:nth-child(5)',
       '.scene__3 .circles .circle__random:nth-child(6)',
     ],
-    { yPercent: -250, duration: 3 }
+    { yPercent: -250, duration: 3 },
+    '<'
   )
   .to(
     [
@@ -357,4 +372,92 @@ tl.to(body, { backgroundColor: '#f5e400', duration: 3 })
     { x: '100vw', duration: 3, autoAlpha: 0, stagger: 0.5 },
     '<'
   )
-  .from('.circles-vertical__inner', { x: '-20vw', duration: 3 }, '<');
+  .fromTo(
+    '.circles-vertical__inner',
+    { x: '-20vw' },
+    { x: '10vw', duration: 3 },
+    '<'
+  )
+  // CIRCLE FORM VERTICAL
+  .set('.circle__replace', { autoAlpha: 1 }, '<')
+  .from(
+    '.circle__replace--1',
+    {
+      xPercent: 225,
+      yPercent: -1,
+      width: '28vw',
+      height: '28vw',
+      duration: 3,
+    },
+    '<'
+  )
+
+  .from(
+    '.circle__replace--2',
+    {
+      xPercent: 225,
+      yPercent: 90,
+      width: '28vw',
+      height: '28vw',
+      duration: 3,
+    },
+    '<'
+  )
+  .from(
+    '.circle__replace--3',
+    {
+      xPercent: 118,
+      yPercent: -30,
+      width: '28vw',
+      height: '28vw',
+      duration: 3,
+    },
+    '<'
+  )
+  .from(
+    '.circle__replace--4',
+    {
+      xPercent: 118,
+      yPercent: -151,
+      width: '28vw',
+      height: '28vw',
+      duration: 3,
+    },
+    '<'
+  )
+
+  .from(
+    '.circle__replace--5',
+    {
+      xPercent: 332,
+      yPercent: -59,
+      width: '28vw',
+      height: '28vw',
+      duration: 3,
+    },
+    '<'
+  )
+
+  .from(
+    '.circle__replace--6',
+    {
+      xPercent: 332,
+      yPercent: 34,
+      width: '28vw',
+      height: '28vw',
+      duration: 3,
+    },
+    '<'
+  )
+
+  .from(
+    '.circle__replace--7',
+    {
+      xPercent: 11,
+      yPercent: -195,
+      width: '28vw',
+      height: '28vw',
+      duration: 3,
+    },
+    '<'
+  );

@@ -330,7 +330,15 @@ tl.set('.circle__replace', { autoAlpha: 0 })
       '.scene__3 .circles .circle__random:nth-child(5)',
       '.scene__3 .circles .circle__random:nth-child(6)',
     ],
-    { yPercent: -250, duration: 3 },
+    { y: '-100vh', duration: 3 },
+    '<'
+  )
+  .to(
+    '.scene__3 .circles .circle__random:nth-child(5)',
+    {
+      xPercent: -60,
+      duration: 2,
+    },
     '<'
   )
   .to(
@@ -380,6 +388,14 @@ tl.set('.circle__replace', { autoAlpha: 0 })
   )
   // CIRCLE FORM VERTICAL
   .set('.circle__replace', { autoAlpha: 1 }, '<')
+  .from(
+    '.circle__fixed',
+    {
+      x: (index) => (index % 2 === 0 ? 100 : -100),
+      duration: 3,
+    },
+    '<'
+  )
   .from(
     '.circle__replace--1',
     {

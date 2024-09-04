@@ -385,15 +385,6 @@ body {
 .scene__3 .circles-vertical__inner .circle__replace--7 {
   transform: translateY(calc(21vw + 3rem));
 }
-.scene__3 .test-box {
-  position: absolute;
-  right: 0%;
-  top: 0%;
-  background-color: gold;
-  width: 100px;
-  height: 100px;
-  z-index: 99;
-}
 .scene__3 .description {
   height: 100%;
   width: 100%;
@@ -415,6 +406,23 @@ body {
   line-height: 1;
   margin-top: 2rem;
   width: 40%;
+}
+.scene__4 .gear {
+  background-image: url("../images/gear.svg");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+}
+.scene__4 .gear__1 {
+  height: 100vw;
+  width: 100vw;
+  transform: translateX(-40vw);
+}
+.scene__4 .gear__2 {
+  height: 80vw;
+  width: 80vw;
+  transform: translateX(60vw) translateY(-40vw);
 }
 .scene__intro {
   position: absolute;

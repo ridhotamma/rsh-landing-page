@@ -297,13 +297,13 @@ body {
             min-width: 3.5vw;
             margin-bottom: 0.5rem;
             position: absolute;
-            
+
             &--2 {
               transform: translateY(calc(3.5vw + 0.5rem));
             }
 
             &--3 {
-              transform: translateY(calc(7vw + 1rem));              
+              transform: translateY(calc(7vw + 1rem));
             }
 
             &--4 {
@@ -324,16 +324,6 @@ body {
           }
         }
       }
-    }
-
-    .test-box {
-      position: absolute;
-      right: 0%;
-      top: 0%;
-      background-color: gold;
-      width: 100px;
-      height: 100px;
-      z-index: 99;
     }
 
     .description {
@@ -361,6 +351,28 @@ body {
           margin-top: 2rem;
           width: 40%;
         }
+      }
+    }
+  }
+
+  &__4 {
+    .gear {
+      background-image: url('../images/gear.svg');
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+      position: absolute;
+
+      &__1 {
+        height: 100vw;
+        width: 100vw;
+        transform: translateX(-40vw);
+      }
+
+      &__2 {
+        height: 80vw;
+        width: 80vw;
+        transform: translateX(60vw) translateY(-40vw);
       }
     }
   }

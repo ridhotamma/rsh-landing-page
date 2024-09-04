@@ -24,6 +24,8 @@ const [s2InnerCircle, ...s2OuterCircles] = s2Circles;
 const scene3 = document.querySelector('.scene__3');
 const s3MainCircle = document.querySelector('.scene__3 .circle__main');
 
+const scene4 = document.querySelector('.scene__4');
+
 const tl = gsap.timeline({
   scrollTrigger: {
     trigger: '.animation-container',
@@ -38,6 +40,7 @@ const tl = gsap.timeline({
 
 tl.set(scene2, { autoAlpha: 0 });
 tl.set(scene3, { autoAlpha: 0 });
+tl.set(scene4, { autoAlpha: 0 });
 
 // scene 1
 tl.fromTo(
@@ -159,7 +162,8 @@ tl.to(scene2, { autoAlpha: 1 })
       duration: 3,
       stagger: 0.2,
       ease: 'power4.inOut',
-    }
+    },
+    '<'
   )
   .fromTo(
     s2Text1,
@@ -213,11 +217,15 @@ tl.to(scene2, { autoAlpha: 1 })
 tl.set('.circle__replace', { autoAlpha: 0 })
   .to(body, { backgroundColor: '#f5e400', duration: 3 })
 
-  .from('.scene__3 .circles .circle__random:nth-child(1)', {
-    xPercent: 100,
-    duration: 3,
-    margin: 0,
-  })
+  .from(
+    '.scene__3 .circles .circle__random:nth-child(1)',
+    {
+      xPercent: 100,
+      duration: 3,
+      margin: 0,
+    },
+    '<'
+  )
   .from(
     '.scene__3 .circles .circle__random:nth-child(2)',
     {
@@ -477,3 +485,34 @@ tl.set('.circle__replace', { autoAlpha: 0 })
     },
     '<'
   );
+
+// scene 4
+tl.to(letterI, {
+  scaleX: 1,
+  x: 0,
+  duration: 3,
+})
+  .to(
+    '.scene__3 .description',
+    {
+      scale: 0.7,
+      transformOrigin: '10vw bottom',
+      y: '100vh',
+      duration: 3,
+    },
+    '<'
+  )
+  .to('.circles-vertical__inner', { y: '-100vh', duration: 3 }, '<')
+  .to(body, { backgroundColor: '#11f3f3', duration: 3 }, '<')
+  .to('.circles-vertical__inner', { y: '100vh', duration: 3 })
+  .set(scene4, { autoAlpha: 1 }, '-=3')
+  .fromTo('.scene__4', { yPercent: -150 }, { yPercent: 0, duration: 3 }, '<')
+  .to('.scene__4 > .gear__1', { rotate: -120, duration: 3 }, '<')
+  .to('.scene__4 > .gear__2', { rotate: 120, duration: 3 }, '<')
+  .to('.scene__4 > .gear__2', {
+    x: '-100vw',
+    y: '100vh',
+    rotate: -120,
+    duration: 6,
+  })
+  .to('.scene__4 > .gear__1', { y: '100vh', rotate: -180, duration: 3 }, '<');

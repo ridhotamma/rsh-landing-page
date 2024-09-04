@@ -319,6 +319,9 @@ q::after {
   color: #ddd;
 }
 @media screen and (max-width: 760px) {
+  .navbar {
+    padding: 1rem;
+  }
   .navbar .logo {
     width: 80px;
   }

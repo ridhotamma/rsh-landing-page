@@ -436,6 +436,42 @@ body {
   height: 80vw;
   width: 80vw;
   transform: translateX(60vw) translateY(-40vw);
+  z-index: 9;
+}
+.scene__4 .gear__3 {
+  height: 70vw;
+  width: 70vw;
+  transform: translateX(60vw) translateY(-10vw);
+}
+.scene__4 .gear__4 {
+  height: 40vw;
+  width: 40vw;
+  transform: translateX(55vw);
+}
+.scene__4 .gear__5 {
+  height: 80vw;
+  width: 80vw;
+  transform: translateX(-40vw);
+}
+.scene__4 .gear__6 {
+  height: 110vw;
+  width: 110vw;
+  transform: translateX(-75vw);
+}
+.scene__4 .gear__7 {
+  height: 65vw;
+  width: 65vw;
+  transform: translateX(50vw);
+}
+.scene__4 .gear__8 {
+  height: 110vw;
+  width: 110vw;
+  transform: translateX(30vw);
+}
+.scene__4 .gear__9 {
+  height: 65vw;
+  width: 65vw;
+  transform: translateX(-7vw);
 }
 .scene__intro {
   position: absolute;

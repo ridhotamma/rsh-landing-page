@@ -509,10 +509,45 @@ tl.to(letterI, {
   .fromTo('.scene__4', { yPercent: -150 }, { yPercent: 0, duration: 3 }, '<')
   .to('.scene__4 > .gear__1', { rotate: -120, duration: 3 }, '<')
   .to('.scene__4 > .gear__2', { rotate: 120, duration: 3 }, '<')
-  .to('.scene__4 > .gear__2', {
-    x: '-100vw',
-    y: '100vh',
-    rotate: -120,
-    duration: 6,
-  })
-  .to('.scene__4 > .gear__1', { y: '100vh', rotate: -180, duration: 3 }, '<');
+  .to('.scene__4 > .gear__1', { y: '100vh', duration: 1 })
+  .set(scene3, { autoAlpha: 0 }, '<')
+  // gear 2
+  .to('.scene__4 > .gear__2', { y: '200vh', duration: 2 }, '<')
+  .to('.scene__4 > .gear__2', { x: '-100vw', duration: 6 }, '<')
+  .to('.scene__4 > .gear__2', { rotate: 0, duration: 2 }, '<')
+  // gear 3
+  .fromTo('.scene__4 > .gear__3', { y: '-100vh' }, { y: '100vh', duration: 2.5 }, '-=6')
+  .to('.scene__4 > .gear__3', { rotate: 180, duration: 3 }, '<')
+  // gear 4
+  .fromTo('.scene__4 > .gear__4', { y: '-100vh' }, { y: '100vh', duration: 2 }, '-=6')
+  .to('.scene__4 > .gear__4', { rotate: -180, duration: 3 }, '<')
+
+  // gear 6
+  .fromTo('.scene__4 > .gear__5', { y: '-120vh' }, { y: '100vh', duration: 4 }, '-=6')
+  .to('.scene__4 > .gear__5', { x: '65vw', duration: 4 }, '-=6')
+  .to('.scene__4 > .gear__5', { rotate: 240, duration: 3 }, '<')
+
+  // gear 6
+  .fromTo('.scene__4 > .gear__6', { y: '-200vh' }, { y: '100vh', duration: 6 }, '-=6')
+  .to('.scene__4 > .gear__6', { rotate: 90, duration: 3 }, '-=4.5')
+
+  // gear 7
+  .fromTo('.scene__4 > .gear__7', { y: '-200vh' }, { y: '100vh', duration: 2 }, '-=3.5')
+  .to('.scene__4 > .gear__7', { rotate: 180, duration: 3 }, '<')
+
+
+  // gear 8
+  .fromTo('.scene__4 > .gear__8', { y: '-200vh' }, { y: '100vh', duration: 5 }, '-=3.5')
+  .to('.scene__4 > .gear__8', { xPercent: 20, duration: 3 }, '-=4.5')
+  .to('.scene__4 > .gear__8', { rotate: 180, duration: 3 }, '-=4.5')
+
+  // gear 9
+  .fromTo('.scene__4 > .gear__9', { y: '-200vh' }, { y: '100vh', duration: 5 }, '-=5.5')
+  .to('.scene__4 > .gear__9', { rotate: 180, duration: 3 }, '-=5')
+
+
+
+
+
+
+

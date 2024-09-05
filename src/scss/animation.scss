@@ -386,6 +386,49 @@ body {
         height: 80vw;
         width: 80vw;
         transform: translateX(60vw) translateY(-40vw);
+        z-index: 9;
+      }
+
+      &__3 {
+        height: 70vw;
+        width: 70vw;
+        transform: translateX(60vw) translateY(-10vw);
+      }
+
+      &__4 {
+        height: 40vw;
+        width: 40vw;
+        transform: translateX(55vw);
+      }
+
+      &__5 {
+        height: 80vw;
+        width: 80vw;
+        transform: translateX(-40vw);
+      }
+
+      &__6 {
+        height: 110vw;
+        width: 110vw;
+        transform: translateX(-75vw);
+      }
+
+      &__7 {
+        height: 65vw;
+        width: 65vw;
+        transform: translateX(50vw);
+      }
+
+      &__8 {
+        height: 110vw;
+        width: 110vw;
+        transform: translateX(30vw);
+      }
+
+      &__9 {
+        height: 65vw;
+        width: 65vw;
+        transform: translateX(-7vw);
       }
     }
   }

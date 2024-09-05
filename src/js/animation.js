@@ -58,23 +58,23 @@ tl.fromTo(
   .fromTo(
     scene1,
     {
-      y: '70%',
+      y: '100vw',
     },
     {
-      y: '0%',
+      y: '0vh',
       duration: 3,
       ease: 'power4.inOut',
     },
     '<'
   )
   .to(letterI, {
-    scaleY: 5,
+    scaleY: 4,
     transformOrigin: 'bottom',
     duration: 3,
     ease: 'power4.inOut',
   })
   .to(scene1, {
-    y: '10%',
+    y: '15vw',
     duration: 3,
     ease: 'power4.inOut',
   })
@@ -92,7 +92,7 @@ tl.fromTo(
     },
     '<'
   )
-  .to(scene1, { y: '40%', duration: 3, ease: 'power4.inOut' })
+  .to(scene1, { y: '25vw', duration: 3, ease: 'power4.inOut' })
   .to(
     letterI,
     {
@@ -116,7 +116,7 @@ tl.fromTo(
     },
     '<'
   )
-  .to(scene1, { y: '50%', duration: 3, ease: 'power4.inOut' })
+  .to(scene1, { y: '35vw', duration: 3, ease: 'power4.inOut' })
   .fromTo(
     chevronUp,
     {
@@ -145,7 +145,7 @@ tl.fromTo(
     },
     '<'
   )
-  .to(scene1, { yPercent: 100, duration: 3, ease: 'power4.inOut' })
+  .to(scene1, { y: '200vh', duration: 3, ease: 'power4.inOut' })
   .to(letterI, { scaleY: 8, duration: 3, ease: 'power4.inOut' }, '<')
   .set(chevronUp, { autoAlpha: 0 });
 

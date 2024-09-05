@@ -129,6 +129,12 @@ body {
   transform: translate(-50%, -50%);
   z-index: 10;
 }
+@media screen and (max-width: 780px) {
+  .logo svg {
+    width: 160px;
+    height: 80px;
+  }
+}
 
 .scene {
   position: absolute;
@@ -190,12 +196,19 @@ body {
   height: 100%;
   width: 100%;
   z-index: 3;
+  display: flex;
+  flex-direction: column;
 }
 .scene__2 .description .text__1 {
   font-size: 34vw;
   text-transform: uppercase;
   line-height: 0.9;
   text-align: center;
+}
+@media screen and (max-height: 600px) {
+  .scene__2 .description .text__1 {
+    font-size: 20rem;
+  }
 }
 .scene__2 .description .text__2 {
   font-size: 7vw;
@@ -428,21 +441,21 @@ body {
   position: absolute;
 }
 .scene__intro--1 {
-  top: 0%;
+  bottom: 40vw;
   right: 50vw;
-  width: 12%;
+  width: 12vw;
   font-size: 1.4rem;
   text-align: right;
 }
 .scene__intro--2 {
-  top: -20%;
+  bottom: 55vw;
   left: 65%;
-  width: 15%;
+  width: 14vw;
   font-size: 1.4rem;
   text-align: left;
 }
 .scene__intro--3 {
-  top: -45%;
+  bottom: 60vw;
   right: 50vw;
   font-size: 3rem;
   height: 40%;

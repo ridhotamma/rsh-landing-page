@@ -249,23 +249,23 @@ body {
   scale: 1;
 }
 .scene__2 .circles .circle__2 {
-  scale: 1.2;
+  scale: 1.4;
   opacity: 0.3;
 }
 .scene__2 .circles .circle__3 {
-  scale: 1.5;
-  opacity: 0.3;
-}
-.scene__2 .circles .circle__4 {
   scale: 1.8;
   opacity: 0.3;
 }
-.scene__2 .circles .circle__5 {
+.scene__2 .circles .circle__4 {
   scale: 2.2;
   opacity: 0.3;
 }
-.scene__2 .circles .circle__6 {
+.scene__2 .circles .circle__5 {
   scale: 2.6;
+  opacity: 0.3;
+}
+.scene__2 .circles .circle__6 {
+  scale: 3;
   opacity: 0.3;
 }
 .scene__3 {

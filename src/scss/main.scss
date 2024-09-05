@@ -134,6 +134,30 @@
   }
 }
 
+.pink-button {
+  color: $color-pink;
+  font-size: 2rem;
+  padding: 2px 20px;
+  text-transform: uppercase;
+
+  &--outline {
+    border: $color-pink 4px solid;
+    border-radius: 30px;
+    color: $color-pink;
+  }
+
+  &:hover {
+    background-color: $color-cyan;
+    border-color: $color-cyan;
+    color: $color-blue;
+  }
+
+  @media screen and (max-width: 780px) {
+    min-width: 140px;
+    font-size: 1rem;
+  }
+}
+
 .navbar {
   width: 100%;
   display: flex;

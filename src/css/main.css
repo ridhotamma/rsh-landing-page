@@ -243,6 +243,29 @@ q::after {
   }
 }
 
+.pink-button {
+  color: #f749d4;
+  font-size: 2rem;
+  padding: 2px 20px;
+  text-transform: uppercase;
+}
+.pink-button--outline {
+  border: #f749d4 4px solid;
+  border-radius: 30px;
+  color: #f749d4;
+}
+.pink-button:hover {
+  background-color: #11f3f3;
+  border-color: #11f3f3;
+  color: #0000e0;
+}
+@media screen and (max-width: 780px) {
+  .pink-button {
+    min-width: 140px;
+    font-size: 1rem;
+  }
+}
+
 .navbar {
   width: 100%;
   display: flex;

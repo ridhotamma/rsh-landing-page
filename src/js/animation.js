@@ -25,6 +25,7 @@ const scene3 = document.querySelector('.scene__3');
 const s3MainCircle = document.querySelector('.scene__3 .circle__main');
 
 const scene4 = document.querySelector('.scene__4');
+const scene5 = document.querySelector('.scene__5');
 
 const tl = gsap.timeline({
   scrollTrigger: {
@@ -41,6 +42,7 @@ const tl = gsap.timeline({
 tl.set(scene2, { autoAlpha: 0 });
 tl.set(scene3, { autoAlpha: 0 });
 tl.set(scene4, { autoAlpha: 0 });
+tl.set(scene5, { autoAlpha: 0 });
 
 // scene 1
 tl.fromTo(
@@ -516,38 +518,89 @@ tl.to(letterI, {
   .to('.scene__4 > .gear__2', { x: '-100vw', duration: 6 }, '<')
   .to('.scene__4 > .gear__2', { rotate: 0, duration: 2 }, '<')
   // gear 3
-  .fromTo('.scene__4 > .gear__3', { y: '-100vh' }, { y: '100vh', duration: 2.5 }, '-=6')
+  .fromTo(
+    '.scene__4 > .gear__3',
+    { y: '-100vh' },
+    { y: '100vh', duration: 2.5 },
+    '-=6'
+  )
   .to('.scene__4 > .gear__3', { rotate: 180, duration: 3 }, '<')
   // gear 4
-  .fromTo('.scene__4 > .gear__4', { y: '-100vh' }, { y: '100vh', duration: 2 }, '-=6')
+  .fromTo(
+    '.scene__4 > .gear__4',
+    { y: '-100vh' },
+    { y: '100vh', duration: 2 },
+    '-=6'
+  )
   .to('.scene__4 > .gear__4', { rotate: -180, duration: 3 }, '<')
 
-  // gear 6
-  .fromTo('.scene__4 > .gear__5', { y: '-120vh' }, { y: '100vh', duration: 4 }, '-=6')
+  // gear 5
+  .fromTo(
+    '.scene__4 > .gear__5',
+    { y: '-120vh' },
+    { y: '100vh', duration: 4 },
+    '<'
+  )
   .to('.scene__4 > .gear__5', { x: '65vw', duration: 4 }, '-=6')
   .to('.scene__4 > .gear__5', { rotate: 240, duration: 3 }, '<')
 
   // gear 6
-  .fromTo('.scene__4 > .gear__6', { y: '-200vh' }, { y: '100vh', duration: 6 }, '-=6')
+  .fromTo(
+    '.scene__4 > .gear__6',
+    { y: '-200vh' },
+    { y: '100vh', duration: 6 },
+    '-=6'
+  )
   .to('.scene__4 > .gear__6', { rotate: 90, duration: 3 }, '-=4.5')
 
   // gear 7
-  .fromTo('.scene__4 > .gear__7', { y: '-200vh' }, { y: '100vh', duration: 2 }, '-=3.5')
+  .fromTo(
+    '.scene__4 > .gear__7',
+    { y: '-200vh' },
+    { y: '100vh', duration: 2 },
+    '-=3.5'
+  )
   .to('.scene__4 > .gear__7', { rotate: 180, duration: 3 }, '<')
 
-
   // gear 8
-  .fromTo('.scene__4 > .gear__8', { y: '-200vh' }, { y: '100vh', duration: 5 }, '-=3.5')
+  .fromTo(
+    '.scene__4 > .gear__8',
+    { y: '-200vh' },
+    { y: '100vh', duration: 5 },
+    '-=3.5'
+  )
   .to('.scene__4 > .gear__8', { xPercent: 20, duration: 3 }, '-=4.5')
   .to('.scene__4 > .gear__8', { rotate: 180, duration: 3 }, '-=4.5')
 
   // gear 9
-  .fromTo('.scene__4 > .gear__9', { y: '-200vh' }, { y: '100vh', duration: 5 }, '-=5.5')
+  .fromTo(
+    '.scene__4 > .gear__9',
+    { y: '-200vh' },
+    { y: '100vh', duration: 5 },
+    '-=5.5'
+  )
   .to('.scene__4 > .gear__9', { rotate: 180, duration: 3 }, '-=5')
 
+  .fromTo(
+    '.scene__4 .closing',
+    { y: '-200vh' },
+    { y: '0vh', duration: 3 },
+    '-=3'
+  )
+  .from(
+    '.scene__4 .description > *',
+    { x: (index) => index === 0 ? '-100vw' : '100vw', duration: 3, autoAlpha: 0, stagger: 0.5 },
+    '<'
+  )
+  .to('.scene__4 .closing .gear', { rotate: -90, duration: 5 }, '<')
+  .set(letterI, { autoAlpha: 0 })
+  .to('.scene__4 .closing', { y: '250vh', duration: 3 })
+  .to('.scene__4 .closing .gear', { rotate: -180, duration: 3 }, '<')
+  .to(body, { backgroundColor: '#f5e400', duration: 3 }, '<')
 
-
-
-
-
-
+  .fromTo(
+    '.scene__5',
+    { autoAlpha: 0, yPercent: -40 },
+    { autoAlpha: 1, yPercent: 0, duration: 3 }
+  )
+  .set(scene4, { autoAlpha: 0 });

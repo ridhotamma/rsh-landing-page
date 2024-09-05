@@ -431,6 +431,61 @@ body {
         transform: translateX(-7vw);
       }
     }
+
+    .closing {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      z-index: 11;
+
+
+      .gear {
+        height: 200vw;
+        width: 200vw;
+        background-image: url('../images/gear.svg');
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        position: absolute;
+        top: -95vw;
+        left: -45vw;
+      }
+
+      .description {
+        position: absolute;
+        bottom: 20%;
+        left: 2%;
+        
+        .text {
+          &__1 {
+            width: 100%;
+            font-size: 17vw;
+            text-transform: uppercase;
+            line-height: 0.5;
+            
+          }
+          &__2 {
+            font-size: 9vw;
+            text-transform: uppercase;
+            padding-left: 40%;
+          }
+          &__3 {
+            text-transform: uppercase;
+            width: 40ch;
+            float: right;
+            margin-right: 25rem;
+          }
+        }
+      }
+    }
+  }
+
+  &__5 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
   }
 
   &__intro {

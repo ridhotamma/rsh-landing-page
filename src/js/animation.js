@@ -391,8 +391,8 @@ tl.set('.circle__replace', { autoAlpha: 0 })
   )
   .fromTo(
     '.circles-vertical__inner',
-    { x: '-20vw' },
-    { x: '10vw', duration: 3 },
+    { x: isMobile() ? '-40vw' : '-20vw' },
+    { x: isMobile() ? '3vw' : '10vw', duration: 3 },
     '<'
   )
   // CIRCLE FORM VERTICAL
@@ -410,8 +410,8 @@ tl.set('.circle__replace', { autoAlpha: 0 })
     {
       xPercent: 225,
       yPercent: -1,
-      width: '28vw',
-      height: '28vw',
+      width: isMobile() ? '38vw' : '28vw',
+      height: isMobile() ? '38vw' : '28vw',
       duration: 3,
     },
     '<'
@@ -422,8 +422,8 @@ tl.set('.circle__replace', { autoAlpha: 0 })
     {
       xPercent: 225,
       yPercent: 90,
-      width: '28vw',
-      height: '28vw',
+      width: isMobile() ? '38vw' : '28vw',
+      height: isMobile() ? '38vw' : '28vw',
       duration: 3,
     },
     '<'
@@ -433,8 +433,8 @@ tl.set('.circle__replace', { autoAlpha: 0 })
     {
       xPercent: 118,
       yPercent: -30,
-      width: '28vw',
-      height: '28vw',
+      width: isMobile() ? '38vw' : '28vw',
+      height: isMobile() ? '38vw' : '28vw',
       duration: 3,
     },
     '<'
@@ -444,8 +444,8 @@ tl.set('.circle__replace', { autoAlpha: 0 })
     {
       xPercent: 118,
       yPercent: -151,
-      width: '28vw',
-      height: '28vw',
+      width: isMobile() ? '38vw' : '28vw',
+      height: isMobile() ? '38vw' : '28vw',
       duration: 3,
     },
     '<'
@@ -456,8 +456,8 @@ tl.set('.circle__replace', { autoAlpha: 0 })
     {
       xPercent: 332,
       yPercent: -59,
-      width: '28vw',
-      height: '28vw',
+      width: isMobile() ? '38vw' : '28vw',
+      height: isMobile() ? '38vw' : '28vw',
       duration: 3,
     },
     '<'
@@ -468,8 +468,8 @@ tl.set('.circle__replace', { autoAlpha: 0 })
     {
       xPercent: 332,
       yPercent: 34,
-      width: '28vw',
-      height: '28vw',
+      width: isMobile() ? '38vw' : '28vw',
+      height: isMobile() ? '38vw' : '28vw',
       duration: 3,
     },
     '<'
@@ -480,8 +480,8 @@ tl.set('.circle__replace', { autoAlpha: 0 })
     {
       xPercent: 11,
       yPercent: -195,
-      width: '28vw',
-      height: '28vw',
+      width: isMobile() ? '38vw' : '28vw',
+      height: isMobile() ? '38vw' : '28vw',
       duration: 3,
     },
     '<'

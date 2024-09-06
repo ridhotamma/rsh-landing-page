@@ -69,7 +69,7 @@ tl.fromTo(
     '<'
   )
   .to(letterI, {
-    scaleY: 12,
+    scaleY: isMobile() ? 12 : 4,
     transformOrigin: 'bottom',
     duration: 3,
     ease: 'power4.inOut',
@@ -97,7 +97,7 @@ tl.fromTo(
   .to(
     letterI,
     {
-      scaleY: 20,
+      scaleY: isMobile() ? 20 : 8,
       duration: 3,
       ease: 'power4.inOut',
     },
@@ -147,7 +147,7 @@ tl.fromTo(
     '<'
   )
   .to(scene1, { y: '200vh', duration: 3, ease: 'power4.inOut' })
-  .to(letterI, { scaleY: 30, duration: 3, ease: 'power4.inOut' }, '<')
+  .to(letterI, { scaleY: isMobile() ? 30 : 12, duration: 3, ease: 'power4.inOut' }, '<')
   .set(chevronUp, { autoAlpha: 0 });
 
 // Scene 2
@@ -603,7 +603,3 @@ tl.to(letterI, {
     { autoAlpha: 1, yPercent: 0, duration: 3 }
   )
   .set(scene4, { autoAlpha: 0 });
-
-window.addEventListener('resize', () => {
-  ScrollTrigger.refresh();
-});

@@ -35,7 +35,6 @@ const tl = gsap.timeline({
     scrub: true,
     pin: true,
     end: '+=9000',
-    anticipatePin: true,
   },
 });
 
@@ -60,7 +59,7 @@ tl.fromTo(
   .fromTo(
     scene1,
     {
-      y: '100vw',
+      y: '100vh',
     },
     {
       y: '0vh',
@@ -70,13 +69,13 @@ tl.fromTo(
     '<'
   )
   .to(letterI, {
-    scaleY: 4,
+    scaleY: 12,
     transformOrigin: 'bottom',
     duration: 3,
     ease: 'power4.inOut',
   })
   .to(scene1, {
-    y: '15vw',
+    y: '10vh',
     duration: 3,
     ease: 'power4.inOut',
   })
@@ -94,11 +93,11 @@ tl.fromTo(
     },
     '<'
   )
-  .to(scene1, { y: '25vw', duration: 3, ease: 'power4.inOut' })
+  .to(scene1, { y: '25vh', duration: 3, ease: 'power4.inOut' })
   .to(
     letterI,
     {
-      scaleY: 8,
+      scaleY: 20,
       duration: 3,
       ease: 'power4.inOut',
     },
@@ -118,7 +117,7 @@ tl.fromTo(
     },
     '<'
   )
-  .to(scene1, { y: '35vw', duration: 3, ease: 'power4.inOut' })
+  .to(scene1, { y: '55vh', duration: 3, ease: 'power4.inOut' })
   .fromTo(
     chevronUp,
     {
@@ -148,7 +147,7 @@ tl.fromTo(
     '<'
   )
   .to(scene1, { y: '200vh', duration: 3, ease: 'power4.inOut' })
-  .to(letterI, { scaleY: 8, duration: 3, ease: 'power4.inOut' }, '<')
+  .to(letterI, { scaleY: 30, duration: 3, ease: 'power4.inOut' }, '<')
   .set(chevronUp, { autoAlpha: 0 });
 
 // Scene 2
@@ -365,7 +364,7 @@ tl.set('.circle__replace', { autoAlpha: 0 })
       '.scene__3 .circles .circle__random:nth-child(8)',
       '.scene__3 .circles .circle__random:nth-child(11)',
     ],
-    { yPercent: -100, xPercent: -100, backgroundColor: '#f749d4', duration: 3 },
+    { y: '-100vh', xPercent: -100, backgroundColor: '#f749d4', duration: 3 },
     '<'
   )
   .to(
@@ -604,3 +603,7 @@ tl.to(letterI, {
     { autoAlpha: 1, yPercent: 0, duration: 3 }
   )
   .set(scene4, { autoAlpha: 0 });
+
+window.addEventListener('resize', () => {
+  ScrollTrigger.refresh();
+});

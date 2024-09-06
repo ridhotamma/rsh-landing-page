@@ -619,8 +619,9 @@ body {
 }
 @media screen and (max-width: 780px) {
   .scene__4 .gear__1 {
-    height: 700px;
-    width: 700px;
+    height: 900px;
+    width: 900px;
+    transform: translateX(-100vw) translateY(500px);
   }
 }
 .scene__4 .gear__2 {
@@ -629,40 +630,91 @@ body {
   transform: translateX(60vw) translateY(-40vw);
   z-index: 9;
 }
+@media screen and (max-width: 780px) {
+  .scene__4 .gear__2 {
+    height: 700px;
+    width: 700px;
+    transform: translateX(-10vw) translateY(-200px);
+  }
+}
 .scene__4 .gear__3 {
   height: 70vw;
   width: 70vw;
   transform: translateX(60vw) translateY(-10vw);
+}
+@media screen and (max-width: 780px) {
+  .scene__4 .gear__3 {
+    height: 600px;
+    width: 600px;
+    transform: translateX(10vw) translateY(-10vw);
+  }
 }
 .scene__4 .gear__4 {
   height: 40vw;
   width: 40vw;
   transform: translateX(55vw);
 }
+@media screen and (max-width: 780px) {
+  .scene__4 .gear__4 {
+    height: 300px;
+    width: 300px;
+    transform: translateX(-20vw);
+  }
+}
 .scene__4 .gear__5 {
   height: 80vw;
   width: 80vw;
-  transform: translateX(-40vw);
+  transform: translateX(-100vw);
+}
+@media screen and (max-width: 780px) {
+  .scene__4 .gear__5 {
+    height: 600px;
+    width: 600px;
+  }
 }
 .scene__4 .gear__6 {
   height: 110vw;
   width: 110vw;
   transform: translateX(-75vw);
 }
+@media screen and (max-width: 780px) {
+  .scene__4 .gear__6 {
+    height: 600px;
+    width: 600px;
+  }
+}
 .scene__4 .gear__7 {
   height: 65vw;
   width: 65vw;
   transform: translateX(50vw);
+}
+@media screen and (max-width: 780px) {
+  .scene__4 .gear__7 {
+    height: 600px;
+    width: 600px;
+  }
 }
 .scene__4 .gear__8 {
   height: 110vw;
   width: 110vw;
   transform: translateX(30vw);
 }
+@media screen and (max-width: 780px) {
+  .scene__4 .gear__8 {
+    height: 600px;
+    width: 600px;
+  }
+}
 .scene__4 .gear__9 {
   height: 65vw;
   width: 65vw;
   transform: translateX(-7vw);
+}
+@media screen and (max-width: 780px) {
+  .scene__4 .gear__9 {
+    height: 600px;
+    width: 600px;
+  }
 }
 .scene__4 .closing {
   width: 100%;
@@ -680,6 +732,13 @@ body {
   position: absolute;
   top: -95vw;
   left: -45vw;
+}
+@media screen and (max-width: 780px) {
+  .scene__4 .closing .gear {
+    height: 1400px;
+    width: 1400px;
+    left: -95vw;
+  }
 }
 .scene__4 .closing .description {
   position: absolute;
@@ -702,6 +761,18 @@ body {
   padding-right: 27vw;
   padding-left: 40vw;
   padding-right: 30vw;
+}
+@media screen and (max-width: 780px) {
+  .scene__4 .closing .description .text__3 {
+    bottom: 20%;
+    padding-left: 10vw;
+    padding-right: 10vw;
+  }
+}
+@media screen and (max-width: 780px) {
+  .scene__4 .closing .description {
+    bottom: 40%;
+  }
 }
 .scene__5 {
   display: flex;

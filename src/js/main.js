@@ -10,12 +10,25 @@ document.addEventListener('DOMContentLoaded', function () {
 
 function isMobile() {
   const userAgent = navigator.userAgent || window.opera;
-  const maxMobileWidth = 768;
+  const maxMobileWidth = 767;
 
-  const isMobileDevice = /android|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test(userAgent);
+  const isMobileDevice =
+    /android|iphone|ipod|blackberry|iemobile|opera mini/i.test(userAgent);
   const isMobileWidth = window.innerWidth <= maxMobileWidth;
 
   return isMobileDevice || isMobileWidth;
+}
+
+function isTablet() {
+  const userAgent = navigator.userAgent || window.opera;
+  const minTabletWidth = 768;
+  const maxTabletWidth = 1024;
+
+  const isTabletDevice = /ipad|android(?!.*mobile)/i.test(userAgent);
+  const isTabletWidth =
+    window.innerWidth >= minTabletWidth && window.innerWidth <= maxTabletWidth;
+
+  return isTabletDevice || isTabletWidth;
 }
 
 function __getIEVersion() {

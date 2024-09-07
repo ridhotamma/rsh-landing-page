@@ -253,6 +253,7 @@ body {
             margin-right: 4vw;
 
             @media screen and (max-width: 1024px) {
+              transform: translateX(-38vw);
             }
 
             @media screen and (max-width: 768px) {
@@ -266,6 +267,7 @@ body {
             background-color: $color-cyan;
 
             @media screen and (max-width: 1024px) {
+              transform: translateX(-76vw);
             }
 
             @media screen and (max-width: 768px) {
@@ -279,6 +281,7 @@ body {
             margin-bottom: 4vw;
 
             @media screen and (max-width: 1024px) {
+              transform: translateX(-38vw) translateY(-38vw);
             }
 
             @media screen and (max-width: 768px) {
@@ -292,6 +295,8 @@ body {
             margin-bottom: 4vw;
 
             @media screen and (max-width: 1024px) {
+              opacity: 0;
+              visibility: hidden;
             }
 
             @media screen and (max-width: 768px) {
@@ -307,6 +312,7 @@ body {
             background-color: $color-blue;
 
             @media screen and (max-width: 1024px) {
+              transform: translateX(-38vw) translateY(38vw);
             }
 
             @media screen and (max-width: 768px) {
@@ -321,6 +327,8 @@ body {
             background-color: $color-cyan;
 
             @media screen and (max-width: 1024px) {
+              opacity: 0;
+              visibility: hidden;
             }
 
             @media screen and (max-width: 768px) {
@@ -334,6 +342,7 @@ body {
             margin-left: 4vw;
 
             @media screen and (max-width: 1024px) {
+              transform: translateX(38vw);
             }
 
             @media screen and (max-width: 768px) {
@@ -348,6 +357,7 @@ body {
             background-color: $color-cyan;
 
             @media screen and (max-width: 1024px) {
+              transform: translateX(38vw) translateY(-38vw);
             }
 
             @media screen and (max-width: 768px) {
@@ -361,6 +371,7 @@ body {
             margin-left: 4vw;
 
             @media screen and (max-width: 1024px) {
+              transform: translateX(38vw) translateY(38vw);
             }
 
             @media screen and (max-width: 768px) {
@@ -373,6 +384,7 @@ body {
             margin-top: 4vw;
 
             @media screen and (max-width: 1024px) {
+              transform: translateY(38vw);
             }
 
             @media screen and (max-width: 768px) {
@@ -386,6 +398,7 @@ body {
             background-color: $color-blue;
 
             @media screen and (max-width: 1024px) {
+              transform: translateY(-38vw);
             }
 
             @media screen and (max-width: 768px) {
@@ -395,6 +408,8 @@ body {
         }
 
         @media screen and (max-width: 1024px) {
+          height: 38vw;
+          width: 38vw;
         }
 
         @media screen and (max-width: 768px) {
@@ -425,6 +440,8 @@ body {
             margin-bottom: 0.5rem;
 
             @media screen and (max-width: 1024px) {
+              min-height: 8vw;
+              min-width: 8vw;
             }
 
             @media screen and (max-width: 768px) {
@@ -445,6 +462,10 @@ body {
             // dot width x 7
             height: calc(24.5vw + 3.5rem);
 
+            @media screen and (max-width: 1024px) {
+              height: calc(48vw + 3.5rem);
+            }
+
             @media screen and (max-width: 768px) {
               height: calc(56vw + 3.5rem);
             }
@@ -461,6 +482,10 @@ body {
             &--2 {
               transform: translateY(calc(3.5vw + 0.5rem));
 
+              @media screen and (max-width: 1024px) {
+                transform: translateY(calc(8vw + 0.5rem));
+              }
+
               @media screen and (max-width: 768px) {
                 transform: translateY(calc(8vw + 0.5rem));
               }
@@ -468,6 +493,10 @@ body {
 
             &--3 {
               transform: translateY(calc(7vw + 1rem));
+
+              @media screen and (max-width: 1024px) {
+                transform: translateY(calc(16vw + 1rem));
+              }
 
               @media screen and (max-width: 768px) {
                 transform: translateY(calc(16vw + 1rem));
@@ -477,6 +506,10 @@ body {
             &--4 {
               transform: translateY(calc(10.5vw + 1.5rem));
 
+              @media screen and (max-width: 1024px) {
+                transform: translateY(calc(24vw + 1.5rem));
+              }
+
               @media screen and (max-width: 768px) {
                 transform: translateY(calc(24vw + 1.5rem));
               }
@@ -484,6 +517,10 @@ body {
 
             &--5 {
               transform: translateY(calc(14vw + 2rem));
+
+              @media screen and (max-width: 1024px) {
+                transform: translateY(calc(32vw + 2rem));
+              }
 
               @media screen and (max-width: 768px) {
                 transform: translateY(calc(32vw + 2rem));
@@ -493,6 +530,10 @@ body {
             &--6 {
               transform: translateY(calc(17.5vw + 2.5rem));
 
+              @media screen and (max-width: 1024px) {
+                transform: translateY(calc(40vw + 2.5rem));
+              }
+
               @media screen and (max-width: 768px) {
                 transform: translateY(calc(40vw + 2.5rem));
               }
@@ -501,9 +542,18 @@ body {
             &--7 {
               transform: translateY(calc(21vw + 3rem));
 
+              @media screen and (max-width: 1024px) {
+                transform: translateY(calc(40vw + 2.5rem));
+              }
+
               @media screen and (max-width: 768px) {
                 transform: translateY(calc(48vw + 3rem));
               }
+            }
+
+            @media screen and (max-width: 1024px) {
+              min-height: 8vw;
+              min-width: 8vw;
             }
 
             @media screen and (max-width: 768px) {
@@ -518,7 +568,7 @@ body {
         }
 
         @media screen and (max-width: 1024px) {
-          transform: translateY(-1.75vw);
+          transform: translateY(-30vw);
         }
 
         @media screen and (max-width: 768px) {
@@ -552,11 +602,20 @@ body {
           margin-top: 2rem;
           width: 40%;
 
+          @media screen and (max-width: 1024px) {
+            font-size: 1rem;
+            width: 80%;
+          }
+
           @media screen and (max-width: 768px) {
             font-size: 1rem;
             width: 80%;
           }
         }
+      }
+
+      @media screen and (max-width: 1024px) {
+        padding-top: 80%;
       }
 
       @media screen and (max-width: 768px) {
@@ -779,7 +838,7 @@ body {
       }
 
       // smaller device
-      @media screen and (max-width: 375px) {
+      @media screen and (max-width: 376px) {
         font-size: 1rem;
         width: 40%;
         right: 55vw;
@@ -808,7 +867,7 @@ body {
       }
 
       // smaller device
-      @media screen and (max-width: 375px) {
+      @media screen and (max-width: 376px) {
         width: 40%;
         bottom: 85%;
         left: unset;

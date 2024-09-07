@@ -574,6 +574,11 @@ body {
         @media screen and (max-width: 768px) {
           transform: translateY(-1.75vw);
         }
+
+        // small device (iphone SE)
+        @media screen and (max-width: 376px) {
+          transform: translateY(-26vw);
+        }
       }
     }
 
@@ -648,6 +653,10 @@ body {
           width: 900px;
           transform: translateX(-100vw) translateY(500px);
         }
+
+        @media screen and (max-width: 376px) {
+          transform: translateX(-100vw) translateY(300px);
+        }
       }
 
       &__2 {
@@ -721,6 +730,10 @@ body {
         @media screen and (max-width: 768px) {
           height: 600px;
           width: 600px;
+        }
+
+        @media screen and (max-width: 376px) {
+          display: none;
         }
       }
 

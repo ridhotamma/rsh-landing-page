@@ -285,7 +285,7 @@ tl.set('.circle__replace', { autoAlpha: 0 })
   .from(
     '.scene__3 .circles .circle__random:nth-child(5)',
     {
-      yPercent: 100,
+      y: '100vh',
       duration: 3,
       margin: 0,
       ease: 'power4.inOut',
@@ -346,7 +346,7 @@ tl.set('.circle__replace', { autoAlpha: 0 })
   .from(
     '.scene__3 .circles .circle__random:nth-child(11)',
     {
-      yPercent: -100,
+      y: '-100vh',
       duration: 3,
       margin: 0,
       ease: 'power4.inOut',
@@ -466,8 +466,8 @@ tl.set('.circle__replace', { autoAlpha: 0 })
   .from(
     '.circle__replace--1',
     {
-      xPercent: 225,
-      yPercent: -1,
+      xPercent: isMobile() ? 205 : 225,
+      yPercent: isMobile() ? 13 : -1,
       width: isMobile() ? '38vw' : '28vw',
       height: isMobile() ? '38vw' : '28vw',
       duration: 5,
@@ -479,8 +479,8 @@ tl.set('.circle__replace', { autoAlpha: 0 })
   .from(
     '.circle__replace--2',
     {
-      xPercent: 225,
-      yPercent: 90,
+      xPercent: isMobile() ? 205 : 225,
+      yPercent: isMobile() ? 93 : 90,
       width: isMobile() ? '38vw' : '28vw',
       height: isMobile() ? '38vw' : '28vw',
       duration: 5,
@@ -491,8 +491,8 @@ tl.set('.circle__replace', { autoAlpha: 0 })
   .from(
     '.circle__replace--3',
     {
-      xPercent: 118,
-      yPercent: -30,
+      xPercent: isMobile() ? 100 : 118,
+      yPercent: isMobile() ? -40 : -30,
       width: isMobile() ? '38vw' : '28vw',
       height: isMobile() ? '38vw' : '28vw',
       duration: 5,
@@ -503,8 +503,8 @@ tl.set('.circle__replace', { autoAlpha: 0 })
   .from(
     '.circle__replace--4',
     {
-      xPercent: 118,
-      yPercent: -151,
+      xPercent: isMobile() ? 100 : 118,
+      yPercent: isMobile() ? -171 : -151,
       width: isMobile() ? '38vw' : '28vw',
       height: isMobile() ? '38vw' : '28vw',
       duration: 5,
@@ -516,8 +516,8 @@ tl.set('.circle__replace', { autoAlpha: 0 })
   .from(
     '.circle__replace--5',
     {
-      xPercent: 332,
-      yPercent: -59,
+      xPercent: isMobile() ? 311 : 332,
+      yPercent: isMobile() ? -92 : -59,
       width: isMobile() ? '38vw' : '28vw',
       height: isMobile() ? '38vw' : '28vw',
       duration: 5,
@@ -529,8 +529,8 @@ tl.set('.circle__replace', { autoAlpha: 0 })
   .from(
     '.circle__replace--6',
     {
-      xPercent: 332,
-      yPercent: 34,
+      xPercent: isMobile() ? 312 : 332,
+      yPercent: isMobile() ? -12 : 34,
       width: isMobile() ? '38vw' : '28vw',
       height: isMobile() ? '38vw' : '28vw',
       duration: 5,
@@ -542,8 +542,8 @@ tl.set('.circle__replace', { autoAlpha: 0 })
   .from(
     '.circle__replace--7',
     {
-      xPercent: 11,
-      yPercent: -195,
+      xPercent: isMobile() ? -11 : 11,
+      yPercent: isMobile() ? -195 : -195,
       width: isMobile() ? '38vw' : '28vw',
       height: isMobile() ? '38vw' : '28vw',
       duration: 5,
@@ -569,7 +569,7 @@ tl.to(letterI, {
     },
     '<'
   )
-  .to('.circles-vertical__inner', { y: '-100vh', duration: 3 }, '<')
+  .to('.circles-vertical__inner', { y: '-50vh', duration: 3 }, '<')
   .to(
     body,
     { backgroundColor: '#11f3f3', duration: 3, ease: 'power4.inOut' },
@@ -579,7 +579,7 @@ tl.to(letterI, {
     y: '100vh',
     duration: 3,
   })
-  .set(scene4, { autoAlpha: 1 }, '-=3')
+  .set(scene4, { autoAlpha: 1 }, '<')
   .fromTo('.scene__4', { yPercent: -150 }, { yPercent: 0, duration: 3 }, '<')
   .to('.scene__4 > .gear__1', { rotate: -120, duration: 3 }, '<')
   .to('.scene__4 > .gear__2', { rotate: 120, duration: 3 }, '<')
@@ -671,18 +671,19 @@ tl.to(letterI, {
   )
   .to(
     '.scene__4 .closing .gear',
-    { rotate: -90, duration: 5, ease: 'power4.inOut' },
+    { rotate: -90, duration: 5 },
     '<'
   )
   .set(letterI, { autoAlpha: 0 })
-  .to('.scene__4 .closing', { y: '280vh', duration: 5, ease: 'power4.inOut' })
+  .to('.scene__4 .closing', { y: '280vh', duration: 5 })
   .to('.scene__4 .closing .gear', { rotate: -180, duration: 5 }, '<')
   .to(body, { backgroundColor: '#f5e400', duration: 3 }, '<')
 
   .fromTo(
     '.scene__5',
     { autoAlpha: 0, yPercent: -40 },
-    { autoAlpha: 1, yPercent: 0, duration: 3, ease: 'power4.inOut' }
+    { autoAlpha: 1, yPercent: 0, duration: 3 },
+    '-=2'
   )
   .set(scene1, { display: 'none' })
   .set(scene2, { display: 'none' })

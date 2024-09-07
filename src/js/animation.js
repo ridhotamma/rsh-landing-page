@@ -73,7 +73,7 @@ tl.fromTo(
     ease: 'power4.inOut',
   })
   .to(scene1, {
-    y: '15vh',
+    y: '18vh',
     duration: 3,
     ease: 'power4.inOut',
   })
@@ -162,7 +162,7 @@ tl.fromTo(
   )
   .to(
     letterI,
-    { scaleY: isMobile() ? 30 : 12, duration: 3, ease: 'power4.inOut' },
+    { scaleY: isMobile() ? 32 : 12, duration: 3, ease: 'power4.inOut' },
     '<'
   )
   .set(chevronUp, { autoAlpha: 0 });

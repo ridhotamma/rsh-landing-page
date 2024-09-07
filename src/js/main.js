@@ -9,8 +9,13 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 function isMobile() {
+  const userAgent = navigator.userAgent || window.opera;
   const maxMobileWidth = 768;
-  return window.innerWidth <= maxMobileWidth;
+
+  const isMobileDevice = /android|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test(userAgent);
+  const isMobileWidth = window.innerWidth <= maxMobileWidth;
+
+  return isMobileDevice || isMobileWidth;
 }
 
 function __getIEVersion() {

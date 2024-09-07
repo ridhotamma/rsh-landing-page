@@ -221,13 +221,6 @@ body::-webkit-scrollbar {
   padding-right: 50%;
   margin-bottom: 1rem;
 }
-@media screen and (max-width: 1024px) {
-  .scene__2 .description .text__3 {
-    padding: 0;
-    margin-left: 2rem;
-    width: 80%;
-  }
-}
 @media screen and (max-width: 768px) {
   .scene__2 .description .text__3 {
     padding: 0;
@@ -239,13 +232,6 @@ body::-webkit-scrollbar {
   font-size: 1rem;
   padding-left: 18.5%;
   padding-right: 50%;
-}
-@media screen and (max-width: 1024px) {
-  .scene__2 .description .text__4 {
-    padding: 0;
-    margin-left: 2rem;
-    width: 80%;
-  }
 }
 @media screen and (max-width: 768px) {
   .scene__2 .description .text__4 {
@@ -558,14 +544,19 @@ body::-webkit-scrollbar {
     min-width: 8vw;
   }
 }
+@media screen and (min-width: 1900px) {
+  .scene__3 .circles-vertical__inner {
+    transform: translateY(-12%);
+  }
+}
 @media screen and (max-width: 1024px) {
   .scene__3 .circles-vertical__inner {
-    transform: translateY(-15vw);
+    transform: translateY(-1.75vw);
   }
 }
 @media screen and (max-width: 768px) {
   .scene__3 .circles-vertical__inner {
-    transform: translateY(-4vw);
+    transform: translateY(-1.75vw);
   }
 }
 .scene__3 .description {
@@ -753,10 +744,10 @@ body::-webkit-scrollbar {
   padding-left: 40%;
 }
 .scene__4 .closing .description .text__3 {
-  text-transform: uppercase;
   padding-right: 27vw;
   padding-left: 40vw;
   padding-right: 30vw;
+  line-height: 1;
 }
 @media screen and (max-width: 768px) {
   .scene__4 .closing .description .text__3 {
@@ -806,6 +797,13 @@ body::-webkit-scrollbar {
     right: 55vw;
   }
 }
+@media screen and (max-width: 375px) {
+  .scene__intro--1 {
+    font-size: 1rem;
+    width: 40%;
+    right: 55vw;
+  }
+}
 .scene__intro--2 {
   bottom: 95%;
   left: 65vw;
@@ -827,6 +825,14 @@ body::-webkit-scrollbar {
     right: unset;
     left: 11vw;
     text-align: right;
+  }
+}
+@media screen and (max-width: 375px) {
+  .scene__intro--2 {
+    width: 40%;
+    bottom: 85%;
+    left: unset;
+    right: 55vw;
   }
 }
 .scene__intro--3 {

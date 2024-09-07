@@ -602,4 +602,8 @@ tl.to(letterI, {
     { autoAlpha: 0, yPercent: -40 },
     { autoAlpha: 1, yPercent: 0, duration: 3 }
   )
-  .set(scene4, { autoAlpha: 0 });
+  .set(scene1, { display: 'none' })
+  .set(scene2, { display: 'none' })
+  .set(scene3, { display: 'none' })
+  .set(scene4, { display: 'none' });
+  

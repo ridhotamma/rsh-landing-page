@@ -9,16 +9,10 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 function isMobile() {
-  const userAgent = navigator.userAgent || window.opera;
   const maxMobileWidth = 768;
-
-  const isMobileDevice = /android|iphone|ipod|blackberry|iemobile|opera mini/i.test(userAgent);
-  const isMobileWidth = window.innerWidth <= maxMobileWidth;
-
-  return isMobileDevice || isMobileWidth;
+  return window.innerWidth <= maxMobileWidth;
 }
 
-console.log
 function __getIEVersion() {
   var rv = -1; // Return value assumes failure.
   if (navigator.appName == 'Microsoft Internet Explorer') {

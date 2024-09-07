@@ -75,7 +75,7 @@ tl.fromTo(
     ease: 'power4.inOut',
   })
   .to(scene1, {
-    y: '10vh',
+    y: '15vh',
     duration: 3,
     ease: 'power4.inOut',
   })
@@ -93,7 +93,7 @@ tl.fromTo(
     },
     '<'
   )
-  .to(scene1, { y: '25vh', duration: 3, ease: 'power4.inOut' })
+  .to(scene1, { y: '30vh', duration: 3, ease: 'power4.inOut' })
   .to(
     letterI,
     {
@@ -593,7 +593,7 @@ tl.to(letterI, {
   )
   .to('.scene__4 .closing .gear', { rotate: -90, duration: 5 }, '<')
   .set(letterI, { autoAlpha: 0 })
-  .to('.scene__4 .closing', { y: '250vh', duration: 3 })
+  .to('.scene__4 .closing', { y: '280vh', duration: 3 })
   .to('.scene__4 .closing .gear', { rotate: -180, duration: 3 }, '<')
   .to(body, { backgroundColor: '#f5e400', duration: 3 }, '<')
 
@@ -606,4 +606,3 @@ tl.to(letterI, {
   .set(scene2, { display: 'none' })
   .set(scene3, { display: 'none' })
   .set(scene4, { display: 'none' });
-  

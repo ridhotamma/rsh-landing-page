@@ -746,11 +746,15 @@ body {
     position: absolute;
 
     &--1 {
-      bottom: 70%;
+      bottom: 74%;
       right: 50vw;
       width: 12vw;
       font-size: 1.4rem;
       text-align: right;
+
+      @media screen and (min-width: 1680px) {
+        bottom: 80%;
+      }
 
       @media screen and (max-width: 1024px) {
         width: 22%;

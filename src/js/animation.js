@@ -34,7 +34,7 @@ const tl = gsap.timeline({
     end: 'bottom top',
     scrub: true,
     pin: true,
-    end: '+=9000',
+    end: '+=18000',
   },
 });
 
@@ -53,7 +53,6 @@ tl.fromTo(
     yPercent: 0,
     left: '2%',
     top: '2%',
-    ease: 'power4.inOut',
   }
 )
   .fromTo(
@@ -64,7 +63,6 @@ tl.fromTo(
     {
       y: '0vh',
       duration: 3,
-      ease: 'power4.inOut',
     },
     '<'
   )
@@ -147,11 +145,35 @@ tl.fromTo(
     '<'
   )
   .to(scene1, { y: '200vh', duration: 3, ease: 'power4.inOut' })
-  .to(letterI, { scaleY: isMobile() ? 30 : 12, duration: 3, ease: 'power4.inOut' }, '<')
+  .to(chevronUp, { y: '-150vh', duration: 3, ease: 'power4.inOut' }, '<')
+  .to(
+    chevronArrow,
+    {
+      yPercent: 120,
+      autoAlpha: 0,
+      duration: '3',
+      ease: 'power4.inOut',
+      stagger: {
+        each: 0.2,
+        from: 'end',
+      },
+    },
+    '<'
+  )
+  .to(
+    letterI,
+    { scaleY: isMobile() ? 30 : 12, duration: 3, ease: 'power4.inOut' },
+    '<'
+  )
   .set(chevronUp, { autoAlpha: 0 });
 
 // Scene 2
-tl.to(scene2, { autoAlpha: 1 })
+tl.fromTo(
+  scene2,
+  { y: '-150vh', autoAlpha: 1 },
+  { y: '0vh', autoAlpha: 1, duration: 5 },
+  '-=3'
+)
   .to(logo, { autoAlpha: 0, duration: 3 }, '<')
   .fromTo(
     s2Circles,
@@ -160,7 +182,7 @@ tl.to(scene2, { autoAlpha: 1 })
     },
     {
       x: '0%',
-      duration: 3,
+      duration: 5,
       stagger: 0.2,
       ease: 'power4.inOut',
     },
@@ -168,27 +190,27 @@ tl.to(scene2, { autoAlpha: 1 })
   )
   .fromTo(
     s2Text1,
-    { xPercent: -100, autoAlpha: 0 },
-    { xPercent: 0, autoAlpha: 1, duration: 3, ease: 'power4.inOut' },
+    { yPercent: -100, autoAlpha: 0 },
+    { yPercent: 0, autoAlpha: 1, duration: 5, ease: 'power4.inOut' },
     '<'
   )
   .fromTo(
     s2Text2,
-    { xPercent: 100, autoAlpha: 0 },
-    { xPercent: 0, autoAlpha: 1, duration: 3, ease: 'power4.inOut' },
+    { xPercent: -100, autoAlpha: 0 },
+    { xPercent: 0, autoAlpha: 1, duration: 5, ease: 'power4.inOut' },
     '<'
   )
   .fromTo(
-    s2Text3,
-    { yPercent: -100, autoAlpha: 0 },
-    { yPercent: 0, autoAlpha: 1, duration: 3, ease: 'power4.inOut' },
-    '-=1.5'
-  )
-  .fromTo(
-    s2Text4,
-    { yPercent: -100, autoAlpha: 0 },
-    { yPercent: 0, autoAlpha: 1, duration: 3, ease: 'power4.inOut' },
-    '-=1.5'
+    [s2Text2, s2Text3, s2Text4],
+    { xPercent: -100, autoAlpha: 0 },
+    {
+      xPercent: 0,
+      autoAlpha: 1,
+      duration: 5,
+      stagger: 0.1,
+      ease: 'power4.inOut',
+    },
+    '<'
   )
   .to(body, { backgroundColor: '#11f3f3', duration: 6, ease: 'power4.inOut' })
   .to(s2OuterCircles, { autoAlpha: 1, duration: 5, ease: 'power4.inOut' }, '<')
@@ -216,7 +238,7 @@ tl.to(scene2, { autoAlpha: 1 })
 
 // scene 3
 tl.set('.circle__replace', { autoAlpha: 0 })
-  .to(body, { backgroundColor: '#f5e400', duration: 3 })
+  .to(body, { backgroundColor: '#f5e400', duration: 3, ease: 'power4.inOut' })
 
   .from(
     '.scene__3 .circles .circle__random:nth-child(1)',
@@ -224,6 +246,7 @@ tl.set('.circle__replace', { autoAlpha: 0 })
       xPercent: 100,
       duration: 3,
       margin: 0,
+      ease: 'power4.inOut',
     },
     '<'
   )
@@ -233,6 +256,7 @@ tl.set('.circle__replace', { autoAlpha: 0 })
       xPercent: -100,
       duration: 3,
       margin: 0,
+      ease: 'power4.inOut',
     },
     '<'
   )
@@ -243,6 +267,7 @@ tl.set('.circle__replace', { autoAlpha: 0 })
       yPercent: 100,
       duration: 3,
       margin: 0,
+      ease: 'power4.inOut',
     },
     '<'
   )
@@ -253,6 +278,7 @@ tl.set('.circle__replace', { autoAlpha: 0 })
       yPercent: 100,
       duration: 3,
       margin: 0,
+      ease: 'power4.inOut',
     },
     '<'
   )
@@ -262,6 +288,7 @@ tl.set('.circle__replace', { autoAlpha: 0 })
       yPercent: 100,
       duration: 3,
       margin: 0,
+      ease: 'power4.inOut',
     },
     '<'
   )
@@ -271,6 +298,7 @@ tl.set('.circle__replace', { autoAlpha: 0 })
       xPercent: -100,
       duration: 3,
       margin: 0,
+      ease: 'power4.inOut',
     },
     '<'
   )
@@ -280,6 +308,7 @@ tl.set('.circle__replace', { autoAlpha: 0 })
       xPercent: -100,
       duration: 3,
       margin: 0,
+      ease: 'power4.inOut',
     },
     '<'
   )
@@ -289,6 +318,7 @@ tl.set('.circle__replace', { autoAlpha: 0 })
       yPercent: -100,
       duration: 3,
       margin: 0,
+      ease: 'power4.inOut',
     },
     '<'
   )
@@ -299,6 +329,7 @@ tl.set('.circle__replace', { autoAlpha: 0 })
       yPercent: -100,
       duration: 3,
       margin: 0,
+      ease: 'power4.inOut',
     },
     '<'
   )
@@ -308,6 +339,7 @@ tl.set('.circle__replace', { autoAlpha: 0 })
       yPercent: -100,
       duration: 3,
       margin: 0,
+      ease: 'power4.inOut',
     },
     '<'
   )
@@ -317,6 +349,7 @@ tl.set('.circle__replace', { autoAlpha: 0 })
       yPercent: -100,
       duration: 3,
       margin: 0,
+      ease: 'power4.inOut',
     },
     '<'
   )
@@ -339,7 +372,7 @@ tl.set('.circle__replace', { autoAlpha: 0 })
       '.scene__3 .circles .circle__random:nth-child(5)',
       '.scene__3 .circles .circle__random:nth-child(6)',
     ],
-    { y: '-100vh', duration: 3 },
+    { y: '-100vh', duration: 3, ease: 'power4.inOut' },
     '<'
   )
   .to(
@@ -347,6 +380,7 @@ tl.set('.circle__replace', { autoAlpha: 0 })
     {
       xPercent: -60,
       duration: 2,
+      ease: 'power4.inOut',
     },
     '<'
   )
@@ -356,7 +390,12 @@ tl.set('.circle__replace', { autoAlpha: 0 })
       '.scene__3 .circles .circle__random:nth-child(5)',
       '.scene__3 .circles .circle__random:nth-child(6)',
     ],
-    { scale: 0.4, backgroundColor: '#f749d4', duration: 3 },
+    {
+      scale: 0.4,
+      backgroundColor: '#f749d4',
+      duration: 3,
+      ease: 'power4.inOut',
+    },
     '<'
   )
   .to(
@@ -364,7 +403,13 @@ tl.set('.circle__replace', { autoAlpha: 0 })
       '.scene__3 .circles .circle__random:nth-child(8)',
       '.scene__3 .circles .circle__random:nth-child(11)',
     ],
-    { y: '-100vh', xPercent: -100, backgroundColor: '#f749d4', duration: 3 },
+    {
+      y: '-100vh',
+      xPercent: -100,
+      backgroundColor: '#f749d4',
+      duration: 3,
+      ease: 'power4.inOut',
+    },
     '<'
   )
   .to(
@@ -372,6 +417,7 @@ tl.set('.circle__replace', { autoAlpha: 0 })
     {
       x: '50vw',
       duration: 3,
+      ease: 'power4.inOut',
     },
     '<'
   )
@@ -379,20 +425,31 @@ tl.set('.circle__replace', { autoAlpha: 0 })
     letterI,
     {
       scaleX: 5,
-      duration: 3,
+      duration: 5,
+      ease: 'power4.inOut',
     },
     '<'
   )
-  .to(body, { backgroundColor: '#0000e0', duration: 3 }, '<')
+  .to(
+    body,
+    { backgroundColor: '#0000e0', duration: 3, ease: 'power4.inOut' },
+    '<'
+  )
   .from(
     '.scene__3 .description > *',
-    { x: '100vw', duration: 3, autoAlpha: 0, stagger: 0.5 },
+    {
+      x: '100vw',
+      duration: 5,
+      autoAlpha: 0,
+      stagger: 0.5,
+      ease: 'power4.inOut',
+    },
     '<'
   )
   .fromTo(
     '.circles-vertical__inner',
     { x: isMobile() ? '-40vw' : '-20vw' },
-    { x: isMobile() ? '3vw' : '10vw', duration: 3 },
+    { x: isMobile() ? '3vw' : '10vw', duration: 5, ease: 'power4.inOut' },
     '<'
   )
   // CIRCLE FORM VERTICAL
@@ -402,6 +459,7 @@ tl.set('.circle__replace', { autoAlpha: 0 })
     {
       x: (index) => (index % 2 === 0 ? 100 : -100),
       duration: 3,
+      ease: 'power4.inOut',
     },
     '<'
   )
@@ -412,7 +470,8 @@ tl.set('.circle__replace', { autoAlpha: 0 })
       yPercent: -1,
       width: isMobile() ? '38vw' : '28vw',
       height: isMobile() ? '38vw' : '28vw',
-      duration: 3,
+      duration: 5,
+      ease: 'power4.inOut',
     },
     '<'
   )
@@ -424,7 +483,8 @@ tl.set('.circle__replace', { autoAlpha: 0 })
       yPercent: 90,
       width: isMobile() ? '38vw' : '28vw',
       height: isMobile() ? '38vw' : '28vw',
-      duration: 3,
+      duration: 5,
+      ease: 'power4.inOut',
     },
     '<'
   )
@@ -435,7 +495,8 @@ tl.set('.circle__replace', { autoAlpha: 0 })
       yPercent: -30,
       width: isMobile() ? '38vw' : '28vw',
       height: isMobile() ? '38vw' : '28vw',
-      duration: 3,
+      duration: 5,
+      ease: 'power4.inOut',
     },
     '<'
   )
@@ -446,7 +507,8 @@ tl.set('.circle__replace', { autoAlpha: 0 })
       yPercent: -151,
       width: isMobile() ? '38vw' : '28vw',
       height: isMobile() ? '38vw' : '28vw',
-      duration: 3,
+      duration: 5,
+      ease: 'power4.inOut',
     },
     '<'
   )
@@ -458,7 +520,8 @@ tl.set('.circle__replace', { autoAlpha: 0 })
       yPercent: -59,
       width: isMobile() ? '38vw' : '28vw',
       height: isMobile() ? '38vw' : '28vw',
-      duration: 3,
+      duration: 5,
+      ease: 'power4.inOut',
     },
     '<'
   )
@@ -470,7 +533,8 @@ tl.set('.circle__replace', { autoAlpha: 0 })
       yPercent: 34,
       width: isMobile() ? '38vw' : '28vw',
       height: isMobile() ? '38vw' : '28vw',
-      duration: 3,
+      duration: 5,
+      ease: 'power4.inOut',
     },
     '<'
   )
@@ -482,7 +546,8 @@ tl.set('.circle__replace', { autoAlpha: 0 })
       yPercent: -195,
       width: isMobile() ? '38vw' : '28vw',
       height: isMobile() ? '38vw' : '28vw',
-      duration: 3,
+      duration: 5,
+      ease: 'power4.inOut',
     },
     '<'
   );
@@ -492,6 +557,7 @@ tl.to(letterI, {
   scaleX: 1,
   x: 0,
   duration: 3,
+  ease: 'power4.inOut',
 })
   .to(
     '.scene__3 .description',
@@ -504,8 +570,15 @@ tl.to(letterI, {
     '<'
   )
   .to('.circles-vertical__inner', { y: '-100vh', duration: 3 }, '<')
-  .to(body, { backgroundColor: '#11f3f3', duration: 3 }, '<')
-  .to('.circles-vertical__inner', { y: '100vh', duration: 3 })
+  .to(
+    body,
+    { backgroundColor: '#11f3f3', duration: 3, ease: 'power4.inOut' },
+    '<'
+  )
+  .to('.circles-vertical__inner', {
+    y: '100vh',
+    duration: 3,
+  })
   .set(scene4, { autoAlpha: 1 }, '-=3')
   .fromTo('.scene__4', { yPercent: -150 }, { yPercent: 0, duration: 3 }, '<')
   .to('.scene__4 > .gear__1', { rotate: -120, duration: 3 }, '<')
@@ -583,24 +656,33 @@ tl.to(letterI, {
   .fromTo(
     '.scene__4 .closing',
     { y: '-200vh' },
-    { y: '0vh', duration: 3 },
+    { y: '0vh', duration: 5 },
     '-=3'
   )
   .from(
     '.scene__4 .description > *',
-    { x: (index) => index === 0 ? '-100vw' : '100vw', duration: 3, autoAlpha: 0, stagger: 0.5 },
+    {
+      x: (index) => (index === 0 ? '-100vw' : '100vw'),
+      duration: 5,
+      autoAlpha: 0,
+      stagger: 0.5,
+    },
     '<'
   )
-  .to('.scene__4 .closing .gear', { rotate: -90, duration: 5 }, '<')
+  .to(
+    '.scene__4 .closing .gear',
+    { rotate: -90, duration: 5, ease: 'power4.inOut' },
+    '<'
+  )
   .set(letterI, { autoAlpha: 0 })
-  .to('.scene__4 .closing', { y: '280vh', duration: 3 })
-  .to('.scene__4 .closing .gear', { rotate: -180, duration: 3 }, '<')
+  .to('.scene__4 .closing', { y: '280vh', duration: 5, ease: 'power4.inOut' })
+  .to('.scene__4 .closing .gear', { rotate: -180, duration: 5 }, '<')
   .to(body, { backgroundColor: '#f5e400', duration: 3 }, '<')
 
   .fromTo(
     '.scene__5',
     { autoAlpha: 0, yPercent: -40 },
-    { autoAlpha: 1, yPercent: 0, duration: 3 }
+    { autoAlpha: 1, yPercent: 0, duration: 3, ease: 'power4.inOut' }
   )
   .set(scene1, { display: 'none' })
   .set(scene2, { display: 'none' })

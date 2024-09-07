@@ -115,6 +115,9 @@ q::after {
 body {
   overflow-x: hidden;
 }
+body::-webkit-scrollbar {
+  display: none;
+}
 
 .animation-container {
   position: relative;

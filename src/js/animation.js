@@ -480,7 +480,7 @@ tl.set('.circle__replace', { autoAlpha: 0 })
     '.circle__replace--2',
     {
       xPercent: isMobile() ? 205 : 225,
-      yPercent: isMobile() ? 93 : 90,
+      yPercent: isMobile() ? 93 : 92,
       width: isMobile() ? '38vw' : '28vw',
       height: isMobile() ? '38vw' : '28vw',
       duration: 5,

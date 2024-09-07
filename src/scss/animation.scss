@@ -23,7 +23,7 @@ body {
   transform: translate(-50%, -50%);
   z-index: 10;
 
-  @media screen and (max-width: 728px) {
+  @media screen and (max-width: 768px) {
     img {
       width: 110px;
       height: 60px;
@@ -132,7 +132,7 @@ body {
             width: 80%;
           }
 
-          @media screen and (max-width: 728px) {
+          @media screen and (max-width: 768px) {
             padding: 0;
             margin-left: 2rem;
             width: 80%;
@@ -150,7 +150,7 @@ body {
             width: 80%;
           }
 
-          @media screen and (max-width: 728px) {
+          @media screen and (max-width: 768px) {
             padding: 0;
             margin-left: 2rem;
             width: 80%;
@@ -162,7 +162,7 @@ body {
         top: 10%;
       }
 
-      @media screen and (max-width: 728px) {
+      @media screen and (max-width: 768px) {
         top: 20%;
       }
     }
@@ -216,7 +216,7 @@ body {
         @media screen and (max-width: 1024px) {
         }
 
-        @media screen and (max-width: 728px) {
+        @media screen and (max-width: 768px) {
           height: 38vw;
           width: 38vw;
         }
@@ -257,7 +257,7 @@ body {
             @media screen and (max-width: 1024px) {
             }
 
-            @media screen and (max-width: 728px) {
+            @media screen and (max-width: 768px) {
               transform: translateX(-38vw);
             }
           }
@@ -270,7 +270,7 @@ body {
             @media screen and (max-width: 1024px) {
             }
 
-            @media screen and (max-width: 728px) {
+            @media screen and (max-width: 768px) {
               transform: translateX(-76vw);
             }
           }
@@ -283,7 +283,7 @@ body {
             @media screen and (max-width: 1024px) {
             }
 
-            @media screen and (max-width: 728px) {
+            @media screen and (max-width: 768px) {
               transform: translateX(-38vw) translateY(-38vw);
             }
           }
@@ -296,7 +296,7 @@ body {
             @media screen and (max-width: 1024px) {
             }
 
-            @media screen and (max-width: 728px) {
+            @media screen and (max-width: 768px) {
               opacity: 0;
               visibility: hidden;
             }
@@ -311,7 +311,7 @@ body {
             @media screen and (max-width: 1024px) {
             }
 
-            @media screen and (max-width: 728px) {
+            @media screen and (max-width: 768px) {
               transform: translateX(-38vw) translateY(38vw);
             }
           }
@@ -325,7 +325,7 @@ body {
             @media screen and (max-width: 1024px) {
             }
 
-            @media screen and (max-width: 728px) {
+            @media screen and (max-width: 768px) {
               opacity: 0;
               visibility: hidden;
             }
@@ -338,7 +338,7 @@ body {
             @media screen and (max-width: 1024px) {
             }
 
-            @media screen and (max-width: 728px) {
+            @media screen and (max-width: 768px) {
               transform: translateX(38vw);
             }
           }
@@ -352,7 +352,7 @@ body {
             @media screen and (max-width: 1024px) {
             }
 
-            @media screen and (max-width: 728px) {
+            @media screen and (max-width: 768px) {
               transform: translateX(38vw) translateY(-38vw);
             }
           }
@@ -365,7 +365,7 @@ body {
             @media screen and (max-width: 1024px) {
             }
 
-            @media screen and (max-width: 728px) {
+            @media screen and (max-width: 768px) {
               transform: translateX(38vw) translateY(38vw);
             }
           }
@@ -377,7 +377,7 @@ body {
             @media screen and (max-width: 1024px) {
             }
 
-            @media screen and (max-width: 728px) {
+            @media screen and (max-width: 768px) {
               transform: translateY(38vw);
             }
           }
@@ -390,7 +390,7 @@ body {
             @media screen and (max-width: 1024px) {
             }
 
-            @media screen and (max-width: 728px) {
+            @media screen and (max-width: 768px) {
               transform: translateY(-38vw);
             }
           }
@@ -399,7 +399,7 @@ body {
         @media screen and (max-width: 1024px) {
         }
 
-        @media screen and (max-width: 728px) {
+        @media screen and (max-width: 768px) {
           height: 38vw;
           width: 38vw;
         }
@@ -429,7 +429,7 @@ body {
             @media screen and (max-width: 1024px) {
             }
 
-            @media screen and (max-width: 728px) {
+            @media screen and (max-width: 768px) {
               min-height: 8vw;
               min-width: 8vw;
             }
@@ -438,7 +438,7 @@ body {
           &__mobile {
             display: none;
 
-            @media screen and (max-width: 728px) {
+            @media screen and (max-width: 1024px) {
               display: block;
             }
           }
@@ -447,7 +447,7 @@ body {
             // dot width x 7
             height: calc(24.5vw + 3.5rem);
 
-            @media screen and (max-width: 728px) {
+            @media screen and (max-width: 768px) {
               height: calc(56vw + 3.5rem);
             }
           }
@@ -463,7 +463,7 @@ body {
             &--2 {
               transform: translateY(calc(3.5vw + 0.5rem));
 
-              @media screen and (max-width: 728px) {
+              @media screen and (max-width: 768px) {
                 transform: translateY(calc(8vw + 0.5rem));
               }
             }
@@ -471,7 +471,7 @@ body {
             &--3 {
               transform: translateY(calc(7vw + 1rem));
 
-              @media screen and (max-width: 728px) {
+              @media screen and (max-width: 768px) {
                 transform: translateY(calc(16vw + 1rem));
               }
             }
@@ -479,7 +479,7 @@ body {
             &--4 {
               transform: translateY(calc(10.5vw + 1.5rem));
 
-              @media screen and (max-width: 728px) {
+              @media screen and (max-width: 768px) {
                 transform: translateY(calc(24vw + 1.5rem));
               }
             }
@@ -487,7 +487,7 @@ body {
             &--5 {
               transform: translateY(calc(14vw + 2rem));
 
-              @media screen and (max-width: 728px) {
+              @media screen and (max-width: 768px) {
                 transform: translateY(calc(32vw + 2rem));
               }
             }
@@ -495,7 +495,7 @@ body {
             &--6 {
               transform: translateY(calc(17.5vw + 2.5rem));
 
-              @media screen and (max-width: 728px) {
+              @media screen and (max-width: 768px) {
                 transform: translateY(calc(40vw + 2.5rem));
               }
             }
@@ -503,20 +503,24 @@ body {
             &--7 {
               transform: translateY(calc(21vw + 3rem));
 
-              @media screen and (max-width: 728px) {
+              @media screen and (max-width: 768px) {
                 transform: translateY(calc(48vw + 3rem));
               }
             }
 
-            @media screen and (max-width: 728px) {
+            @media screen and (max-width: 768px) {
               min-height: 8vw;
               min-width: 8vw;
             }
           }
         }
 
-        @media screen and (max-width: 728px) {
-          transform: translateY(-5vw);
+        @media screen and (max-width: 1024px) {
+          transform: translateY(-15vw);
+        }
+
+        @media screen and (max-width: 768px) {
+          transform: translateY(-4vw);
         }
       }
     }
@@ -546,14 +550,14 @@ body {
           margin-top: 2rem;
           width: 40%;
 
-          @media screen and (max-width: 728px) {
+          @media screen and (max-width: 768px) {
             font-size: 1rem;
             width: 80%;
           }
         }
       }
 
-      @media screen and (max-width: 728px) {
+      @media screen and (max-width: 768px) {
         padding-top: 100%;
       }
     }
@@ -572,7 +576,7 @@ body {
         width: 100vw;
         transform: translateX(-40vw);
 
-        @media screen and (max-width: 728px) {
+        @media screen and (max-width: 768px) {
           height: 900px;
           width: 900px;
           transform: translateX(-100vw) translateY(500px);
@@ -585,7 +589,7 @@ body {
         transform: translateX(60vw) translateY(-40vw);
         z-index: 9;
 
-        @media screen and (max-width: 728px) {
+        @media screen and (max-width: 768px) {
           height: 700px;
           width: 700px;
           transform: translateX(-10vw) translateY(-200px);
@@ -597,7 +601,7 @@ body {
         width: 70vw;
         transform: translateX(60vw) translateY(-10vw);
 
-        @media screen and (max-width: 728px) {
+        @media screen and (max-width: 768px) {
           height: 600px;
           width: 600px;
 
@@ -610,7 +614,7 @@ body {
         width: 40vw;
         transform: translateX(55vw);
 
-        @media screen and (max-width: 728px) {
+        @media screen and (max-width: 768px) {
           height: 300px;
           width: 300px;
 
@@ -623,7 +627,7 @@ body {
         width: 80vw;
         transform: translateX(-100vw);
 
-        @media screen and (max-width: 728px) {
+        @media screen and (max-width: 768px) {
           height: 600px;
           width: 600px;
         }
@@ -634,7 +638,7 @@ body {
         width: 110vw;
         transform: translateX(-75vw);
 
-        @media screen and (max-width: 728px) {
+        @media screen and (max-width: 768px) {
           height: 600px;
           width: 600px;
         }
@@ -645,7 +649,7 @@ body {
         width: 65vw;
         transform: translateX(50vw);
 
-        @media screen and (max-width: 728px) {
+        @media screen and (max-width: 768px) {
           height: 600px;
           width: 600px;
         }
@@ -656,7 +660,7 @@ body {
         width: 110vw;
         transform: translateX(30vw);
 
-        @media screen and (max-width: 728px) {
+        @media screen and (max-width: 768px) {
           height: 600px;
           width: 600px;
         }
@@ -667,7 +671,7 @@ body {
         width: 65vw;
         transform: translateX(-7vw);
 
-        @media screen and (max-width: 728px) {
+        @media screen and (max-width: 768px) {
           height: 600px;
           width: 600px;
         }
@@ -691,7 +695,7 @@ body {
         top: -95vw;
         left: -45vw;
 
-        @media screen and (max-width: 728px) {
+        @media screen and (max-width: 768px) {
           height: 1400px;
           width: 1400px;
           left: -95vw;
@@ -723,7 +727,7 @@ body {
             padding-left: 40vw;
             padding-right: 30vw;
 
-            @media screen and (max-width: 728px) {
+            @media screen and (max-width: 768px) {
               bottom: 20%;
               padding-left: 10vw;
               padding-right: 10vw;
@@ -731,7 +735,7 @@ body {
           }
         }
 
-        @media screen and (max-width: 728px) {
+        @media screen and (max-width: 768px) {
           bottom: 40%;
         }
       }
@@ -765,7 +769,7 @@ body {
         bottom: 60%;
       }
 
-      @media screen and (max-width: 728px) {
+      @media screen and (max-width: 768px) {
         font-size: 1rem;
         width: 25%;
         bottom: 60%;
@@ -785,7 +789,7 @@ body {
         bottom: 90%;
       }
 
-      @media screen and (max-width: 728px) {
+      @media screen and (max-width: 768px) {
         font-size: 1rem;
         width: 35%;
         bottom: 90%;
@@ -809,7 +813,7 @@ body {
         height: 30%;
       }
 
-      @media screen and (max-width: 728px) {
+      @media screen and (max-width: 768px) {
         font-size: 2rem;
         bottom: 110%;
         right: 55vw;

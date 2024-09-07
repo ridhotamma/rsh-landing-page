@@ -32,7 +32,7 @@ const tl = gsap.timeline({
     trigger: '.animation-container',
     start: 'top top',
     end: 'bottom top',
-    scrub: true,
+    scrub: 1,
     pin: true,
     end: '+=18000',
   },
@@ -119,11 +119,11 @@ tl.fromTo(
   .fromTo(
     chevronUp,
     {
+      yPercent: 50,
       autoAlpha: 0,
-      yPercent: -40,
     },
     {
-      yPercent: -70,
+      yPercent: 0,
       duration: 3,
       autoAlpha: 1,
       ease: 'power4.inOut',
@@ -637,7 +637,7 @@ tl.to(letterI, {
   // gear 8
   .fromTo(
     '.scene__4 > .gear__8',
-    { y: '-200vh' },
+    { y: '-210vh' },
     { y: '100vh', duration: 5 },
     '-=3.5'
   )

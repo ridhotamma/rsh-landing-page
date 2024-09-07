@@ -730,6 +730,13 @@ body::-webkit-scrollbar {
   width: 100vw;
   transform: translateX(-40vw);
 }
+@media screen and (max-width: 1024px) {
+  .scene__4 .gear__1 {
+    height: 1500px;
+    width: 1500px;
+    transform: translateX(-100vw) translateY(500px);
+  }
+}
 @media screen and (max-width: 768px) {
   .scene__4 .gear__1 {
     height: 900px;
@@ -743,6 +750,13 @@ body::-webkit-scrollbar {
   transform: translateX(60vw) translateY(-40vw);
   z-index: 9;
 }
+@media screen and (max-width: 1024px) {
+  .scene__4 .gear__2 {
+    height: 1200px;
+    width: 1200px;
+    transform: translateX(30vw) translateY(-400px);
+  }
+}
 @media screen and (max-width: 768px) {
   .scene__4 .gear__2 {
     height: 700px;
@@ -755,11 +769,18 @@ body::-webkit-scrollbar {
   width: 70vw;
   transform: translateX(60vw) translateY(-10vw);
 }
+@media screen and (max-width: 1024px) {
+  .scene__4 .gear__3 {
+    height: 1200px;
+    width: 1200px;
+    transform: translateX(10vw) translateY(-10vw);
+  }
+}
 @media screen and (max-width: 768px) {
   .scene__4 .gear__3 {
     height: 600px;
     width: 600px;
-    transform: translateX(10vw) translateY(-10vw);
+    transform: translateX(20vw) translateY(-10vw);
   }
 }
 .scene__4 .gear__4 {
@@ -767,17 +788,30 @@ body::-webkit-scrollbar {
   width: 40vw;
   transform: translateX(55vw);
 }
+@media screen and (max-width: 1024px) {
+  .scene__4 .gear__4 {
+    height: 700px;
+    width: 700px;
+    transform: translateX(-20vw);
+  }
+}
 @media screen and (max-width: 768px) {
   .scene__4 .gear__4 {
-    height: 300px;
-    width: 300px;
-    transform: translateX(-20vw);
+    height: 400px;
+    width: 400px;
+    transform: translateX(-40vw);
   }
 }
 .scene__4 .gear__5 {
   height: 80vw;
   width: 80vw;
   transform: translateX(-100vw);
+}
+@media screen and (max-width: 1024px) {
+  .scene__4 .gear__5 {
+    height: 800px;
+    width: 800px;
+  }
 }
 @media screen and (max-width: 768px) {
   .scene__4 .gear__5 {
@@ -790,16 +824,30 @@ body::-webkit-scrollbar {
   width: 110vw;
   transform: translateX(-75vw);
 }
+@media screen and (max-width: 1024px) {
+  .scene__4 .gear__6 {
+    height: 1800px;
+    width: 1800px;
+    transform: translateX(-155vw) translateY(-500px);
+  }
+}
 @media screen and (max-width: 768px) {
   .scene__4 .gear__6 {
-    height: 600px;
-    width: 600px;
+    height: 1200px;
+    width: 1200px;
+    transform: translateX(-205vw);
   }
 }
 .scene__4 .gear__7 {
   height: 65vw;
   width: 65vw;
   transform: translateX(50vw);
+}
+@media screen and (max-width: 1024px) {
+  .scene__4 .gear__7 {
+    height: 800px;
+    width: 800px;
+  }
 }
 @media screen and (max-width: 768px) {
   .scene__4 .gear__7 {
@@ -812,16 +860,30 @@ body::-webkit-scrollbar {
   width: 110vw;
   transform: translateX(30vw);
 }
+@media screen and (max-width: 1024px) {
+  .scene__4 .gear__8 {
+    height: 1200px;
+    width: 1200px;
+    transform: translateX(0vw);
+  }
+}
 @media screen and (max-width: 768px) {
   .scene__4 .gear__8 {
-    height: 600px;
-    width: 600px;
+    height: 1000px;
+    width: 1000px;
   }
 }
 .scene__4 .gear__9 {
   height: 65vw;
   width: 65vw;
   transform: translateX(-7vw);
+}
+@media screen and (max-width: 1024px) {
+  .scene__4 .gear__9 {
+    height: 1000px;
+    width: 1000px;
+    transform: translateX(-70vw);
+  }
 }
 @media screen and (max-width: 768px) {
   .scene__4 .gear__9 {
@@ -845,6 +907,13 @@ body::-webkit-scrollbar {
   position: absolute;
   top: -95vw;
   left: -45vw;
+}
+@media screen and (max-width: 1024px) {
+  .scene__4 .closing .gear {
+    height: 2400px;
+    width: 2400px;
+    left: -95vw;
+  }
 }
 @media screen and (max-width: 768px) {
   .scene__4 .closing .gear {
@@ -875,11 +944,23 @@ body::-webkit-scrollbar {
   padding-right: 30vw;
   line-height: 1;
 }
+@media screen and (max-width: 1024px) {
+  .scene__4 .closing .description .text__3 {
+    bottom: 20%;
+    padding-left: 10vw;
+    padding-right: 10vw;
+  }
+}
 @media screen and (max-width: 768px) {
   .scene__4 .closing .description .text__3 {
     bottom: 20%;
     padding-left: 10vw;
     padding-right: 10vw;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .scene__4 .closing .description {
+    bottom: 40%;
   }
 }
 @media screen and (max-width: 768px) {

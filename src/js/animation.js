@@ -81,7 +81,7 @@ tl.fromTo(
     intro1,
     {
       autoAlpha: 0,
-      y: 40,
+      y: '100vh',
     },
     {
       y: 0,
@@ -105,7 +105,7 @@ tl.fromTo(
     intro2,
     {
       autoAlpha: 0,
-      y: 40,
+      y: '100vh',
     },
     {
       y: 0,
@@ -119,11 +119,25 @@ tl.fromTo(
   .fromTo(
     chevronUp,
     {
-      yPercent: 50,
+      y: '100vh',
       autoAlpha: 0,
     },
     {
-      yPercent: 0,
+      y: 0,
+      duration: 3,
+      autoAlpha: 1,
+      ease: 'power4.inOut',
+    },
+    '<'
+  )
+  .fromTo(
+    intro3,
+    {
+      autoAlpha: 0,
+      y: '100vh',
+    },
+    {
+      y: 0,
       duration: 3,
       autoAlpha: 1,
       ease: 'power4.inOut',
@@ -131,20 +145,6 @@ tl.fromTo(
     '<'
   )
   .to('.theme-changer', { autoAlpha: 0, duration: 3 }, '<')
-  .fromTo(
-    intro3,
-    {
-      autoAlpha: 0,
-      yPercent: 30,
-    },
-    {
-      yPercent: 0,
-      duration: 3,
-      autoAlpha: 1,
-      ease: 'power4.inOut',
-    },
-    '<'
-  )
   .to(scene1, {
     y: '200vh',
     duration: 3,

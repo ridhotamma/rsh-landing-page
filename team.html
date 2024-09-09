@@ -1,312 +1,322 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-      crossorigin="anonymous"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css"
-    />
-    <link rel="stylesheet" href="./src/css/main.css" />
-    <title>SRH Site</title>
-  </head>
 
-  <body class="bg-blue">
-    <div class="container smooth-scroll">
-      <nav class="navbar">
-        <a href="index.html" class="logo">
-          <img width="124" src="./src/images/logo-white.svg" alt="logo white" />
-        </a>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css" />
+  <link rel="stylesheet" href="./src/css/main.css" />
+  <title>SRH Site</title>
+</head>
 
-        <div class="hamburger-menu">
-          <span class="line"></span>
-          <span class="line"></span>
-          <span class="line"></span>
+<style>
+  body {
+    transition: background 400ms ease-in-out;
+  }
+</style>
+
+<body class="bg-blue">
+  <div class="theme-changer">
+    <div onclick="changeThemeColor(Theme.pink)" id="theme-pink"></div>
+    <div onclick="changeThemeColor(Theme.blue)" id="theme-blue"></div>
+    <div onclick="changeThemeColor(Theme.green)" id="theme-green"></div>
+  </div>
+
+  <div class="container smooth-scroll">
+    <nav id="navbar" class="navbar">
+      <a href="index.html" class="logo">
+        <img width="124" src="./src/images/logo-white.svg" alt="logo white" />
+      </a>
+
+      <div class="hamburger-menu">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </div>
+      <div class="menu-container">
+        <ul class="menu-container__nav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="work.html">Work</a></li>
+          <li><a href="#">About Emperial Marketing</a></li>
+          <li><a href="team.html">Team</a></li>
+          <li><a href="newsletter.html">Newsletter</a></li>
+        </ul>
+      </div>
+    </nav>
+    <main>
+      <h1 class="main-title">
+        <span class="left-word dunbartall-ultra text-pink" id="primary-title">The</span>
+        <span class="right-word dunbartall-ultra text-yellow" id="secondary-title">Team</span>
+      </h1>
+
+      <div class="main-subtitle">
+        <p class="poppins-medium text-yellow">
+          Meet the talented folks behind all of our smart thinking.
+        </p>
+      </div>
+
+      <div class="team-members">
+        <div class="team-members__item">
+          <div class="person-detail person-detail--1">
+            <div class="person-detail__description">
+              <h5 class="person-detail__name text-yellow">
+                <span>Matt</span>
+                <span>Sabljak</span>
+              </h5>
+              <p class="person-detail__position text-yellow">
+                Partner, President
+              </p>
+            </div>
+          </div>
+          <div class="description-popover description-popover--1">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Voluptatibus consequatur ad voluptate repudiandae quos? Minus rem
+            dolorem non? Fugiat unde temporibus ea enim et, rerum voluptatem
+            asperiores laborum beatae quam?
+          </div>
         </div>
-        <div class="menu-container">
-          <ul class="menu-container__nav">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="work.html">Work</a></li>
-            <li><a href="#">About Emperial Marketing</a></li>
-            <li><a href="team.html">Team</a></li>
-            <li><a href="newsletter.html">Newsletter</a></li>
-          </ul>
+        <div class="team-members__item">
+          <div class="person-detail person-detail--2">
+            <div class="person-detail__description">
+              <h5 class="person-detail__name text-yellow">
+                <span>Kurt</span>
+                <span>Ravenwood</span>
+              </h5>
+              <p class="person-detail__position text-yellow">
+                Partner, Executive Strategy Director
+              </p>
+            </div>
+          </div>
+          <div class="description-popover description-popover--2">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Voluptatibus consequatur ad voluptate repudiandae quos? Minus rem
+            dolorem non? Fugiat unde temporibus ea enim et, rerum voluptatem
+            asperiores laborum beatae quam?
+          </div>
         </div>
-      </nav>
-      <main>
-        <h1 class="main-title">
-          <span class="left-word dunbartall-ultra text-pink">The</span>
-          <span class="right-word dunbartall-ultra text-yellow">Team</span>
-        </h1>
-
-        <div class="main-subtitle">
-          <p class="poppins-medium text-yellow">
-            Meet the talented folks behind all of our smart thinking.
-          </p>
-        </div>
-
-        <div class="team-members">
-          <div class="team-members__item">
-            <div class="person-detail person-detail--1">
-              <div class="person-detail__description">
-                <h5 class="person-detail__name text-yellow">
-                  <span>Matt</span>
-                  <span>Sabljak</span>
-                </h5>
-                <p class="person-detail__position text-yellow">
-                  Partner, President
-                </p>
-              </div>
-            </div>
-            <div class="description-popover description-popover--1">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Voluptatibus consequatur ad voluptate repudiandae quos? Minus rem
-              dolorem non? Fugiat unde temporibus ea enim et, rerum voluptatem
-              asperiores laborum beatae quam?
+        <div class="team-members__item">
+          <div class="person-detail person-detail--3">
+            <div class="person-detail__description">
+              <h5 class="person-detail__name text-yellow">
+                <span>Sam</span>
+                <span>Hogerton</span>
+              </h5>
+              <p class="person-detail__position text-yellow">
+                Partner, Executive Creative Director
+              </p>
             </div>
           </div>
-          <div class="team-members__item">
-            <div class="person-detail person-detail--2">
-              <div class="person-detail__description">
-                <h5 class="person-detail__name text-yellow">
-                  <span>Kurt</span>
-                  <span>Ravenwood</span>
-                </h5>
-                <p class="person-detail__position text-yellow">
-                  Partner, Executive Strategy Director
-                </p>
-              </div>
-            </div>
-            <div class="description-popover description-popover--2">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Voluptatibus consequatur ad voluptate repudiandae quos? Minus rem
-              dolorem non? Fugiat unde temporibus ea enim et, rerum voluptatem
-              asperiores laborum beatae quam?
-            </div>
-          </div>
-          <div class="team-members__item">
-            <div class="person-detail person-detail--3">
-              <div class="person-detail__description">
-                <h5 class="person-detail__name text-yellow">
-                  <span>Sam</span>
-                  <span>Hogerton</span>
-                </h5>
-                <p class="person-detail__position text-yellow">
-                  Partner, Executive Creative Director
-                </p>
-              </div>
-            </div>
-            <div class="description-popover description-popover--3">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Voluptatibus consequatur ad voluptate repudiandae quos? Minus rem
-              dolorem non? Fugiat unde temporibus ea enim et, rerum voluptatem
-              asperiores laborum beatae quam?
-            </div>
-          </div>
-
-          <div class="team-members__item">
-            <div class="person-detail person-detail--4">
-              <div class="person-detail__description">
-                <h5 class="person-detail__name text-yellow">
-                  <span>Jonathan</span>
-                  <span>Gundlach</span>
-                </h5>
-                <p class="person-detail__position text-yellow">
-                  Managing Director
-                </p>
-              </div>
-            </div>
-            <div class="description-popover description-popover--4">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Voluptatibus consequatur ad voluptate repudiandae quos? Minus rem
-              dolorem non? Fugiat unde temporibus ea enim et, rerum voluptatem
-              asperiores laborum beatae quam?
-            </div>
-          </div>
-
-          <div class="team-members__item">
-            <div class="person-detail person-detail--5">
-              <div class="person-detail__description">
-                <h5 class="person-detail__name text-yellow">
-                  <span>Jeff</span>
-                  <span>Ohm</span>
-                </h5>
-                <p class="person-detail__position text-yellow">
-                  Accounts Director
-                </p>
-              </div>
-            </div>
-            <div class="description-popover description-popover--5">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Voluptatibus consequatur ad voluptate repudiandae quos? Minus rem
-              dolorem non? Fugiat unde temporibus ea enim et, rerum voluptatem
-              asperiores laborum beatae quam?
-            </div>
-          </div>
-
-          <div class="team-members__item">
-            <div class="person-detail person-detail--6">
-              <div class="person-detail__description">
-                <h5 class="person-detail__name text-yellow">
-                  <span>Milly</span>
-                  <span>Segovia</span>
-                </h5>
-                <p class="person-detail__position text-yellow">
-                  Media Director
-                </p>
-              </div>
-            </div>
-            <div class="description-popover description-popover--6">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Voluptatibus consequatur ad voluptate repudiandae quos? Minus rem
-              dolorem non? Fugiat unde temporibus ea enim et, rerum voluptatem
-              asperiores laborum beatae quam?
-            </div>
+          <div class="description-popover description-popover--3">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Voluptatibus consequatur ad voluptate repudiandae quos? Minus rem
+            dolorem non? Fugiat unde temporibus ea enim et, rerum voluptatem
+            asperiores laborum beatae quam?
           </div>
         </div>
 
-        <footer class="footer bg-pink">
-          <div class="footer__menu-top">
-            <a href="index.html" class="footer__logo">
-              <img
-                width="190"
-                src="./src/images/logo-blue.svg"
-                alt="Footer Logo"
-              />
-            </a>
-            <div class="footer__nav">
-              <ul class="footer__nav-list d-flex">
-                <li class="footer__nav-item">
-                  <a href="index.html">Home</a>
-                </li>
-                <li class="footer__nav-item">
-                  <a href="work.html">Work</a>
-                </li>
-                <li class="footer__nav-item">
-                  <a href="#">About Empirical Marketing</a>
-                </li>
-                <li class="footer__nav-item"><a href="team.html">Team </a></li>
-                <li class="footer__nav-item">
-                  <a href="newsletter.html">Newsletter</a>
-                </li>
-              </ul>
-            </div>
-            <div class="footer__contact">
-              <button class="footer__contact-button">Contact us</button>
+        <div class="team-members__item">
+          <div class="person-detail person-detail--4">
+            <div class="person-detail__description">
+              <h5 class="person-detail__name text-yellow">
+                <span>Jonathan</span>
+                <span>Gundlach</span>
+              </h5>
+              <p class="person-detail__position text-yellow">
+                Managing Director
+              </p>
             </div>
           </div>
-          <div class="footer__menu-bottom">
-            ©
-            <script>
-              document.write(new Date().getFullYear());
-            </script>
-            — SRH — Terms — Privacy Policy — CAREERS
+          <div class="description-popover description-popover--4">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Voluptatibus consequatur ad voluptate repudiandae quos? Minus rem
+            dolorem non? Fugiat unde temporibus ea enim et, rerum voluptatem
+            asperiores laborum beatae quam?
           </div>
-        </footer>
-      </main>
-    </div>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js"></script>
-    <script src="./src/js/main.js"></script>
+        </div>
 
-    <script>
-      document.addEventListener('DOMContentLoaded', () => {
-        const locoScroll = new LocomotiveScroll({
-          el: document.querySelector('.smooth-scroll'),
-          smooth: true,
-        });
+        <div class="team-members__item">
+          <div class="person-detail person-detail--5">
+            <div class="person-detail__description">
+              <h5 class="person-detail__name text-yellow">
+                <span>Jeff</span>
+                <span>Ohm</span>
+              </h5>
+              <p class="person-detail__position text-yellow">
+                Accounts Director
+              </p>
+            </div>
+          </div>
+          <div class="description-popover description-popover--5">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Voluptatibus consequatur ad voluptate repudiandae quos? Minus rem
+            dolorem non? Fugiat unde temporibus ea enim et, rerum voluptatem
+            asperiores laborum beatae quam?
+          </div>
+        </div>
 
-        locoScroll.on('scroll', ScrollTrigger.update);
+        <div class="team-members__item">
+          <div class="person-detail person-detail--6">
+            <div class="person-detail__description">
+              <h5 class="person-detail__name text-yellow">
+                <span>Milly</span>
+                <span>Segovia</span>
+              </h5>
+              <p class="person-detail__position text-yellow">
+                Media Director
+              </p>
+            </div>
+          </div>
+          <div class="description-popover description-popover--6">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Voluptatibus consequatur ad voluptate repudiandae quos? Minus rem
+            dolorem non? Fugiat unde temporibus ea enim et, rerum voluptatem
+            asperiores laborum beatae quam?
+          </div>
+        </div>
+      </div>
 
-        ScrollTrigger.scrollerProxy('.smooth-scroll', {
-          scrollTop(value) {
-            return arguments.length
-              ? locoScroll.scrollTo(value, 0, 0)
-              : locoScroll.scroll.instance.scroll.y;
-          },
-          getBoundingClientRect() {
-            return {
-              top: 0,
-              left: 0,
-              width: window.innerWidth,
-              height: window.innerHeight,
-            };
-          },
-          pinType: document.querySelector('.smooth-scroll').style.transform
-            ? 'transform'
-            : 'fixed',
-        });
+      <footer class="footer bg-pink" id="footer">
+        <div class="footer__menu-top">
+          <a href="index.html" class="footer__logo">
+            <img id="footer-logo" width="190" src="./src/images/logo-blue.svg" alt="Footer Logo" />
+          </a>
+          <div class="footer__nav">
+            <ul class="footer__nav-list d-flex">
+              <li id="footer-nav-item" class="footer__nav-item">
+                <a href="index.html">Home</a>
+              </li>
+              <li id="footer-nav-item" class="footer__nav-item">
+                <a href="work.html">Work</a>
+              </li>
+              <li id="footer-nav-item" class="footer__nav-item">
+                <a href="#">About Empirical Marketing</a>
+              </li>
+              <li id="footer-nav-item" class="footer__nav-item">
+                <a href="team.html">Team </a>
+              </li>
+              <li id="footer-nav-item" class="footer__nav-item">
+                <a href="newsletter.html">Newsletter</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer__contact">
+            <button class="footer__contact-button" id="footer-contact-button">
+              Contact us
+            </button>
+          </div>
+        </div>
+        <div class="footer__menu-bottom" id="footer-menu-bottom">
+          ©
+          <script>
+            document.write(new Date().getFullYear());
+          </script>
+          — SRH — <span><a href="#">Terms</a></span> —
+          <span><a href="#">Privacy Policy</a></span> —
+          <span><a href="#">CAREERS</a></span>
+        </div>
+      </footer>
+    </main>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js"></script>
+  <script src="./src/js/main.js"></script>
+  <script src="./src/js/theme.js"></script>
 
-        gsap.registerPlugin(ScrollTrigger);
-
-        gsap.from('.logo img', {
-          duration: 1.5,
-          opacity: 0,
-          y: -20,
-          ease: 'power2.out',
-        });
-
-        gsap.from('.main-title .left-word', {
-          duration: 1.5,
-          x: -100,
-          opacity: 0,
-          ease: 'power2.out',
-          delay: 0.5,
-        });
-
-        gsap.from('.main-title .right-word', {
-          duration: 1.5,
-          x: 100,
-          opacity: 0,
-          ease: 'power2.out',
-          delay: 0.7,
-        });
-
-        gsap.from('.main-subtitle p', {
-          duration: 1.5,
-          y: 20,
-          opacity: 0,
-          ease: 'power2.out',
-          delay: 1,
-        });
-
-        gsap.from('.team-members__item', {
-          scrollTrigger: {
-            trigger: '.team-members__item',
-            start: 'top 90%',
-            toggleActions: 'play none none none',
-            scroller: '.smooth-scroll',
-          },
-          duration: 1.5,
-          opacity: 0,
-          y: 50,
-          stagger: 0.2,
-          ease: 'power2.out',
-        });
-
-        gsap.from('.footer', {
-          scrollTrigger: {
-            trigger: '.footer',
-            start: 'top bottom',
-            toggleActions: 'play none none none',
-            scroller: '.smooth-scroll'
-          },
-          duration: 1.5,
-          y: 50,
-          opacity: 0,
-          ease: 'power2.out',
-        });
-
-        ScrollTrigger.addEventListener('refresh', () => locoScroll.update());
-        ScrollTrigger.refresh();
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const locoScroll = new LocomotiveScroll({
+        el: document.querySelector('.smooth-scroll'),
+        smooth: true,
       });
-    </script>
-  </body>
+
+      locoScroll.on('scroll', ScrollTrigger.update);
+
+      ScrollTrigger.scrollerProxy('.smooth-scroll', {
+        scrollTop(value) {
+          return arguments.length
+            ? locoScroll.scrollTo(value, 0, 0)
+            : locoScroll.scroll.instance.scroll.y;
+        },
+        getBoundingClientRect() {
+          return {
+            top: 0,
+            left: 0,
+            width: window.innerWidth,
+            height: window.innerHeight,
+          };
+        },
+        pinType: document.querySelector('.smooth-scroll').style.transform
+          ? 'transform'
+          : 'fixed',
+      });
+
+      gsap.registerPlugin(ScrollTrigger);
+
+      gsap.from('.logo img', {
+        duration: 1.5,
+        opacity: 0,
+        y: -20,
+        ease: 'power2.out',
+      });
+
+      gsap.from('.main-title .left-word', {
+        duration: 1.5,
+        x: -100,
+        opacity: 0,
+        ease: 'power2.out',
+        delay: 0.5,
+      });
+
+      gsap.from('.main-title .right-word', {
+        duration: 1.5,
+        x: 100,
+        opacity: 0,
+        ease: 'power2.out',
+        delay: 0.7,
+      });
+
+      gsap.from('.main-subtitle p', {
+        duration: 1.5,
+        y: 20,
+        opacity: 0,
+        ease: 'power2.out',
+        delay: 1,
+      });
+
+      gsap.from('.team-members__item', {
+        scrollTrigger: {
+          trigger: '.team-members__item',
+          start: 'top 90%',
+          toggleActions: 'play none none none',
+          scroller: '.smooth-scroll',
+        },
+        duration: 1.5,
+        opacity: 0,
+        y: 50,
+        stagger: 0.2,
+        ease: 'power2.out',
+      });
+
+      gsap.from('.footer', {
+        scrollTrigger: {
+          trigger: '.footer',
+          start: 'top bottom',
+          toggleActions: 'play none none none',
+          scroller: '.smooth-scroll',
+        },
+        duration: 1.5,
+        y: 50,
+        opacity: 0,
+        ease: 'power2.out',
+      });
+
+      ScrollTrigger.addEventListener('refresh', () => locoScroll.update());
+      ScrollTrigger.refresh();
+    });
+  </script>
+</body>
+
 </html>

@@ -1,382 +1,366 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-      crossorigin="anonymous"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css"
-    />
-    <link rel="stylesheet" href="./src/css/main.css" />
-    <title>SRH Site</title>
-  </head>
 
-  <body class="bg-blue">
-    <div class="container smooth-scroll">
-      <nav class="navbar">
-        <a href="index.html" class="logo">
-          <img width="124" src="./src/images/logo-white.svg" alt="logo white" />
-        </a>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css" />
+  <link rel="stylesheet" href="./src/css/main.css" />
+  <title>SRH Site</title>
+</head>
 
-        <div class="hamburger-menu">
-          <span class="line"></span>
-          <span class="line"></span>
-          <span class="line"></span>
-        </div>
-        <div class="menu-container">
-          <ul class="menu-container__nav">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="work.html">Work</a></li>
-            <li><a href="#">About Emperial Marketing</a></li>
-            <li><a href="team.html">Team</a></li>
-            <li><a href="newsletter.html">Newsletter</a></li>
-          </ul>
-        </div>
-      </nav>
+<style>
+  body {
+    transition: background 400ms ease-in-out;
+  }
+</style>
 
-      <main>
-        <h1 class="main-title">
-          <span class="left-word dunbartall-ultra text-pink">The</span>
-          <span class="right-word dunbartall-ultra text-yellow">Dispatch</span>
-        </h1>
+<body class="bg-blue">
+  <div class="theme-changer">
+    <div onclick="changeThemeColor(Theme.pink)" id="theme-pink"></div>
+    <div onclick="changeThemeColor(Theme.blue)" id="theme-blue"></div>
+    <div onclick="changeThemeColor(Theme.green)" id="theme-green"></div>
+  </div>
 
-        <div class="main-subtitle main-subtitle--medium">
-          <p class="poppins-medium text-yellow">
-            Bi-weekly newsletter trusted by marketing leaders like you. Learn
-            how to better navigate the world of creativity and marketing with
-            THE DISPATCH.
-          </p>
-        </div>
+  <div class="container smooth-scroll">
+    <nav id="navbar" class="navbar">
+      <a href="index.html" class="logo">
+        <img width="124" src="./src/images/logo-white.svg" alt="logo white" />
+      </a>
 
-        <div class="filter-buttons">
-          <button class="primary-button primary-button--outline">
-            Empirical Marketing
-          </button>
-          <button class="primary-button primary-button--outline">
-            Creative
-          </button>
-          <button class="primary-button primary-button--outline">
-            Culture
-          </button>
-          <button class="primary-button primary-button--outline">
-            Strategy
-          </button>
-          <button class="primary-button primary-button--outline">
-            Business
-          </button>
-          <button class="primary-button primary-button--outline">Media</button>
-          <button class="primary-button primary-button--outline">
-            Agency News
-          </button>
-        </div>
+      <div class="hamburger-menu">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </div>
+      <div class="menu-container">
+        <ul class="menu-container__nav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="work.html">Work</a></li>
+          <li><a href="#">About Emperial Marketing</a></li>
+          <li><a href="team.html">Team</a></li>
+          <li><a href="newsletter.html">Newsletter</a></li>
+        </ul>
+      </div>
+    </nav>
 
-        <div class="showcase-gallery row g-3">
-          <div class="col-12 col-sm-6 col-md-4">
-            <div class="gallery-item">
-              <img
-                src="./src/images/works/showcase-1.png"
-                class="img-fluid"
-                alt="Gallery Image 1"
-              />
-              <div class="overlay">
-                <div class="overlay-text">
-                  <p class="title">Your project title here</p>
-                  <p class="description">
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                    Dignissimos, veritatis perspiciatis at quidem impedit
-                    pariatur deserunt reprehenderit fuga reiciendis culpa
-                    aperiam
-                  </p>
-                  <p class="action">Also from Mars</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-12 col-sm-6 col-md-4">
-            <div class="gallery-item">
-              <img
-                src="./src/images/works/showcase-1.png"
-                class="img-fluid"
-                alt="Gallery Image 2"
-              />
-              <div class="overlay">
-                <div class="overlay-text">
-                  <p class="title">Your project title here</p>
-                  <p class="description">
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                    Dignissimos, veritatis perspiciatis at quidem impedit
-                    pariatur deserunt reprehenderit fuga reiciendis culpa
-                    aperiam
-                  </p>
-                  <p class="action">Also from Mars</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-12 col-sm-6 col-md-4">
-            <div class="gallery-item">
-              <img
-                src="./src/images/works/showcase-2.png"
-                class="img-fluid"
-                alt="Gallery Image 3"
-              />
-              <div class="overlay">
-                <div class="overlay-text">
-                  <p class="title">Your project title here</p>
-                  <p class="description">
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                    Dignissimos, veritatis perspiciatis at quidem impedit
-                    pariatur deserunt reprehenderit fuga reiciendis culpa
-                    aperiam
-                  </p>
-                  <p class="action">Also from Mars</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-12 col-sm-6 col-md-4">
-            <div class="gallery-item">
-              <img
-                src="./src/images/works/showcase-2.png"
-                class="img-fluid"
-                alt="Gallery Image 4"
-              />
-              <div class="overlay">
-                <div class="overlay-text">
-                  <p class="title">Your project title here</p>
-                  <p class="description">
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                    Dignissimos, veritatis perspiciatis at quidem impedit
-                    pariatur deserunt reprehenderit fuga reiciendis culpa
-                    aperiam
-                  </p>
-                  <p class="action">Also from Mars</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-12 col-sm-6 col-md-4">
-            <div class="gallery-item">
-              <img
-                src="./src/images/works/showcase-3.png"
-                class="img-fluid"
-                alt="Gallery Image 3"
-              />
-              <div class="overlay">
-                <div class="overlay-text">
-                  <p class="title">Your project title here</p>
-                  <p class="description">
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                    Dignissimos, veritatis perspiciatis at quidem impedit
-                    pariatur deserunt reprehenderit fuga reiciendis culpa
-                    aperiam
-                  </p>
-                  <p class="action">Also from Mars</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-12 col-sm-6 col-md-4">
-            <div class="gallery-item">
-              <img
-                src="./src/images/works/showcase-3.png"
-                class="img-fluid"
-                alt="Gallery Image 4"
-              />
-              <div class="overlay">
-                <div class="overlay-text">
-                  <p class="title">Your project title here</p>
-                  <p class="description">
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                    Dignissimos, veritatis perspiciatis at quidem impedit
-                    pariatur deserunt reprehenderit fuga reiciendis culpa
-                    aperiam
-                  </p>
-                  <p class="action">Also from Mars</p>
-                </div>
+    <main>
+      <h1 class="main-title">
+        <span class="left-word dunbartall-ultra text-pink" id="primary-title">The</span>
+        <span class="right-word dunbartall-ultra text-yellow" id="secondary-title">Dispatch</span>
+      </h1>
+
+      <div class="main-subtitle main-subtitle--medium">
+        <p class="poppins-medium text-yellow">
+          Bi-weekly newsletter trusted by marketing leaders like you. Learn
+          how to better navigate the world of creativity and marketing with
+          THE DISPATCH.
+        </p>
+      </div>
+
+      <div class="filter-buttons">
+        <button class="primary-button primary-button--outline">
+          Empirical Marketing
+        </button>
+        <button class="primary-button primary-button--outline">
+          Creative
+        </button>
+        <button class="primary-button primary-button--outline">
+          Culture
+        </button>
+        <button class="primary-button primary-button--outline">
+          Strategy
+        </button>
+        <button class="primary-button primary-button--outline">
+          Business
+        </button>
+        <button class="primary-button primary-button--outline">Media</button>
+        <button class="primary-button primary-button--outline">
+          Agency News
+        </button>
+      </div>
+
+      <div class="showcase-gallery row g-3">
+        <div class="col-12 col-sm-6 col-md-4">
+          <div class="gallery-item">
+            <img src="./src/images/works/showcase-1.png" class="img-fluid" alt="Gallery Image 1" />
+            <div class="overlay">
+              <div class="overlay-text">
+                <p class="title">Your project title here</p>
+                <p class="description">
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Dignissimos, veritatis perspiciatis at quidem impedit
+                  pariatur deserunt reprehenderit fuga reiciendis culpa
+                  aperiam
+                </p>
+                <p class="action">Also from Mars</p>
               </div>
             </div>
           </div>
         </div>
-        <div
-          class="w-100 d-flex justify-content-center align-items-center y-divider"
-        >
-          <button class="primary-button primary-button--outline">
-            View more
-          </button>
+        <div class="col-12 col-sm-6 col-md-4">
+          <div class="gallery-item">
+            <img src="./src/images/works/showcase-1.png" class="img-fluid" alt="Gallery Image 2" />
+            <div class="overlay">
+              <div class="overlay-text">
+                <p class="title">Your project title here</p>
+                <p class="description">
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Dignissimos, veritatis perspiciatis at quidem impedit
+                  pariatur deserunt reprehenderit fuga reiciendis culpa
+                  aperiam
+                </p>
+                <p class="action">Also from Mars</p>
+              </div>
+            </div>
+          </div>
         </div>
-
-        <footer class="footer bg-pink">
-          <div class="footer__menu-top">
-            <a href="index.html" class="footer__logo">
-              <img
-                width="190"
-                src="./src/images/logo-blue.svg"
-                alt="Footer Logo"
-              />
-            </a>
-            <div class="footer__nav">
-              <ul class="footer__nav-list d-flex">
-                <li class="footer__nav-item">
-                  <a href="index.html">Home</a>
-                </li>
-                <li class="footer__nav-item">
-                  <a href="work.html">Work</a>
-                </li>
-                <li class="footer__nav-item">
-                  <a href="#">About Empirical Marketing</a>
-                </li>
-                <li class="footer__nav-item"><a href="team.html">Team </a></li>
-                <li class="footer__nav-item">
-                  <a href="newsletter.html">Newsletter</a>
-                </li>
-              </ul>
-            </div>
-            <div class="footer__contact">
-              <button class="footer__contact-button">Contact us</button>
+        <div class="col-12 col-sm-6 col-md-4">
+          <div class="gallery-item">
+            <img src="./src/images/works/showcase-2.png" class="img-fluid" alt="Gallery Image 3" />
+            <div class="overlay">
+              <div class="overlay-text">
+                <p class="title">Your project title here</p>
+                <p class="description">
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Dignissimos, veritatis perspiciatis at quidem impedit
+                  pariatur deserunt reprehenderit fuga reiciendis culpa
+                  aperiam
+                </p>
+                <p class="action">Also from Mars</p>
+              </div>
             </div>
           </div>
-          <div class="footer__menu-bottom">
-            ©
-            <script>
-              document.write(new Date().getFullYear());
-            </script>
-            — SRH — Terms — Privacy Policy — CAREERS
+        </div>
+        <div class="col-12 col-sm-6 col-md-4">
+          <div class="gallery-item">
+            <img src="./src/images/works/showcase-2.png" class="img-fluid" alt="Gallery Image 4" />
+            <div class="overlay">
+              <div class="overlay-text">
+                <p class="title">Your project title here</p>
+                <p class="description">
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Dignissimos, veritatis perspiciatis at quidem impedit
+                  pariatur deserunt reprehenderit fuga reiciendis culpa
+                  aperiam
+                </p>
+                <p class="action">Also from Mars</p>
+              </div>
+            </div>
           </div>
-        </footer>
-      </main>
-    </div>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js"></script>
-    <script src="./src/js/main.js"></script>
+        </div>
+        <div class="col-12 col-sm-6 col-md-4">
+          <div class="gallery-item">
+            <img src="./src/images/works/showcase-3.png" class="img-fluid" alt="Gallery Image 3" />
+            <div class="overlay">
+              <div class="overlay-text">
+                <p class="title">Your project title here</p>
+                <p class="description">
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Dignissimos, veritatis perspiciatis at quidem impedit
+                  pariatur deserunt reprehenderit fuga reiciendis culpa
+                  aperiam
+                </p>
+                <p class="action">Also from Mars</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-sm-6 col-md-4">
+          <div class="gallery-item">
+            <img src="./src/images/works/showcase-3.png" class="img-fluid" alt="Gallery Image 4" />
+            <div class="overlay">
+              <div class="overlay-text">
+                <p class="title">Your project title here</p>
+                <p class="description">
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Dignissimos, veritatis perspiciatis at quidem impedit
+                  pariatur deserunt reprehenderit fuga reiciendis culpa
+                  aperiam
+                </p>
+                <p class="action">Also from Mars</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="w-100 d-flex justify-content-center align-items-center y-divider">
+        <button class="primary-button primary-button--outline">
+          View more
+        </button>
+      </div>
 
-    <script>
-      document.addEventListener('DOMContentLoaded', () => {
-        const locoScroll = new LocomotiveScroll({
-          el: document.querySelector('.smooth-scroll'),
-          smooth: true,
-        });
+      <footer class="footer bg-pink" id="footer">
+        <div class="footer__menu-top">
+          <a href="index.html" class="footer__logo">
+            <img id="footer-logo" width="190" src="./src/images/logo-blue.svg" alt="Footer Logo" />
+          </a>
+          <div class="footer__nav">
+            <ul class="footer__nav-list d-flex">
+              <li id="footer-nav-item" class="footer__nav-item">
+                <a href="index.html">Home</a>
+              </li>
+              <li id="footer-nav-item" class="footer__nav-item">
+                <a href="work.html">Work</a>
+              </li>
+              <li id="footer-nav-item" class="footer__nav-item">
+                <a href="#">About Empirical Marketing</a>
+              </li>
+              <li id="footer-nav-item" class="footer__nav-item">
+                <a href="team.html">Team </a>
+              </li>
+              <li id="footer-nav-item" class="footer__nav-item">
+                <a href="newsletter.html">Newsletter</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer__contact">
+            <button class="footer__contact-button" id="footer-contact-button">
+              Contact us
+            </button>
+          </div>
+        </div>
+        <div class="footer__menu-bottom" id="footer-menu-bottom">
+          ©
+          <script>
+            document.write(new Date().getFullYear());
+          </script>
+          — SRH — <span><a href="#">Terms</a></span> —
+          <span><a href="#">Privacy Policy</a></span> —
+          <span><a href="#">CAREERS</a></span>
+        </div>
+      </footer>
+    </main>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js"></script>
+  <script src="./src/js/main.js"></script>
+  <script src="./src/js/theme.js"></script>
 
-        locoScroll.on('scroll', ScrollTrigger.update);
-
-        ScrollTrigger.scrollerProxy('.smooth-scroll', {
-          scrollTop(value) {
-            return arguments.length
-              ? locoScroll.scrollTo(value, 0, 0)
-              : locoScroll.scroll.instance.scroll.y;
-          },
-          getBoundingClientRect() {
-            return {
-              top: 0,
-              left: 0,
-              width: window.innerWidth,
-              height: window.innerHeight,
-            };
-          },
-          pinType: document.querySelector('.smooth-scroll').style.transform
-            ? 'transform'
-            : 'fixed',
-        });
-
-        gsap.registerPlugin(ScrollTrigger);
-
-        // Animate the logo
-        gsap.from('.logo img', {
-          duration: 1.5,
-          opacity: 0,
-          y: -20,
-          ease: 'power2.out',
-        });
-
-        // Animate the main title
-        gsap.from('.main-title .left-word', {
-          duration: 1.5,
-          x: -100,
-          opacity: 0,
-          ease: 'power2.out',
-          delay: 0.5,
-        });
-
-        gsap.from('.main-title .right-word', {
-          duration: 1.5,
-          x: 100,
-          opacity: 0,
-          ease: 'power2.out',
-          delay: 0.7,
-        });
-
-        // Animate the main subtitle
-        gsap.from('.main-subtitle p', {
-          duration: 1.5,
-          y: 20,
-          opacity: 0,
-          ease: 'power2.out',
-          delay: 1,
-        });
-
-        // Animate the filter buttons
-        gsap.from('.filter-buttons .primary-button', {
-          duration: 1.5,
-          y: 20,
-          opacity: 0,
-          ease: 'power2.out',
-          stagger: 0.2,
-          delay: 1.2,
-        });
-
-        // Animate the showcase gallery items
-        gsap.from('.showcase-gallery .gallery-item', {
-          scrollTrigger: {
-            trigger: '.showcase-gallery .gallery-item',
-            start: 'top 90%',
-            toggleActions: 'play none none none',
-            scroller: '.smooth-scroll',
-          },
-          duration: 1.5,
-          opacity: 0,
-          y: 50,
-          stagger: 0.2,
-          ease: 'power2.out',
-        });
-
-        // Animate the view more button
-        gsap.from('.y-divider .primary-button', {
-          scrollTrigger: {
-            trigger: '.y-divider .primary-button',
-            start: 'top 90%',
-            toggleActions: 'play none none none',
-            scroller: '.smooth-scroll',
-          },
-          duration: 1.5,
-          y: 20,
-          opacity: 0,
-          ease: 'power2.out',
-        });
-
-        // Animate the footer
-        gsap.from('.footer', {
-          scrollTrigger: {
-            trigger: '.footer',
-            start: 'top bottom',
-            toggleActions: 'play none none none',
-            scroller: '.smooth-scroll',
-          },
-          duration: 1.5,
-          y: 50,
-          opacity: 0,
-          ease: 'power2.out',
-        });
-
-        ScrollTrigger.addEventListener('refresh', () => locoScroll.update());
-        ScrollTrigger.refresh();
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const locoScroll = new LocomotiveScroll({
+        el: document.querySelector('.smooth-scroll'),
+        smooth: true,
       });
-    </script>
-  </body>
+
+      locoScroll.on('scroll', ScrollTrigger.update);
+
+      ScrollTrigger.scrollerProxy('.smooth-scroll', {
+        scrollTop(value) {
+          return arguments.length
+            ? locoScroll.scrollTo(value, 0, 0)
+            : locoScroll.scroll.instance.scroll.y;
+        },
+        getBoundingClientRect() {
+          return {
+            top: 0,
+            left: 0,
+            width: window.innerWidth,
+            height: window.innerHeight,
+          };
+        },
+        pinType: document.querySelector('.smooth-scroll').style.transform
+          ? 'transform'
+          : 'fixed',
+      });
+
+      gsap.registerPlugin(ScrollTrigger);
+
+      // Animate the logo
+      gsap.from('.logo img', {
+        duration: 1.5,
+        opacity: 0,
+        y: -20,
+        ease: 'power2.out',
+      });
+
+      // Animate the main title
+      gsap.from('.main-title .left-word', {
+        duration: 1.5,
+        x: -100,
+        opacity: 0,
+        ease: 'power2.out',
+        delay: 0.5,
+      });
+
+      gsap.from('.main-title .right-word', {
+        duration: 1.5,
+        x: 100,
+        opacity: 0,
+        ease: 'power2.out',
+        delay: 0.7,
+      });
+
+      // Animate the main subtitle
+      gsap.from('.main-subtitle p', {
+        duration: 1.5,
+        y: 20,
+        opacity: 0,
+        ease: 'power2.out',
+        delay: 1,
+      });
+
+      // Animate the filter buttons
+      gsap.from('.filter-buttons .primary-button', {
+        duration: 1.5,
+        y: 20,
+        opacity: 0,
+        ease: 'power2.out',
+        stagger: 0.2,
+        delay: 1.2,
+      });
+
+      // Animate the showcase gallery items
+      gsap.from('.showcase-gallery .gallery-item', {
+        scrollTrigger: {
+          trigger: '.showcase-gallery .gallery-item',
+          start: 'top 90%',
+          toggleActions: 'play none none none',
+          scroller: '.smooth-scroll',
+        },
+        duration: 1.5,
+        opacity: 0,
+        y: 50,
+        stagger: 0.2,
+        ease: 'power2.out',
+      });
+
+      // Animate the view more button
+      gsap.from('.y-divider .primary-button', {
+        scrollTrigger: {
+          trigger: '.y-divider .primary-button',
+          start: 'top 90%',
+          toggleActions: 'play none none none',
+          scroller: '.smooth-scroll',
+        },
+        duration: 1.5,
+        y: 20,
+        opacity: 0,
+        ease: 'power2.out',
+      });
+
+      // Animate the footer
+      gsap.from('.footer', {
+        scrollTrigger: {
+          trigger: '.footer',
+          start: 'top bottom',
+          toggleActions: 'play none none none',
+          scroller: '.smooth-scroll',
+        },
+        duration: 1.5,
+        y: 50,
+        opacity: 0,
+        ease: 'power2.out',
+      });
+
+      ScrollTrigger.addEventListener('refresh', () => locoScroll.update());
+      ScrollTrigger.refresh();
+    });
+  </script>
+</body>
+
 </html>

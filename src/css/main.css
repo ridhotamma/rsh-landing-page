@@ -221,6 +221,36 @@ q::after {
   padding: 0;
 }
 
+.theme-changer {
+  z-index: 10;
+  position: fixed;
+  left: 0;
+  bottom: 50%;
+  transform: translateY(50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+  width: 18px;
+}
+.theme-changer #theme-pink,
+.theme-changer #theme-blue,
+.theme-changer #theme-green {
+  height: 100%;
+  width: 100%;
+  cursor: pointer;
+}
+.theme-changer #theme-pink {
+  background-color: #f749d4;
+}
+.theme-changer #theme-blue {
+  background-color: #0000e0;
+}
+.theme-changer #theme-green {
+  background-color: #18b31c;
+}
+
 .primary-button {
   color: white;
   padding: 0.5rem 2rem;
@@ -264,6 +294,16 @@ q::after {
     min-width: 140px;
     font-size: 1rem;
   }
+}
+
+#navbar,
+#footer {
+  transition: background 400ms ease-in-out;
+}
+
+#primary-title,
+#secondary-title {
+  transition: color 400ms ease-in-out;
 }
 
 .navbar {
@@ -471,6 +511,12 @@ q::after {
     top: unset;
     transform: translateX(-50%);
   }
+}
+.team-members__item .popover-yellow {
+  background-color: #f5e400;
+}
+.team-members__item .popover-yellow::before {
+  background-color: #f5e400;
 }
 .team-members__item .person-detail {
   background-repeat: no-repeat;

@@ -12,6 +12,12 @@
 </head>
 
 <body class="bg-blue">
+  <div class="theme-changer">
+    <div onclick="changeThemeColor(Theme.pink, document.querySelector('.animation-container'))" id="theme-pink"></div>
+    <div onclick="changeThemeColor(Theme.blue, document.querySelector('.animation-container'))" id="theme-blue"></div>
+    <div onclick="changeThemeColor(Theme.green, document.querySelector('.animation-container'))" id="theme-green"></div>
+  </div>
+
   <div class="animation-container">
     <div class="logo">
       <img src="src/images/logo-yellow.svg" alt="logo yellow">
@@ -36,7 +42,7 @@
 
     <div class="scene scene__1">
       <!-- DONT ADD A SPACE TO IT -->
-      <h1 class="dunbartall-ultra">
+      <h1 class="dunbartall-ultra" id="intro-title">
         AR<div class="letter-i">
           <div class="chevron">
             <div></div>
@@ -46,7 +52,7 @@
           <div class="text"></div>
         </div>SE
       </h1>
-      <h2 class="dunbartall-ultra">YE SLEEPING GIANT</h2>
+      <h2 class="dunbartall-ultra" id="intro-title">YE SLEEPING GIANT</h2>
       <div class="scene__intro scene__intro--1 text-yellow">
         We harness empirical marketing(1) to awaken brands to their true
         potential.
@@ -203,6 +209,7 @@
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
   <script src="./src/js/main.js"></script>
+  <script src="./src/js/theme.js"></script>
   <script src="./src/js/animation.js"></script>
 </body>
 

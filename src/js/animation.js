@@ -144,7 +144,11 @@ tl.fromTo(
     },
     '<'
   )
-  .to(scene1, { y: '200vh', duration: 3, ease: 'power4.inOut' })
+  .to(scene1, {
+    y: '200vh',
+    duration: 3,
+    ease: 'power4.inOut',
+  })
   .to(chevronUp, { y: '-150vh', duration: 3, ease: 'power4.inOut' }, '<')
   .to(
     chevronArrow,
@@ -178,6 +182,8 @@ tl.fromTo(
   { y: '0vh', autoAlpha: 1, duration: 5 },
   '-=3'
 )
+  .set('.animation-container', { backgroundColor: 'transparent' }, '<')
+  .set(letterI, { backgroundColor: '#f749d4' }, '<')
   .to(logo, { autoAlpha: 0, duration: 3 }, '<')
   .fromTo(
     s2Circles,

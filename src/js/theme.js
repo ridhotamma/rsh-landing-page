@@ -54,8 +54,6 @@ function changeThemeColor(theme, wrapper = document.body) {
   currentTheme = theme;
   wrapper.style.backgroundColor = theme.bodyBackgroundColor;
 
-  tl.invalidate()
-
   if (introTitles.length > 0) {
     introTitles.forEach((element) => {
       if (theme.bodyBackgroundColor === Color.blue) {

@@ -8,28 +8,31 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 
-function isMobile() {
+let isTablet;
+let isMobile;
+
+function updateDeviceType() {
   const userAgent = navigator.userAgent || window.opera;
   const maxMobileWidth = 767;
+  const minTabletWidth = 768;
+  const maxTabletWidth = 1024;
 
   const isMobileDevice =
     /android|iphone|ipod|blackberry|iemobile|opera mini/i.test(userAgent);
   const isMobileWidth = window.innerWidth <= maxMobileWidth;
-
-  return isMobileDevice || isMobileWidth;
-}
-
-function isTablet() {
-  const userAgent = navigator.userAgent || window.opera;
-  const minTabletWidth = 768;
-  const maxTabletWidth = 1024;
+  isMobile = isMobileDevice || isMobileWidth;
 
   const isTabletDevice = /ipad|android(?!.*mobile)/i.test(userAgent);
   const isTabletWidth =
     window.innerWidth >= minTabletWidth && window.innerWidth <= maxTabletWidth;
-
-  return isTabletDevice || isTabletWidth;
+  isTablet = isTabletDevice || isTabletWidth;
 }
+
+// Initialize on load
+updateDeviceType();
+
+// Recalculate on window resize
+window.addEventListener('resize', updateDeviceType);
 
 function __getIEVersion() {
   var rv = -1; // Return value assumes failure.

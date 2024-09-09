@@ -67,7 +67,7 @@ tl.fromTo(
     '<'
   )
   .to(letterI, {
-    scaleY: isMobile() || isTablet() || isTablet() ? 12 : 4,
+    scaleY: isMobile || isTablet || isTablet ? 12 : 4,
     transformOrigin: 'bottom',
     duration: 3,
     ease: 'power4.inOut',
@@ -95,7 +95,7 @@ tl.fromTo(
   .to(
     letterI,
     {
-      scaleY: isMobile() || isTablet() || isTablet() ? 20 : 8,
+      scaleY: isMobile || isTablet || isTablet ? 20 : 8,
       duration: 3,
       ease: 'power4.inOut',
     },
@@ -130,6 +130,7 @@ tl.fromTo(
     },
     '<'
   )
+  .to('.theme-changer', { autoAlpha: 0, duration: 3 }, '<')
   .fromTo(
     intro3,
     {
@@ -167,7 +168,7 @@ tl.fromTo(
   .to(
     letterI,
     {
-      scaleY: isMobile() || isTablet() || isTablet() ? 32 : 12,
+      scaleY: isMobile || isTablet || isTablet ? 32 : 12,
       duration: 3,
       ease: 'power4.inOut',
     },
@@ -184,6 +185,7 @@ tl.fromTo(
 )
   .set('.animation-container', { backgroundColor: 'transparent' }, '<')
   .set(letterI, { backgroundColor: '#f749d4' }, '<')
+  .set('#intro-title', { color: '#f749d4' }, '<')
   .to(logo, { autoAlpha: 0, duration: 3 }, '<')
   .fromTo(
     s2Circles,
@@ -458,9 +460,9 @@ tl.set('.circle__replace', { autoAlpha: 0 })
   )
   .fromTo(
     '.circles-vertical__inner',
-    { x: isMobile() || isTablet() ? '-40vw' : '-20vw' },
+    { x: isMobile || isTablet ? '-40vw' : '-20vw' },
     {
-      x: isMobile() || isTablet() ? '3vw' : '10vw',
+      x: isMobile || isTablet ? '3vw' : '10vw',
       duration: 5,
       ease: 'power4.inOut',
     },
@@ -480,10 +482,10 @@ tl.set('.circle__replace', { autoAlpha: 0 })
   .from(
     '.circle__replace--1',
     {
-      xPercent: isMobile() || isTablet() ? 205 : 225,
-      yPercent: isMobile() || isTablet() ? 13 : -1,
-      width: isMobile() || isTablet() ? '38vw' : '28vw',
-      height: isMobile() || isTablet() ? '38vw' : '28vw',
+      xPercent: isMobile || isTablet ? 205 : 225,
+      yPercent: isMobile || isTablet ? 13 : -1,
+      width: isMobile || isTablet ? '38vw' : '28vw',
+      height: isMobile || isTablet ? '38vw' : '28vw',
       duration: 5,
       ease: 'power4.inOut',
     },
@@ -493,10 +495,10 @@ tl.set('.circle__replace', { autoAlpha: 0 })
   .from(
     '.circle__replace--2',
     {
-      xPercent: isMobile() || isTablet() ? 205 : 225,
-      yPercent: isMobile() || isTablet() ? 93 : 92,
-      width: isMobile() || isTablet() ? '38vw' : '28vw',
-      height: isMobile() || isTablet() ? '38vw' : '28vw',
+      xPercent: isMobile || isTablet ? 205 : 225,
+      yPercent: isMobile || isTablet ? 93 : 92,
+      width: isMobile || isTablet ? '38vw' : '28vw',
+      height: isMobile || isTablet ? '38vw' : '28vw',
       duration: 5,
       ease: 'power4.inOut',
     },
@@ -505,10 +507,10 @@ tl.set('.circle__replace', { autoAlpha: 0 })
   .from(
     '.circle__replace--3',
     {
-      xPercent: isMobile() || isTablet() ? 100 : 118,
-      yPercent: isMobile() || isTablet() ? -40 : -30,
-      width: isMobile() || isTablet() ? '38vw' : '28vw',
-      height: isMobile() || isTablet() ? '38vw' : '28vw',
+      xPercent: isMobile || isTablet ? 100 : 118,
+      yPercent: isMobile || isTablet ? -40 : -30,
+      width: isMobile || isTablet ? '38vw' : '28vw',
+      height: isMobile || isTablet ? '38vw' : '28vw',
       duration: 5,
       ease: 'power4.inOut',
     },
@@ -517,10 +519,10 @@ tl.set('.circle__replace', { autoAlpha: 0 })
   .from(
     '.circle__replace--4',
     {
-      xPercent: isMobile() || isTablet() ? 100 : 118,
-      yPercent: isMobile() || isTablet() ? -171 : -151,
-      width: isMobile() || isTablet() ? '38vw' : '28vw',
-      height: isMobile() || isTablet() ? '38vw' : '28vw',
+      xPercent: isMobile || isTablet ? 100 : 118,
+      yPercent: isMobile || isTablet ? -171 : -151,
+      width: isMobile || isTablet ? '38vw' : '28vw',
+      height: isMobile || isTablet ? '38vw' : '28vw',
       duration: 5,
       ease: 'power4.inOut',
     },
@@ -530,10 +532,10 @@ tl.set('.circle__replace', { autoAlpha: 0 })
   .from(
     '.circle__replace--5',
     {
-      xPercent: isMobile() || isTablet() ? 311 : 332,
-      yPercent: isMobile() || isTablet() ? -92 : -59,
-      width: isMobile() || isTablet() ? '38vw' : '28vw',
-      height: isMobile() || isTablet() ? '38vw' : '28vw',
+      xPercent: isMobile || isTablet ? 311 : 332,
+      yPercent: isMobile || isTablet ? -92 : -59,
+      width: isMobile || isTablet ? '38vw' : '28vw',
+      height: isMobile || isTablet ? '38vw' : '28vw',
       duration: 5,
       ease: 'power4.inOut',
     },
@@ -543,10 +545,10 @@ tl.set('.circle__replace', { autoAlpha: 0 })
   .from(
     '.circle__replace--6',
     {
-      xPercent: isMobile() || isTablet() ? 312 : 332,
-      yPercent: isMobile() || isTablet() ? -12 : 34,
-      width: isMobile() || isTablet() ? '38vw' : '28vw',
-      height: isMobile() || isTablet() ? '38vw' : '28vw',
+      xPercent: isMobile || isTablet ? 312 : 332,
+      yPercent: isMobile || isTablet ? -12 : 34,
+      width: isMobile || isTablet ? '38vw' : '28vw',
+      height: isMobile || isTablet ? '38vw' : '28vw',
       duration: 5,
       ease: 'power4.inOut',
     },
@@ -556,10 +558,10 @@ tl.set('.circle__replace', { autoAlpha: 0 })
   .from(
     '.circle__replace--7',
     {
-      xPercent: isMobile() || isTablet() ? -11 : 11,
-      yPercent: isMobile() || isTablet() ? -195 : -195,
-      width: isMobile() || isTablet() ? '38vw' : '28vw',
-      height: isMobile() || isTablet() ? '38vw' : '28vw',
+      xPercent: isMobile || isTablet ? -11 : 11,
+      yPercent: isMobile || isTablet ? -195 : -195,
+      width: isMobile || isTablet ? '38vw' : '28vw',
+      height: isMobile || isTablet ? '38vw' : '28vw',
       duration: 5,
       ease: 'power4.inOut',
     },
@@ -673,12 +675,16 @@ tl.to(letterI, {
     { y: '0vh', duration: 5 },
     '-=3'
   )
-  .from(
+  .fromTo(
     '.scene__4 .description > *',
     {
       x: (index) => (index === 0 ? '-100vw' : '100vw'),
-      duration: 5,
       autoAlpha: 0,
+    },
+    {
+      x: 0,
+      duration: 5,
+      autoAlpha: 1,
       stagger: 0.5,
     },
     '<'

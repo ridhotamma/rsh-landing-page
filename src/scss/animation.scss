@@ -435,7 +435,7 @@ body {
       &__inner {
         height: 100%;
         width: 3.5vw;
-        transform: translateY(calc(3.5vw - 5.25vw));
+        transform: translateY(calc(-5.5% - 3.5vw));
 
         .circle {
           &__dot {

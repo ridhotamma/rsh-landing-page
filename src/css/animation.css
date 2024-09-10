@@ -525,7 +525,7 @@ body::-webkit-scrollbar {
 .scene__3 .circles-vertical__inner {
   height: 100%;
   width: 3.5vw;
-  transform: translateY(-1.75vw);
+  transform: translateY(calc(-5.5% - 3.5vw));
 }
 .scene__3 .circles-vertical__inner .circle__dot {
   background-color: #f749d4;

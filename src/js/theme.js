@@ -52,7 +52,12 @@ function changeThemeColor(theme, wrapper = document.body) {
   const letterIText = document.querySelector('.letter-i > .text');
 
   currentTheme = theme;
-  wrapper.style.backgroundColor = theme.bodyBackgroundColor;
+
+  if (wrapper === document.body) {
+    wrapper.style.backgroundColor = theme.bodyBackgroundColor
+  } else {
+    gsap.to(wrapper, { backgroundColor: theme.bodyBackgroundColor, duration: 0.4 })
+  }
 
   if (introTitles.length > 0) {
     introTitles.forEach((element) => {

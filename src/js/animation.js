@@ -1,6 +1,5 @@
 gsap.registerPlugin(ScrollTrigger);
 
-const body = document.body;
 const container = document.querySelector('.animation-container');
 const logo = document.querySelector('.logo');
 
@@ -45,27 +44,16 @@ gsap.set(scene5, { autoAlpha: 0 });
 
 // scene 1
 tl.fromTo(
-  logo,
-  { xPercent: -50, yPercent: -50, left: '50%', top: '50%' },
+  scene1,
   {
+    y: '100vh',
+  },
+  {
+    y: '0vh',
     duration: 3,
-    xPercent: 0,
-    yPercent: 0,
-    left: '2%',
-    top: '2%',
-  }
+  },
+  '<'
 )
-  .fromTo(
-    scene1,
-    {
-      y: '100vh',
-    },
-    {
-      y: '0vh',
-      duration: 3,
-    },
-    '<'
-  )
   .to(letterI, {
     scaleY: isMobile || isTablet ? 12 : 4,
     transformOrigin: 'bottom',
@@ -183,7 +171,7 @@ tl.fromTo(
   { y: '0vh', autoAlpha: 1, duration: 5 },
   '-=3'
 )
-  .set('.animation-container', { backgroundColor: 'transparent' }, '<')
+  .set('.animation-container', { backgroundColor: '#0000e0' }, '<')
   .set(letterI, { backgroundColor: '#f749d4' }, '<')
   .set('#intro-title', { color: '#f749d4' }, '<')
   .fromTo(
@@ -223,7 +211,11 @@ tl.fromTo(
     },
     '<'
   )
-  .to(body, { backgroundColor: '#11f3f3', duration: 6, ease: 'power4.inOut' })
+  .to('.animation-container', {
+    backgroundColor: '#11f3f3',
+    duration: 6,
+    ease: 'power4.inOut',
+  })
   .to(s2OuterCircles, { autoAlpha: 1, duration: 5, ease: 'power4.inOut' }, '<')
   .to(s2OuterCircles, { yPercent: 100, duration: 6, ease: 'power4.inOut' }, '<')
   .to(
@@ -249,7 +241,11 @@ tl.fromTo(
 
 // scene 3
 tl.set('.circle__replace', { autoAlpha: 0 })
-  .to(body, { backgroundColor: '#f5e400', duration: 3, ease: 'power4.inOut' })
+  .to('.animation-container', {
+    backgroundColor: '#f5e400',
+    duration: 3,
+    ease: 'power4.inOut',
+  })
 
   .from(
     '.scene__3 .circles .circle__random:nth-child(1)',
@@ -442,7 +438,7 @@ tl.set('.circle__replace', { autoAlpha: 0 })
     '<'
   )
   .to(
-    body,
+    '.animation-container',
     { backgroundColor: '#0000e0', duration: 3, ease: 'power4.inOut' },
     '<'
   )
@@ -586,7 +582,7 @@ tl.to(letterI, {
   )
   .to('.circles-vertical__inner', { y: '-50vh', duration: 3 }, '<')
   .to(
-    body,
+    '.animation-container',
     { backgroundColor: '#11f3f3', duration: 3, ease: 'power4.inOut' },
     '<'
   )
@@ -692,7 +688,7 @@ tl.to(letterI, {
   .set(letterI, { autoAlpha: 0 })
   .to('.scene__4 .closing', { y: '280vh', duration: 5 })
   .to('.scene__4 .closing .gear', { rotate: -180, duration: 5 }, '<')
-  .to(body, { backgroundColor: '#f5e400', duration: 3 }, '<')
+  .to('.animation-container', { backgroundColor: '#f5e400', duration: 3 }, '<')
   .to(
     '.hamburger-menu > .line',
     { backgroundColor: '#0000e0', duration: 3 },

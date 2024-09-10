@@ -37,6 +37,15 @@ const tl = gsap.timeline({
   },
 });
 
+const tlAutoScroll = gsap.timeline({
+  paused: true,
+  onComplete: () => {
+    document.body.style.overflow = 'auto';
+    bounceChevronUp();
+  },
+});
+
+gsap.set(scene1, { autoAlpha: 0 });
 gsap.set(scene2, { autoAlpha: 0 });
 gsap.set(scene3, { autoAlpha: 0 });
 gsap.set(scene4, { autoAlpha: 0 });
@@ -54,27 +63,44 @@ function pulseCircles() {
   });
 }
 
+function bounceChevronUp() {
+  gsap.fromTo(
+    chevronUp,
+    { y: 0 },
+    {
+      y: -50,
+      duration: 0.5,
+      ease: 'power3.inOut',
+      repeat: -1,
+      yoyo: true,
+    }
+  );
+}
+
 // scene 1
-tl.fromTo(
-  scene1,
-  {
-    y: '100vh',
-  },
-  {
-    y: '0vh',
-    duration: 3,
-  },
-  '<'
-)
+// start auto scroll
+tlAutoScroll
+  .set('.loading-container', { autoAlpha: 0, delay: 1 })
+  .set(scene1, { autoAlpha: 1 })
+  .fromTo(
+    scene1,
+    {
+      y: '120vh',
+    },
+    {
+      y: '0vh',
+      duration: 1.5,
+    }
+  )
   .to(letterI, {
     scaleY: isMobile || isTablet ? 12 : 4,
     transformOrigin: 'bottom',
-    duration: 3,
+    duration: 1.5,
     ease: 'power4.inOut',
   })
   .to(scene1, {
     y: '18vh',
-    duration: 3,
+    duration: 1.5,
     ease: 'power4.inOut',
   })
   .fromTo(
@@ -85,18 +111,18 @@ tl.fromTo(
     },
     {
       y: 0,
-      duration: 3,
+      duration: 1.5,
       autoAlpha: 1,
       ease: 'power4.inOut',
     },
     '<'
   )
-  .to(scene1, { y: '30vh', duration: 3, ease: 'power4.inOut' })
+  .to(scene1, { y: '30vh', duration: 1.5, ease: 'power4.inOut' })
   .to(
     letterI,
     {
       scaleY: isMobile || isTablet ? 20 : 8,
-      duration: 3,
+      duration: 1.5,
       ease: 'power4.inOut',
     },
     '<'
@@ -109,13 +135,13 @@ tl.fromTo(
     },
     {
       y: 0,
-      duration: 3,
+      duration: 1.5,
       autoAlpha: 1,
       ease: 'power4.inOut',
     },
     '<'
   )
-  .to(scene1, { y: '55vh', duration: 3, ease: 'power4.inOut' })
+  .to(scene1, { y: '55vh', duration: 1.5, ease: 'power4.inOut' })
   .fromTo(
     chevronUp,
     {
@@ -124,7 +150,7 @@ tl.fromTo(
     },
     {
       y: 0,
-      duration: 3,
+      duration: 1.5,
       autoAlpha: 1,
       ease: 'power4.inOut',
     },
@@ -138,25 +164,50 @@ tl.fromTo(
     },
     {
       y: 0,
-      duration: 3,
+      duration: 1.5,
       autoAlpha: 1,
       ease: 'power4.inOut',
     },
     '<'
   )
-  .to('.theme-changer', { autoAlpha: 0, duration: 3 }, '<')
-  .to(scene1, {
+  .to(logo, { autoAlpha: 1, duration: 1.5, ease: 'power4.inOut' }, '<')
+  .to('.theme-changer', { autoAlpha: 0, duration: 1.5 }, '<')
+  .to(
+    letterI,
+    {
+      scaleY: isMobile || isTablet ? 32 : 12,
+      duration: 1.5,
+      ease: 'power4.inOut',
+    },
+    '<'
+  );
+// end auto scroll
+
+tl.fromTo(
+  scene1,
+  { y: '55vh' },
+  {
     y: '200vh',
     duration: 3,
     ease: 'power4.inOut',
-  })
-  .to(chevronUp, { y: '-150vh', duration: 3, ease: 'power4.inOut' }, '<')
-  .to(
+  }
+)
+  .fromTo(
+    chevronUp,
+    { y: '0vh' },
+    { y: '-100vh', duration: 3, ease: 'power4.inOut' },
+    '<'
+  )
+  .fromTo(
     chevronArrow,
+    {
+      yPercent: 0,
+      autoAlpha: 1,
+    },
     {
       yPercent: 120,
       autoAlpha: 0,
-      duration: '3',
+      duration: 3,
       ease: 'power4.inOut',
       stagger: {
         each: 0.2,
@@ -164,17 +215,16 @@ tl.fromTo(
       },
     },
     '<'
-  )
-  .to(
-    letterI,
-    {
-      scaleY: isMobile || isTablet ? 32 : 12,
-      duration: 3,
-      ease: 'power4.inOut',
-    },
-    '<'
-  )
-  .set(chevronUp, { autoAlpha: 0 });
+  );
+// .to(
+//   letterI,
+//   {
+//     scaleY: isMobile || isTablet ? 32 : 12,
+//     duration: 3,
+//     ease: 'power4.inOut',
+//   },
+//   '<'
+// )
 
 // Scene 2
 tl.fromTo(
@@ -717,4 +767,9 @@ tl.to(letterI, {
     '-=2'
   );
 
-pulseCircles();
+document.addEventListener('DOMContentLoaded', () => {
+  ScrollTrigger.refresh();
+  tlAutoScroll.play();
+  pulseCircles();
+  document.body.style.overflow = 'hidden';
+});

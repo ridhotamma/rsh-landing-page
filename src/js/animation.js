@@ -38,10 +38,10 @@ const tl = gsap.timeline({
   },
 });
 
-tl.set(scene2, { autoAlpha: 0 });
-tl.set(scene3, { autoAlpha: 0 });
-tl.set(scene4, { autoAlpha: 0 });
-tl.set(scene5, { autoAlpha: 0 });
+gsap.set(scene2, { autoAlpha: 0 });
+gsap.set(scene3, { autoAlpha: 0 });
+gsap.set(scene4, { autoAlpha: 0 });
+gsap.set(scene5, { autoAlpha: 0 });
 
 // scene 1
 tl.fromTo(
@@ -67,7 +67,7 @@ tl.fromTo(
     '<'
   )
   .to(letterI, {
-    scaleY: isMobile || isTablet || isTablet ? 12 : 4,
+    scaleY: isMobile || isTablet ? 12 : 4,
     transformOrigin: 'bottom',
     duration: 3,
     ease: 'power4.inOut',
@@ -95,7 +95,7 @@ tl.fromTo(
   .to(
     letterI,
     {
-      scaleY: isMobile || isTablet || isTablet ? 20 : 8,
+      scaleY: isMobile || isTablet ? 20 : 8,
       duration: 3,
       ease: 'power4.inOut',
     },
@@ -168,7 +168,7 @@ tl.fromTo(
   .to(
     letterI,
     {
-      scaleY: isMobile || isTablet || isTablet ? 32 : 12,
+      scaleY: isMobile || isTablet ? 32 : 12,
       duration: 3,
       ease: 'power4.inOut',
     },
@@ -186,7 +186,6 @@ tl.fromTo(
   .set('.animation-container', { backgroundColor: 'transparent' }, '<')
   .set(letterI, { backgroundColor: '#f749d4' }, '<')
   .set('#intro-title', { color: '#f749d4' }, '<')
-  .to(logo, { autoAlpha: 0, duration: 3 }, '<')
   .fromTo(
     s2Circles,
     {

@@ -50,13 +50,21 @@ function changeThemeColor(theme, wrapper = document.body) {
   const descriptionPopover = document.querySelectorAll('.description-popover');
   const introTitles = document.querySelectorAll('#intro-title');
   const letterIText = document.querySelector('.letter-i > .text');
+  const pageContainer = document.querySelector('.container');
 
   currentTheme = theme;
 
   if (wrapper === document.body) {
-    wrapper.style.backgroundColor = theme.bodyBackgroundColor
+    wrapper.style.backgroundColor = theme.bodyBackgroundColor;
   } else {
-    gsap.to(wrapper, { backgroundColor: theme.bodyBackgroundColor, duration: 0.4 })
+    gsap.to(wrapper, {
+      backgroundColor: theme.bodyBackgroundColor,
+      duration: 0.4,
+    });
+  }
+
+  if (pageContainer) {
+    pageContainer.style.backgroundColor = theme.bodyBackgroundColor;
   }
 
   if (introTitles.length > 0) {
@@ -83,7 +91,7 @@ function changeThemeColor(theme, wrapper = document.body) {
 
   if (footer) {
     footer.style.backgroundColor = theme.footerBackgrondColor;
-    footer.style.boxShadow = `0 0 0 100vmax ${theme.footerBackgrondColor}`
+    footer.style.boxShadow = `0 0 0 100vmax ${theme.footerBackgrondColor}`;
   }
 
   if (footerNavItems.length > 0) {

@@ -665,19 +665,9 @@ body::-webkit-scrollbar {
     min-width: 8vw;
   }
 }
-@media screen and (min-width: 1500px) {
-  .scene__3 .circles-vertical__inner {
-    transform: translateY(-6vw);
-  }
-}
-@media screen and (max-width: 1024px) {
-  .scene__3 .circles-vertical__inner {
-    transform: translateY(-30vw);
-  }
-}
 @media screen and (max-width: 768px) {
   .scene__3 .circles-vertical__inner {
-    transform: translateY(-1.75vw);
+    transform: translateY(calc(8vw - 6%));
   }
 }
 @media screen and (max-width: 376px) {
@@ -926,7 +916,7 @@ body::-webkit-scrollbar {
   background-size: contain;
   background-repeat: no-repeat;
   position: absolute;
-  top: -95vw;
+  top: -80vw;
   left: -45vw;
 }
 @media screen and (max-width: 1024px) {

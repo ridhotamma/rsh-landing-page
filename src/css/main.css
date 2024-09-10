@@ -805,6 +805,9 @@ q::after {
 .footer {
   display: flex;
   flex-direction: column;
+  box-shadow: 0 0 0 100vmax #f749d4;
+  clip-path: inset(0 -100vmax);
+  background: #f749d4;
 }
 .footer__menu-top {
   padding: 1rem;

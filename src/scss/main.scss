@@ -753,6 +753,9 @@
 .footer {
   display: flex;
   flex-direction: column;
+  box-shadow: 0 0 0 100vmax $color-pink;
+  clip-path: inset(0 -100vmax);
+  background: $color-pink;
 
   &__menu-top {
     padding: 1rem;

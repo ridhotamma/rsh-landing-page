@@ -435,7 +435,7 @@ body {
       &__inner {
         height: 100%;
         width: 3.5vw;
-        transform: translateY(-1.75vw);
+        transform: translateY(calc(3.5vw - 5.25vw));
 
         .circle {
           &__dot {
@@ -569,16 +569,12 @@ body {
           }
         }
 
-        @media screen and (min-width: 1500px) {
-          transform: translateY(-6vw);
-        }
-
-        @media screen and (max-width: 1024px) {
-          transform: translateY(-30vw);
-        }
+        // @media screen and (max-width: 1024px) {
+        //   transform: translateY(calc(8vw - 5%));
+        // }
 
         @media screen and (max-width: 768px) {
-          transform: translateY(-1.75vw);
+          transform: translateY(calc(8vw - 6%));
         }
 
         // small device (iphone SE)
@@ -828,7 +824,7 @@ body {
         background-size: contain;
         background-repeat: no-repeat;
         position: absolute;
-        top: -95vw;
+        top: -80vw;
         left: -45vw;
 
         @media screen and (max-width: 1024px) {

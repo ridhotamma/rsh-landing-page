@@ -39,7 +39,6 @@ const Theme = {
 let currentTheme = Theme.blue;
 
 function changeThemeColor(theme, wrapper = document.body) {
-  const navbar = document.querySelector('#navbar');
   const footer = document.querySelector('#footer');
   const footerLogo = document.querySelector('#footer-logo');
   const primaryTitle = document.querySelector('#primary-title');
@@ -83,10 +82,6 @@ function changeThemeColor(theme, wrapper = document.body) {
     } else {
       letterIText.style.backgroundColor = Color.yellow;
     }
-  }
-
-  if (navbar) {
-    navbar.style.backgroundColor = theme.bodyBackgroundColor;
   }
 
   if (footer) {

@@ -222,6 +222,7 @@
     left: 0;
     justify-content: flex-end;
     background-color: transparent;
+    mix-blend-mode: normal;
   }
 
   .hamburger-menu {
@@ -289,7 +290,7 @@
           text-transform: uppercase;
 
           &:hover {
-            color: #ddd;
+            opacity: .8;
           }
         }
       }

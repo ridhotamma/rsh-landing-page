@@ -259,6 +259,7 @@ body::-webkit-scrollbar {
   padding-left: 18.5%;
   padding-right: 50%;
   margin-bottom: 1rem;
+  line-height: 1;
 }
 @media screen and (max-width: 768px) {
   .scene__2 .description .text__3 {
@@ -271,6 +272,7 @@ body::-webkit-scrollbar {
   font-size: 1rem;
   padding-left: 18.5%;
   padding-right: 50%;
+  line-height: 1;
 }
 @media screen and (max-width: 768px) {
   .scene__2 .description .text__4 {

@@ -326,6 +326,7 @@ q::after {
   left: 0;
   justify-content: flex-end;
   background-color: transparent;
+  mix-blend-mode: normal;
 }
 .navbar .hamburger-menu {
   display: inline-block;
@@ -384,7 +385,7 @@ q::after {
   text-transform: uppercase;
 }
 .navbar .menu-container__nav li a:hover {
-  color: #ddd;
+  opacity: 0.8;
 }
 @media screen and (max-width: 760px) {
   .navbar {

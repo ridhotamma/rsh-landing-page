@@ -766,11 +766,6 @@ tl.to(letterI, {
   .to('.scene__4 .closing', { y: '280vh', duration: 5 })
   .to('.scene__4 .closing .gear', { rotate: -180, duration: 5 }, '<')
   .to('.animation-container', { backgroundColor: '#f5e400', duration: 3 }, '<')
-  .to(
-    '.hamburger-menu > .line',
-    { backgroundColor: '#0000e0', duration: 3 },
-    '<'
-  )
   .set(scene1, { display: 'none' })
   .set(scene2, { display: 'none' })
   .set(scene3, { display: 'none' })

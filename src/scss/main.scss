@@ -216,13 +216,11 @@
   z-index: 5;
   mix-blend-mode: difference;
   background-color: transparent;
-  
+
   &__home {
     position: fixed;
     left: 0;
     justify-content: flex-end;
-    background-color: transparent;
-    mix-blend-mode: normal;
   }
 
   .hamburger-menu {
@@ -231,6 +229,7 @@
     width: 25px;
     height: 35px;
     position: relative;
+    mix-blend-mode: difference;
 
     .line {
       display: block;
@@ -240,6 +239,7 @@
       margin: 5px 0;
       transition: all 0.3s ease;
       border-radius: 10px;
+      mix-blend-mode: difference;
     }
 
     &--active {
@@ -259,7 +259,7 @@
 
   .menu-container {
     position: absolute;
-    top: 65%;
+    top: 80%;
     right: 0;
     overflow: hidden;
     max-height: 0;
@@ -275,12 +275,11 @@
       margin: 0;
       text-align: right;
       padding: 0rem 2rem;
-      
+
       li {
         padding: 5px 0;
         color: $color-yellow;
-        mix-blend-mode: difference;
-        
+
         a {
           text-decoration: none;
           font-size: 18px;
@@ -290,9 +289,13 @@
           text-transform: uppercase;
 
           &:hover {
-            opacity: .8;
+            opacity: 0.8;
           }
         }
+      }
+
+      @media screen and (max-width: 760px) {
+        padding: 0rem 1rem;
       }
     }
   }

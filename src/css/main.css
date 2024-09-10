@@ -325,8 +325,6 @@ q::after {
   position: fixed;
   left: 0;
   justify-content: flex-end;
-  background-color: transparent;
-  mix-blend-mode: normal;
 }
 .navbar .hamburger-menu {
   display: inline-block;
@@ -334,6 +332,7 @@ q::after {
   width: 25px;
   height: 35px;
   position: relative;
+  mix-blend-mode: difference;
 }
 .navbar .hamburger-menu .line {
   display: block;
@@ -343,6 +342,7 @@ q::after {
   margin: 5px 0;
   transition: all 0.3s ease;
   border-radius: 10px;
+  mix-blend-mode: difference;
 }
 .navbar .hamburger-menu--active .line:nth-child(1) {
   transform: translateY(8px) rotate(45deg);
@@ -355,7 +355,7 @@ q::after {
 }
 .navbar .menu-container {
   position: absolute;
-  top: 65%;
+  top: 80%;
   right: 0;
   overflow: hidden;
   max-height: 0;
@@ -374,7 +374,6 @@ q::after {
 .navbar .menu-container__nav li {
   padding: 5px 0;
   color: #f5e400;
-  mix-blend-mode: difference;
 }
 .navbar .menu-container__nav li a {
   text-decoration: none;
@@ -386,6 +385,11 @@ q::after {
 }
 .navbar .menu-container__nav li a:hover {
   opacity: 0.8;
+}
+@media screen and (max-width: 760px) {
+  .navbar .menu-container__nav {
+    padding: 0rem 1rem;
+  }
 }
 @media screen and (max-width: 760px) {
   .navbar {

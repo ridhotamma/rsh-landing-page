@@ -40,7 +40,7 @@ const tl = gsap.timeline({
 const tlAutoScroll = gsap.timeline({
   paused: true,
   onComplete: () => {
-    document.body.style.overflow = 'auto';
+    tl.scrollTrigger.enable();
     playBounce();
   },
 });
@@ -760,9 +760,9 @@ tl.to(letterI, {
     },
     '<'
   )
+  .to(logo, { autoAlpha: 1, duration: 1 }, '<')
   .to('.scene__4 .closing .gear', { rotate: -90, duration: 5 }, '<')
   .set(letterI, { autoAlpha: 0 })
-  .to(logo, { autoAlpha: 1, duration: 1 }, '<')
   .to('.scene__4 .closing', { y: '280vh', duration: 5 })
   .to('.scene__4 .closing .gear', { rotate: -180, duration: 5 }, '<')
   .to('.animation-container', { backgroundColor: '#f5e400', duration: 3 }, '<')
@@ -786,5 +786,5 @@ document.addEventListener('DOMContentLoaded', () => {
   ScrollTrigger.refresh();
   tlAutoScroll.play();
   pulseCircles();
-  document.body.style.overflow = 'hidden';
+  tl.scrollTrigger.disable();
 });

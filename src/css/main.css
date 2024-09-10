@@ -318,6 +318,8 @@ q::after {
   padding: 1rem 2rem;
   position: relative;
   z-index: 5;
+  mix-blend-mode: difference;
+  background-color: transparent;
 }
 .navbar__home {
   position: fixed;

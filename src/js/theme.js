@@ -78,6 +78,7 @@ function changeThemeColor(theme, wrapper = document.body) {
 
   if (footer) {
     footer.style.backgroundColor = theme.footerBackgrondColor;
+    footer.style.boxShadow = `0 0 0 100vmax ${theme.footerBackgrondColor}`
   }
 
   if (footerNavItems.length > 0) {

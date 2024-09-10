@@ -136,6 +136,8 @@ body::-webkit-scrollbar {
   top: 3%;
   z-index: 10;
   mix-blend-mode: difference;
+  visibility: hidden;
+  opacity: 0;
 }
 .logo svg path {
   fill: white;
@@ -285,28 +287,20 @@ body::-webkit-scrollbar {
   width: 28vw;
   position: absolute;
 }
-.scene__2 .circles .circle__1 {
-  scale: 1;
-}
 .scene__2 .circles .circle__2 {
-  scale: 1.4;
-  opacity: 0.3;
+  opacity: 0.8;
 }
 .scene__2 .circles .circle__3 {
-  scale: 1.8;
-  opacity: 0.3;
+  opacity: 0.8;
 }
 .scene__2 .circles .circle__4 {
-  scale: 2.2;
-  opacity: 0.3;
+  opacity: 0.8;
 }
 .scene__2 .circles .circle__5 {
-  scale: 2.6;
-  opacity: 0.3;
+  opacity: 0.8;
 }
 .scene__2 .circles .circle__6 {
-  scale: 3;
-  opacity: 0.3;
+  opacity: 0.8;
 }
 @media screen and (max-width: 768px) {
   .scene__2 .circles .circle {

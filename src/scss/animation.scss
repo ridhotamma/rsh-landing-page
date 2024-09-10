@@ -27,7 +27,9 @@ body {
   top: 3%;
   z-index: 10;
   mix-blend-mode: difference;
-
+  visibility: hidden;
+  opacity: 0;
+  
   svg {
     path {
       fill: white;
@@ -197,33 +199,24 @@ body {
         width: 28vw;
         position: absolute;
 
-        &__1 {
-          scale: 1;
-        }
-
         &__2 {
-          scale: 1.4;
-          opacity: 0.3;
+          opacity: 0.8;
         }
 
         &__3 {
-          scale: 1.8;
-          opacity: 0.3;
+          opacity: 0.8;
         }
 
         &__4 {
-          scale: 2.2;
-          opacity: 0.3;
+          opacity: 0.8;
         }
 
         &__5 {
-          scale: 2.6;
-          opacity: 0.3;
+          opacity: 0.8;
         }
 
         &__6 {
-          scale: 3;
-          opacity: 0.3;
+          opacity: 0.8;
         }
 
         @media screen and (max-width: 1024px) {

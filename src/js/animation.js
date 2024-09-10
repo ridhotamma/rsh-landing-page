@@ -42,6 +42,18 @@ gsap.set(scene3, { autoAlpha: 0 });
 gsap.set(scene4, { autoAlpha: 0 });
 gsap.set(scene5, { autoAlpha: 0 });
 
+function pulseCircles() {
+  gsap.to(s2OuterCircles, {
+    scale: 3.75,
+    opacity: 0,
+    duration: 3.6,
+    stagger: {
+      each: 0.6,
+      repeat: -1,
+    },
+  });
+}
+
 // scene 1
 tl.fromTo(
   scene1,
@@ -174,19 +186,19 @@ tl.fromTo(
   .set('.animation-container', { backgroundColor: '#0000e0' }, '<')
   .set(letterI, { backgroundColor: '#f749d4' }, '<')
   .set('#intro-title', { color: '#f749d4' }, '<')
-  .fromTo(
-    s2Circles,
-    {
-      x: (index) => (index % 2 === 0 ? '-100%' : '100%'),
-    },
-    {
-      x: '0%',
-      duration: 5,
-      stagger: 0.2,
-      ease: 'power4.inOut',
-    },
-    '<'
-  )
+  // .fromTo(
+  //   s2Circles,
+  //   {
+  //     x: (index) => (index % 2 === 0 ? '-100%' : '100%'),
+  //   },
+  //   {
+  //     x: '0%',
+  //     duration: 5,
+  //     stagger: 0.2,
+  //     ease: 'power4.inOut',
+  //   },
+  //   '<'
+  // )
   .fromTo(
     s2Text1,
     { yPercent: -100, autoAlpha: 0 },
@@ -216,7 +228,7 @@ tl.fromTo(
     duration: 6,
     ease: 'power4.inOut',
   })
-  .to(s2OuterCircles, { autoAlpha: 1, duration: 5, ease: 'power4.inOut' }, '<')
+  // .to(s2OuterCircles, { autoAlpha: 1, duration: 5, ease: 'power4.inOut' }, '<')
   .to(s2OuterCircles, { yPercent: 100, duration: 6, ease: 'power4.inOut' }, '<')
   .to(
     document.querySelectorAll('.scene__2 .description'),
@@ -704,3 +716,5 @@ tl.to(letterI, {
     { autoAlpha: 1, yPercent: 0, duration: 3 },
     '-=2'
   );
+
+pulseCircles();

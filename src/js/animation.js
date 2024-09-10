@@ -41,7 +41,7 @@ const tlAutoScroll = gsap.timeline({
   paused: true,
   onComplete: () => {
     document.body.style.overflow = 'auto';
-    bounceChevronUp();
+    playBounce();
   },
 });
 
@@ -63,18 +63,25 @@ function pulseCircles() {
   });
 }
 
-function bounceChevronUp() {
-  gsap.fromTo(
-    chevronUp,
-    { y: 0 },
-    {
-      y: -50,
-      duration: 0.5,
-      ease: 'power3.inOut',
-      repeat: -1,
-      yoyo: true,
-    }
-  );
+let chevronUpAnimation = gsap.fromTo(
+  chevronUp,
+  { y: 0 },
+  {
+    y: -50,
+    duration: 0.5,
+    ease: 'power3.inOut',
+    repeat: -1,
+    yoyo: true,
+    paused: true,
+  }
+);
+
+function playBounce() {
+  chevronUpAnimation.play();
+}
+
+function stopBounce() {
+  chevronUpAnimation.pause();
 }
 
 // scene 1
@@ -141,7 +148,11 @@ tlAutoScroll
     },
     '<'
   )
-  .to(scene1, { y: '55vh', duration: 1.5, ease: 'power4.inOut' })
+  .to(scene1, {
+    y: '55vh',
+    duration: 1.5,
+    ease: 'power4.inOut',
+  })
   .fromTo(
     chevronUp,
     {
@@ -190,6 +201,9 @@ tl.fromTo(
     y: '200vh',
     duration: 3,
     ease: 'power4.inOut',
+    onStart: () => {
+      stopBounce();
+    },
   }
 )
   .fromTo(
@@ -652,6 +666,7 @@ tl.to(letterI, {
     y: '100vh',
     duration: 3,
   })
+  .fromTo(logo, { autoAlpha: 1 }, { autoAlpha: 0, duration: 1 }, '<')
   .set(scene4, { autoAlpha: 1 }, '<')
   .fromTo('.scene__4', { yPercent: -150 }, { yPercent: 0, duration: 3 }, '<')
   .to('.scene__4 > .gear__1', { rotate: -120, duration: 3 }, '<')
@@ -725,7 +740,6 @@ tl.to(letterI, {
     '-=5.5'
   )
   .to('.scene__4 > .gear__9', { rotate: 180, duration: 3 }, '-=5')
-
   .fromTo(
     '.scene__4 .closing',
     { y: '-200vh' },
@@ -748,6 +762,7 @@ tl.to(letterI, {
   )
   .to('.scene__4 .closing .gear', { rotate: -90, duration: 5 }, '<')
   .set(letterI, { autoAlpha: 0 })
+  .to(logo, { autoAlpha: 1, duration: 1 }, '<')
   .to('.scene__4 .closing', { y: '280vh', duration: 5 })
   .to('.scene__4 .closing .gear', { rotate: -180, duration: 5 }, '<')
   .to('.animation-container', { backgroundColor: '#f5e400', duration: 3 }, '<')

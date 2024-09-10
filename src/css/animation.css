@@ -665,6 +665,21 @@ body::-webkit-scrollbar {
     min-width: 8vw;
   }
 }
+@media screen and (max-width: 1750px) {
+  .scene__3 .circles-vertical__inner {
+    transform: translateY(calc(8vw - 17.5%));
+  }
+}
+@media screen and (max-width: 1550px) {
+  .scene__3 .circles-vertical__inner {
+    transform: translateY(calc(8vw - 17.5%));
+  }
+}
+@media screen and (max-width: 1024px) {
+  .scene__3 .circles-vertical__inner {
+    transform: translateY(calc(8vw - 5%));
+  }
+}
 @media screen and (max-width: 768px) {
   .scene__3 .circles-vertical__inner {
     transform: translateY(calc(8vw - 6%));

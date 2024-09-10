@@ -435,7 +435,7 @@ body {
       &__inner {
         height: 100%;
         width: 3.5vw;
-        transform: translateY(calc(3.5vw - 5.25vw));
+        transform: translateY(calc(-1.75vw));
 
         .circle {
           &__dot {
@@ -569,9 +569,17 @@ body {
           }
         }
 
-        // @media screen and (max-width: 1024px) {
-        //   transform: translateY(calc(8vw - 5%));
-        // }
+        @media screen and (max-width: 1750px) {
+          transform: translateY(calc(8vw - 17.5%));
+        }
+
+        @media screen and (max-width: 1550px) {
+          transform: translateY(calc(8vw - 17.5%));
+        }
+
+        @media screen and (max-width: 1024px) {
+          transform: translateY(calc(8vw - 5%));
+        }
 
         @media screen and (max-width: 768px) {
           transform: translateY(calc(8vw - 6%));

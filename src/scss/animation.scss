@@ -28,11 +28,44 @@ body {
   width: 100%;
   overflow: hidden;
 
-  p {
+  .wrapper {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 1em;
+    transition: 2s ease;
     position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 1em;
+  }
+
+  .wrapper:hover {
+    transform: scale(1.2);
+  }
+
+  .text {
     color: white;
-    bottom: 10px;
-    right: 30px;
+  }
+
+  .dot {
+    background: white;
+    height: 0.65em;
+    width: 0.65em;
+    border-radius: 50%;
+    animation: move 0.6s ease infinite;
+  }
+
+  @keyframes move {
+    0% {
+      transform: translateX(50%);
+    }
+    50% {
+      transform: translateX(-50%);
+    }
+    100% {
+      transform: translateX(50%);
+    }
   }
 }
 
@@ -49,7 +82,7 @@ body {
   z-index: 81;
   visibility: hidden;
   opacity: 0;
-  
+
   svg {
     path {
       fill: $color-yellow;

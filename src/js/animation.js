@@ -41,7 +41,7 @@ const tl = gsap.timeline({
         playBounce();
       });
 
-      gsap.set('.loading-container', { autoAlpha: 0, delay: 2 });
+      gsap.set('.loading-container', { autoAlpha: 0, delay: 1 });
       gsap.set(scene1, { autoAlpha: 1 });
     },
   },
@@ -96,7 +96,7 @@ tl.fromTo(
   {
     y: '0vh',
     duration: 3,
-    delay: 2,
+    delay: 1,
   }
 )
   .to(letterI, {

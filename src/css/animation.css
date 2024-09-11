@@ -137,11 +137,40 @@ body::-webkit-scrollbar {
   width: 100%;
   overflow: hidden;
 }
-.loading-container p {
+.loading-container .wrapper {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 1em;
+  transition: 2s ease;
   position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 1em;
+}
+.loading-container .wrapper:hover {
+  transform: scale(1.2);
+}
+.loading-container .text {
   color: white;
-  bottom: 10px;
-  right: 30px;
+}
+.loading-container .dot {
+  background: white;
+  height: 0.65em;
+  width: 0.65em;
+  border-radius: 50%;
+  animation: move 0.6s ease infinite;
+}
+@keyframes move {
+  0% {
+    transform: translateX(50%);
+  }
+  50% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(50%);
+  }
 }
 
 #intro-title {

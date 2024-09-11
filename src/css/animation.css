@@ -1051,6 +1051,11 @@ body::-webkit-scrollbar {
     left: -95dvw;
   }
 }
+@media screen and (max-width: 376px) {
+  .scene__4 .closing .gear {
+    left: -120dvw;
+  }
+}
 .scene__4 .closing .description {
   position: absolute;
   bottom: 20%;

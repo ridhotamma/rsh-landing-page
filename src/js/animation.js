@@ -36,15 +36,18 @@ const tl = gsap.timeline({
     end: '+=18000',
     onEnter: () => {
       tl.tweenFromTo(0, 'autoScroll').then(() => {
-        console.log("AUTO SCROLL IS COMPLETED")
         document.body.style.overflow = 'auto';
+        gsap.to(logo, { autoAlpha: 1, duration: 3, ease: 'power4.inOut' });
+        playBounce();
       });
-      playBounce();
+
+      gsap.set('.loading-container', { autoAlpha: 0, delay: 2 });
+      gsap.set(scene1, { autoAlpha: 1 });
     },
   },
 });
 
-// gsap.set(scene1, { autoAlpha: 0 });
+gsap.set(scene1, { autoAlpha: 0 });
 gsap.set(scene2, { autoAlpha: 0 });
 gsap.set(scene3, { autoAlpha: 0 });
 gsap.set(scene4, { autoAlpha: 0 });
@@ -93,6 +96,7 @@ tl.fromTo(
   {
     y: '0vh',
     duration: 3,
+    delay: 2,
   }
 )
   .to(letterI, {
@@ -177,7 +181,6 @@ tl.fromTo(
     },
     '<'
   )
-  .to(logo, { autoAlpha: 1, duration: 3, ease: 'power4.inOut' }, '<')
   .to('.theme-changer', { autoAlpha: 0, duration: 3 }, '<')
   .to(
     letterI,
@@ -209,6 +212,7 @@ tl.fromTo(
     { y: '-100vh', duration: 3, ease: 'power4.inOut' },
     '<'
   )
+  .to('.logo > svg > path', { fill: 'white', duration: 3 }, '<')
   .fromTo(
     chevronArrow,
     {
@@ -663,7 +667,7 @@ tl.to(letterI, {
     y: '100vh',
     duration: 3,
   })
-  .fromTo(logo, { autoAlpha: 1 }, { autoAlpha: 0, duration: 1 }, '<')
+  // .fromTo(logo, { autoAlpha: 1 }, { autoAlpha: 0, duration: 1 }, '<')
   .set(scene4, { autoAlpha: 1 }, '<')
   .fromTo('.scene__4', { yPercent: -150 }, { yPercent: 0, duration: 3 }, '<')
   .to('.scene__4 > .gear__1', { rotate: -120, duration: 3 }, '<')
@@ -757,7 +761,7 @@ tl.to(letterI, {
     },
     '<'
   )
-  .to(logo, { autoAlpha: 1, duration: 1 }, '<')
+  // .to(logo, { autoAlpha: 1, duration: 1 }, '<')
   .to('.scene__4 .closing .gear', { rotate: -90, duration: 5 }, '<')
   .set(letterI, { autoAlpha: 0 })
   .to('.scene__4 .closing', { y: '280vh', duration: 5 })
@@ -779,6 +783,6 @@ document.addEventListener('DOMContentLoaded', () => {
   pulseCircles();
   document.body.style.overflow = 'hidden';
   gsap.to(window, {
-    scrollTo: { y: 4500 },
+    scrollTo: { y: 5000 },
   });
 });

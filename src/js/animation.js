@@ -91,10 +91,10 @@ function stopBounce() {
 tl.fromTo(
   scene1,
   {
-    y: '120vh',
+    y: '120dvh',
   },
   {
-    y: '0vh',
+    y: '0dvh',
     duration: 3,
     delay: 1,
   }
@@ -106,7 +106,7 @@ tl.fromTo(
     ease: 'power4.inOut',
   })
   .to(scene1, {
-    y: '18vh',
+    y: '18dvh',
     duration: 3,
     ease: 'power4.inOut',
   })
@@ -114,7 +114,7 @@ tl.fromTo(
     intro1,
     {
       autoAlpha: 0,
-      y: '100vh',
+      y: '100dvh',
     },
     {
       y: 0,
@@ -124,7 +124,7 @@ tl.fromTo(
     },
     '<'
   )
-  .to(scene1, { y: '30vh', duration: 3, ease: 'power4.inOut' })
+  .to(scene1, { y: '30dvh', duration: 3, ease: 'power4.inOut' })
   .to(
     letterI,
     {
@@ -138,7 +138,7 @@ tl.fromTo(
     intro2,
     {
       autoAlpha: 0,
-      y: '100vh',
+      y: '100dvh',
     },
     {
       y: 0,
@@ -149,14 +149,14 @@ tl.fromTo(
     '<'
   )
   .to(scene1, {
-    y: '55vh',
+    y: '55dvh',
     duration: 3,
     ease: 'power4.inOut',
   })
   .fromTo(
     chevronUp,
     {
-      y: '100vh',
+      y: '100dvh',
       autoAlpha: 0,
     },
     {
@@ -171,7 +171,7 @@ tl.fromTo(
     intro3,
     {
       autoAlpha: 0,
-      y: '100vh',
+      y: '100dvh',
     },
     {
       y: 0,
@@ -195,9 +195,9 @@ tl.fromTo(
 
 tl.fromTo(
   scene1,
-  { y: '55vh' },
+  { y: '55dvh' },
   {
-    y: '200vh',
+    y: '200dvh',
     duration: 3,
     ease: 'power4.inOut',
     onStart: () => {
@@ -207,8 +207,8 @@ tl.fromTo(
 )
   .fromTo(
     chevronUp,
-    { y: '0vh' },
-    { y: '-100vh', duration: 3, ease: 'power4.inOut' },
+    { y: '0dvh' },
+    { y: '-100dvh', duration: 3, ease: 'power4.inOut' },
     '<'
   )
   .to('.logo > svg > path', { fill: 'white', duration: 3 }, '<')
@@ -244,8 +244,8 @@ tl.fromTo(
 // Scene 2
 tl.fromTo(
   scene2,
-  { y: '-150vh', autoAlpha: 1 },
-  { y: '0vh', autoAlpha: 1, duration: 5 },
+  { y: '-150dvh', autoAlpha: 1 },
+  { y: '0dvh', autoAlpha: 1, duration: 5 },
   '-=5'
 )
   .to(
@@ -381,7 +381,7 @@ tl.set('.circle__replace', { autoAlpha: 0 })
   .from(
     '.scene__3 .circles .circle__random:nth-child(5)',
     {
-      y: '100vh',
+      y: '100dvh',
       duration: 3,
       margin: 0,
       ease: 'power4.inOut',
@@ -442,7 +442,7 @@ tl.set('.circle__replace', { autoAlpha: 0 })
   .from(
     '.scene__3 .circles .circle__random:nth-child(11)',
     {
-      y: '-100vh',
+      y: '-100dvh',
       duration: 3,
       margin: 0,
       ease: 'power4.inOut',
@@ -468,7 +468,7 @@ tl.set('.circle__replace', { autoAlpha: 0 })
       '.scene__3 .circles .circle__random:nth-child(5)',
       '.scene__3 .circles .circle__random:nth-child(6)',
     ],
-    { y: '-100vh', duration: 3, ease: 'power4.inOut' },
+    { y: '-100dvh', duration: 3, ease: 'power4.inOut' },
     '<'
   )
   .to(
@@ -500,7 +500,7 @@ tl.set('.circle__replace', { autoAlpha: 0 })
       '.scene__3 .circles .circle__random:nth-child(11)',
     ],
     {
-      y: '-100vh',
+      y: '-100dvh',
       xPercent: -100,
       backgroundColor: '#f749d4',
       duration: 3,
@@ -511,7 +511,7 @@ tl.set('.circle__replace', { autoAlpha: 0 })
   .to(
     letterI,
     {
-      x: '50vw',
+      x: '50dvw',
       duration: 3,
       ease: 'power4.inOut',
     },
@@ -534,7 +534,7 @@ tl.set('.circle__replace', { autoAlpha: 0 })
   .from(
     '.scene__3 .description > *',
     {
-      x: '100vw',
+      x: '100dvw',
       duration: 5,
       autoAlpha: 0,
       stagger: 0.5,
@@ -544,9 +544,9 @@ tl.set('.circle__replace', { autoAlpha: 0 })
   )
   .fromTo(
     '.circles-vertical__inner',
-    { x: isMobile || isTablet ? '-40vw' : '-20vw' },
+    { x: isMobile || isTablet ? '-40dvw' : '-20dvw' },
     {
-      x: isMobile || isTablet ? '3vw' : '10vw',
+      x: isMobile || isTablet ? '3dvw' : '10dvw',
       duration: 5,
       ease: 'power4.inOut',
     },
@@ -568,8 +568,8 @@ tl.set('.circle__replace', { autoAlpha: 0 })
     {
       xPercent: isMobile || isTablet ? 205 : 225,
       yPercent: isMobile || isTablet ? 13 : -1,
-      width: isMobile || isTablet ? '38vw' : '28vw',
-      height: isMobile || isTablet ? '38vw' : '28vw',
+      width: isMobile || isTablet ? '38dvw' : '28dvw',
+      height: isMobile || isTablet ? '38dvw' : '28dvw',
       duration: 5,
       ease: 'power4.inOut',
     },
@@ -581,8 +581,8 @@ tl.set('.circle__replace', { autoAlpha: 0 })
     {
       xPercent: isMobile || isTablet ? 205 : 225,
       yPercent: isMobile || isTablet ? 93 : 92,
-      width: isMobile || isTablet ? '38vw' : '28vw',
-      height: isMobile || isTablet ? '38vw' : '28vw',
+      width: isMobile || isTablet ? '38dvw' : '28dvw',
+      height: isMobile || isTablet ? '38dvw' : '28dvw',
       duration: 5,
       ease: 'power4.inOut',
     },
@@ -593,8 +593,8 @@ tl.set('.circle__replace', { autoAlpha: 0 })
     {
       xPercent: isMobile || isTablet ? 100 : 118,
       yPercent: isMobile || isTablet ? -40 : -30,
-      width: isMobile || isTablet ? '38vw' : '28vw',
-      height: isMobile || isTablet ? '38vw' : '28vw',
+      width: isMobile || isTablet ? '38dvw' : '28dvw',
+      height: isMobile || isTablet ? '38dvw' : '28dvw',
       duration: 5,
       ease: 'power4.inOut',
     },
@@ -605,8 +605,8 @@ tl.set('.circle__replace', { autoAlpha: 0 })
     {
       xPercent: isMobile || isTablet ? 100 : 118,
       yPercent: isMobile || isTablet ? -171 : -151,
-      width: isMobile || isTablet ? '38vw' : '28vw',
-      height: isMobile || isTablet ? '38vw' : '28vw',
+      width: isMobile || isTablet ? '38dvw' : '28dvw',
+      height: isMobile || isTablet ? '38dvw' : '28dvw',
       duration: 5,
       ease: 'power4.inOut',
     },
@@ -618,8 +618,8 @@ tl.set('.circle__replace', { autoAlpha: 0 })
     {
       xPercent: isMobile || isTablet ? 311 : 332,
       yPercent: isMobile || isTablet ? -92 : -59,
-      width: isMobile || isTablet ? '38vw' : '28vw',
-      height: isMobile || isTablet ? '38vw' : '28vw',
+      width: isMobile || isTablet ? '38dvw' : '28dvw',
+      height: isMobile || isTablet ? '38dvw' : '28dvw',
       duration: 5,
       ease: 'power4.inOut',
     },
@@ -631,8 +631,8 @@ tl.set('.circle__replace', { autoAlpha: 0 })
     {
       xPercent: isMobile || isTablet ? 312 : 332,
       yPercent: isMobile || isTablet ? -12 : 34,
-      width: isMobile || isTablet ? '38vw' : '28vw',
-      height: isMobile || isTablet ? '38vw' : '28vw',
+      width: isMobile || isTablet ? '38dvw' : '28dvw',
+      height: isMobile || isTablet ? '38dvw' : '28dvw',
       duration: 5,
       ease: 'power4.inOut',
     },
@@ -644,8 +644,8 @@ tl.set('.circle__replace', { autoAlpha: 0 })
     {
       xPercent: isMobile || isTablet ? -11 : 11,
       yPercent: isMobile || isTablet ? -195 : -195,
-      width: isMobile || isTablet ? '38vw' : '28vw',
-      height: isMobile || isTablet ? '38vw' : '28vw',
+      width: isMobile || isTablet ? '38dvw' : '28dvw',
+      height: isMobile || isTablet ? '38dvw' : '28dvw',
       duration: 5,
       ease: 'power4.inOut',
     },
@@ -664,19 +664,19 @@ tl.to(letterI, {
     {
       scale: 0.7,
       transformOrigin: '10vw bottom',
-      y: '100vh',
+      y: '100dvh',
       duration: 3,
     },
     '<'
   )
-  .to('.circles-vertical__inner', { y: '-50vh', duration: 3 }, '<')
+  .to('.circles-vertical__inner', { y: '-50dvh', duration: 3 }, '<')
   .to(
     '.animation-container',
     { backgroundColor: '#11f3f3', duration: 3, ease: 'power4.inOut' },
     '<'
   )
   .to('.circles-vertical__inner', {
-    y: '100vh',
+    y: '100dvh',
     duration: 3,
   })
   // .fromTo(logo, { autoAlpha: 1 }, { autoAlpha: 0, duration: 1 }, '<')
@@ -684,25 +684,25 @@ tl.to(letterI, {
   .fromTo('.scene__4', { yPercent: -150 }, { yPercent: 0, duration: 3 }, '<')
   .to('.scene__4 > .gear__1', { rotate: -120, duration: 3 }, '<')
   .to('.scene__4 > .gear__2', { rotate: 120, duration: 3 }, '<')
-  .to('.scene__4 > .gear__1', { y: '100vh', duration: 1 })
+  .to('.scene__4 > .gear__1', { y: '100dvh', duration: 1 })
   .set(scene3, { autoAlpha: 0 }, '<')
   // gear 2
-  .to('.scene__4 > .gear__2', { y: '200vh', duration: 2 }, '<')
-  .to('.scene__4 > .gear__2', { x: '-100vw', duration: 6 }, '<')
+  .to('.scene__4 > .gear__2', { y: '200dvh', duration: 2 }, '<')
+  .to('.scene__4 > .gear__2', { x: '-100dvw', duration: 6 }, '<')
   .to('.scene__4 > .gear__2', { rotate: 0, duration: 2 }, '<')
   // gear 3
   .fromTo(
     '.scene__4 > .gear__3',
-    { y: '-100vh' },
-    { y: '100vh', duration: 2.5 },
+    { y: '-100dvh' },
+    { y: '100dvh', duration: 2.5 },
     '-=6'
   )
   .to('.scene__4 > .gear__3', { rotate: 180, duration: 3 }, '<')
   // gear 4
   .fromTo(
     '.scene__4 > .gear__4',
-    { y: '-100vh' },
-    { y: '100vh', duration: 2 },
+    { y: '-100dvh' },
+    { y: '100dvh', duration: 2 },
     '-=6'
   )
   .to('.scene__4 > .gear__4', { rotate: -180, duration: 3 }, '<')
@@ -710,18 +710,18 @@ tl.to(letterI, {
   // gear 5
   .fromTo(
     '.scene__4 > .gear__5',
-    { y: '-120vh' },
-    { y: '100vh', duration: 4 },
+    { y: '-120dvh' },
+    { y: '100dvh', duration: 4 },
     '<'
   )
-  .to('.scene__4 > .gear__5', { x: '65vw', duration: 4 }, '-=6')
+  .to('.scene__4 > .gear__5', { x: '65dvw', duration: 4 }, '-=6')
   .to('.scene__4 > .gear__5', { rotate: 240, duration: 3 }, '<')
 
   // gear 6
   .fromTo(
     '.scene__4 > .gear__6',
-    { y: '-200vh' },
-    { y: '100vh', duration: 6 },
+    { y: '-200dvh' },
+    { y: '100dvh', duration: 6 },
     '-=6'
   )
   .to('.scene__4 > .gear__6', { rotate: 90, duration: 3 }, '-=4.5')
@@ -729,8 +729,8 @@ tl.to(letterI, {
   // gear 7
   .fromTo(
     '.scene__4 > .gear__7',
-    { y: '-200vh' },
-    { y: '100vh', duration: 2 },
+    { y: '-200dvh' },
+    { y: '100dvh', duration: 2 },
     '-=3.5'
   )
   .to('.scene__4 > .gear__7', { rotate: 180, duration: 3 }, '<')
@@ -738,8 +738,8 @@ tl.to(letterI, {
   // gear 8
   .fromTo(
     '.scene__4 > .gear__8',
-    { y: '-210vh' },
-    { y: '100vh', duration: 5 },
+    { y: '-210dvh' },
+    { y: '100dvh', duration: 5 },
     '-=3.5'
   )
   .to('.scene__4 > .gear__8', { xPercent: 20, duration: 3 }, '-=4.5')
@@ -748,21 +748,21 @@ tl.to(letterI, {
   // gear 9
   .fromTo(
     '.scene__4 > .gear__9',
-    { y: '-200vh' },
-    { y: '100vh', duration: 5 },
+    { y: '-200dvh' },
+    { y: '100dvh', duration: 5 },
     '-=5.5'
   )
   .to('.scene__4 > .gear__9', { rotate: 180, duration: 3 }, '-=5')
   .fromTo(
     '.scene__4 .closing',
-    { y: '-200vh' },
-    { y: '0vh', duration: 5 },
+    { y: '-200dvh' },
+    { y: '0dvh', duration: 5 },
     '-=3'
   )
   .fromTo(
     '.scene__4 .description > *',
     {
-      x: (index) => (index === 0 ? '-100vw' : '100vw'),
+      x: (index) => (index === 0 ? '-100dvw' : '100dvw'),
       autoAlpha: 0,
     },
     {
@@ -776,7 +776,7 @@ tl.to(letterI, {
   // .to(logo, { autoAlpha: 1, duration: 1 }, '<')
   .to('.scene__4 .closing .gear', { rotate: -90, duration: 5 }, '<')
   .set(letterI, { autoAlpha: 0 })
-  .to('.scene__4 .closing', { y: '280vh', duration: 5 })
+  .to('.scene__4 .closing', { y: '280dvh', duration: 5 })
   .to('.scene__4 .closing .gear', { rotate: -180, duration: 5 }, '<')
   .to('.animation-container', { backgroundColor: '#f5e400', duration: 3 }, '<')
   .set(scene1, { display: 'none' })

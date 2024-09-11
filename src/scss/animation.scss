@@ -121,7 +121,7 @@ body {
     }
 
     h1 {
-      font-size: 33vw;
+      font-size: 33dvw;
       color: $color-pink;
 
       .letter-i {
@@ -129,8 +129,8 @@ body {
         position: relative;
 
         .text {
-          height: 24.5vw;
-          width: 8vw;
+          height: 24.5dvw;
+          width: 8dvw;
           background-color: $color-pink;
           transition: background 400ms ease-in-out;
         }
@@ -202,7 +202,7 @@ body {
     }
 
     h2 {
-      font-size: 8vw;
+      font-size: 8dvw;
       color: $color-pink;
     }
   }
@@ -220,14 +220,14 @@ body {
 
       .text {
         &__1 {
-          font-size: 34vw;
+          font-size: 34dvw;
           text-transform: uppercase;
           line-height: 0.9;
           text-align: center;
         }
 
         &__2 {
-          font-size: 7vw;
+          font-size: 7dvw;
           text-transform: uppercase;
           line-height: 0.9;
           padding-left: 18%;
@@ -290,8 +290,8 @@ body {
       .circle {
         background-color: $color-pink;
         border-radius: 50%;
-        height: 28vw;
-        width: 28vw;
+        height: 28dvw;
+        width: 28dvw;
         position: absolute;
 
         &__2 {
@@ -318,8 +318,8 @@ body {
         }
 
         @media screen and (max-width: 768px) {
-          height: 38vw;
-          width: 38vw;
+          height: 38dvw;
+          width: 38dvw;
         }
       }
     }
@@ -341,8 +341,8 @@ body {
       .circle {
         background-color: $color-pink;
         border-radius: 50%;
-        height: 28vw;
-        width: 28vw;
+        height: 28dvw;
+        width: 28dvw;
         position: absolute;
 
         &__random {
@@ -352,50 +352,50 @@ body {
           color: transparent;
 
           &:nth-child(1) {
-            transform: translateX(-28vw);
-            margin-right: 4vw;
+            transform: translateX(-28dvw);
+            margin-right: 4dvw;
 
             @media screen and (max-width: 1024px) {
-              transform: translateX(-38vw);
+              transform: translateX(-38dvw);
             }
 
             @media screen and (max-width: 768px) {
-              transform: translateX(-38vw);
+              transform: translateX(-38dvw);
             }
           }
 
           &:nth-child(2) {
-            transform: translateX(-56vw);
-            margin-right: 8vw;
+            transform: translateX(-56dvw);
+            margin-right: 8dvw;
             background-color: $color-cyan;
 
             @media screen and (max-width: 1024px) {
-              transform: translateX(-76vw);
+              transform: translateX(-76dvw);
             }
 
             @media screen and (max-width: 768px) {
-              transform: translateX(-76vw);
+              transform: translateX(-76dvw);
             }
           }
 
           &:nth-child(3) {
-            transform: translateX(-28vw) translateY(-28vw);
-            margin-right: 4vw;
-            margin-bottom: 4vw;
+            transform: translateX(-28dvw) translateY(-28dvw);
+            margin-right: 4dvw;
+            margin-bottom: 4dvw;
 
             @media screen and (max-width: 1024px) {
-              transform: translateX(-38vw) translateY(-38vw);
+              transform: translateX(-38dvw) translateY(-38dvw);
             }
 
             @media screen and (max-width: 768px) {
-              transform: translateX(-38vw) translateY(-38vw);
+              transform: translateX(-38dvw) translateY(-38dvw);
             }
           }
 
           &:nth-child(4) {
-            transform: translateX(-56vw) translateY(-28vw);
-            margin-right: 8vw;
-            margin-bottom: 4vw;
+            transform: translateX(-56dvw) translateY(-28dvw);
+            margin-right: 8dvw;
+            margin-bottom: 4dvw;
 
             @media screen and (max-width: 1024px) {
               opacity: 0;
@@ -409,24 +409,24 @@ body {
           }
 
           &:nth-child(5) {
-            transform: translateX(-28vw) translateY(28vw);
-            margin-right: 4vw;
-            margin-top: 4vw;
+            transform: translateX(-28dvw) translateY(28dvw);
+            margin-right: 4dvw;
+            margin-top: 4dvw;
             background-color: $color-blue;
 
             @media screen and (max-width: 1024px) {
-              transform: translateX(-38vw) translateY(38vw);
+              transform: translateX(-38dvw) translateY(38dvw);
             }
 
             @media screen and (max-width: 768px) {
-              transform: translateX(-38vw) translateY(38vw);
+              transform: translateX(-38dvw) translateY(38dvw);
             }
           }
 
           &:nth-child(6) {
-            transform: translateX(-56vw) translateY(28vw);
-            margin-right: 8vw;
-            margin-top: 4vw;
+            transform: translateX(-56dvw) translateY(28dvw);
+            margin-right: 8dvw;
+            margin-top: 4dvw;
             background-color: $color-cyan;
 
             @media screen and (max-width: 1024px) {
@@ -441,83 +441,83 @@ body {
           }
 
           &:nth-child(7) {
-            transform: translateX(28vw);
-            margin-left: 4vw;
+            transform: translateX(28dvw);
+            margin-left: 4dvw;
 
             @media screen and (max-width: 1024px) {
-              transform: translateX(38vw);
+              transform: translateX(38dvw);
             }
 
             @media screen and (max-width: 768px) {
-              transform: translateX(38vw);
+              transform: translateX(38dvw);
             }
           }
 
           &:nth-child(8) {
-            transform: translateX(28vw) translateY(-28vw);
-            margin-bottom: 4vw;
-            margin-left: 4vw;
+            transform: translateX(28dvw) translateY(-28dvw);
+            margin-bottom: 4dvw;
+            margin-left: 4dvw;
             background-color: $color-cyan;
 
             @media screen and (max-width: 1024px) {
-              transform: translateX(38vw) translateY(-38vw);
+              transform: translateX(38dvw) translateY(-38dvw);
             }
 
             @media screen and (max-width: 768px) {
-              transform: translateX(38vw) translateY(-38vw);
+              transform: translateX(38dvw) translateY(-38dvw);
             }
           }
 
           &:nth-child(9) {
-            transform: translateX(28vw) translateY(28vw);
-            margin-top: 4vw;
-            margin-left: 4vw;
+            transform: translateX(28dvw) translateY(28dvw);
+            margin-top: 4dvw;
+            margin-left: 4dvw;
 
             @media screen and (max-width: 1024px) {
-              transform: translateX(38vw) translateY(38vw);
+              transform: translateX(38dvw) translateY(38dvw);
             }
 
             @media screen and (max-width: 768px) {
-              transform: translateX(38vw) translateY(38vw);
+              transform: translateX(38dvw) translateY(38dvw);
             }
           }
 
           &:nth-child(10) {
-            transform: translateY(28vw);
-            margin-top: 4vw;
+            transform: translateY(28dvw);
+            margin-top: 4dvw;
 
             @media screen and (max-width: 1024px) {
-              transform: translateY(38vw);
+              transform: translateY(38dvw);
             }
 
             @media screen and (max-width: 768px) {
-              transform: translateY(38vw);
+              transform: translateY(38dvw);
             }
           }
 
           &:nth-child(11) {
-            transform: translateY(-28vw);
-            margin-bottom: 4vw;
+            transform: translateY(-28dvw);
+            margin-bottom: 4dvw;
             background-color: $color-blue;
 
             @media screen and (max-width: 1024px) {
-              transform: translateY(-38vw);
+              transform: translateY(-38dvw);
             }
 
             @media screen and (max-width: 768px) {
-              transform: translateY(-38vw);
+              transform: translateY(-38dvw);
             }
           }
         }
 
         @media screen and (max-width: 1024px) {
-          height: 38vw;
-          width: 38vw;
+          height: 38dvw;
+          width: 38dvw;
         }
 
         @media screen and (max-width: 768px) {
-          height: 38vw;
-          width: 38vw;
+          height: 38dvw;
+          width: 38dvw;
         }
       }
     }
@@ -531,25 +531,25 @@ body {
 
       &__inner {
         height: 100%;
-        width: 3.5vw;
-        transform: translateY(calc(-1.75vw));
+        width: 3.5dvw;
+        transform: translateY(calc(-1.75dvw));
 
         .circle {
           &__dot {
             background-color: $color-pink;
             border-radius: 50%;
-            min-height: 3.5vw;
-            min-width: 3.5vw;
+            min-height: 3.5dvw;
+            min-width: 3.5dvw;
             margin-bottom: 0.5rem;
 
             @media screen and (max-width: 1024px) {
-              min-height: 8vw;
-              min-width: 8vw;
+              min-height: 8dvw;
+              min-width: 8dvw;
             }
 
             @media screen and (max-width: 768px) {
-              min-height: 8vw;
-              min-width: 8vw;
+              min-height: 8dvw;
+              min-width: 8dvw;
             }
           }
 
@@ -563,133 +563,133 @@ body {
 
           &__spacer {
             // dot width x 7
-            height: calc(24.5vw + 3.5rem);
+            height: calc(24.5dvw + 3.5rem);
 
             @media screen and (max-width: 1024px) {
-              height: calc(48vw + 3.5rem);
+              height: calc(48dvw + 3.5rem);
             }
 
             @media screen and (max-width: 768px) {
-              height: calc(56vw + 3.5rem);
+              height: calc(56dvw + 3.5rem);
             }
           }
 
           &__replace {
             background-color: $color-pink;
             border-radius: 50%;
-            min-height: 3.5vw;
-            min-width: 3.5vw;
+            min-height: 3.5dvw;
+            min-width: 3.5dvw;
             margin-bottom: 0.5rem;
             position: absolute;
 
             &--2 {
-              transform: translateY(calc(3.5vw + 0.5rem));
+              transform: translateY(calc(3.5dvw + 0.5rem));
 
               @media screen and (max-width: 1024px) {
-                transform: translateY(calc(8vw + 0.5rem));
+                transform: translateY(calc(8dvw + 0.5rem));
               }
 
               @media screen and (max-width: 768px) {
-                transform: translateY(calc(8vw + 0.5rem));
+                transform: translateY(calc(8dvw + 0.5rem));
               }
             }
 
             &--3 {
-              transform: translateY(calc(7vw + 1rem));
+              transform: translateY(calc(7dvw + 1rem));
 
               @media screen and (max-width: 1024px) {
-                transform: translateY(calc(16vw + 1rem));
+                transform: translateY(calc(16dvw + 1rem));
               }
 
               @media screen and (max-width: 768px) {
-                transform: translateY(calc(16vw + 1rem));
+                transform: translateY(calc(16dvw + 1rem));
               }
             }
 
             &--4 {
-              transform: translateY(calc(10.5vw + 1.5rem));
+              transform: translateY(calc(10.5dvw + 1.5rem));
 
               @media screen and (max-width: 1024px) {
-                transform: translateY(calc(24vw + 1.5rem));
+                transform: translateY(calc(24dvw + 1.5rem));
               }
 
               @media screen and (max-width: 768px) {
-                transform: translateY(calc(24vw + 1.5rem));
+                transform: translateY(calc(24dvw + 1.5rem));
               }
             }
 
             &--5 {
-              transform: translateY(calc(14vw + 2rem));
+              transform: translateY(calc(14dvw + 2rem));
 
               @media screen and (max-width: 1024px) {
-                transform: translateY(calc(32vw + 2rem));
+                transform: translateY(calc(32dvw + 2rem));
               }
 
               @media screen and (max-width: 768px) {
-                transform: translateY(calc(32vw + 2rem));
+                transform: translateY(calc(32dvw + 2rem));
               }
             }
 
             &--6 {
-              transform: translateY(calc(17.5vw + 2.5rem));
+              transform: translateY(calc(17.5dvw + 2.5rem));
 
               @media screen and (max-width: 1024px) {
-                transform: translateY(calc(40vw + 2.5rem));
+                transform: translateY(calc(40dvw + 2.5rem));
               }
 
               @media screen and (max-width: 768px) {
-                transform: translateY(calc(40vw + 2.5rem));
+                transform: translateY(calc(40dvw + 2.5rem));
               }
             }
 
             &--7 {
-              transform: translateY(calc(21vw + 3rem));
+              transform: translateY(calc(21dvw + 3rem));
 
               @media screen and (max-width: 1024px) {
-                transform: translateY(calc(40vw + 2.5rem));
+                transform: translateY(calc(40dvw + 2.5rem));
               }
 
               @media screen and (max-width: 768px) {
-                transform: translateY(calc(48vw + 3rem));
+                transform: translateY(calc(48dvw + 3rem));
               }
             }
 
             @media screen and (max-width: 1024px) {
-              min-height: 8vw;
-              min-width: 8vw;
+              min-height: 8dvw;
+              min-width: 8dvw;
             }
 
             @media screen and (max-width: 768px) {
-              min-height: 8vw;
-              min-width: 8vw;
+              min-height: 8dvw;
+              min-width: 8dvw;
             }
           }
         }
 
         @media screen and (max-width: 1650px) {
-          transform: translateY(calc(8vw - 30%));
+          transform: translateY(calc(8dvw - 30%));
         }
 
         @media screen and (max-width: 1450px) {
-          transform: translateY(calc(8vw - 17.5%));
+          transform: translateY(calc(8dvw - 17.5%));
         }
 
         @media screen and (max-width: 1024px) {
-          transform: translateY(-30vw);
+          transform: translateY(-30dvw);
         }
 
         @media screen and (max-width: 768px) {
-          transform: translateY(-5vw);
+          transform: translateY(-5dvw);
         }
 
         // small device (iphone SE)
         @media screen and (max-width: 376px) {
-          transform: translateY(-26vw);
+          transform: translateY(-26dvw);
         }
 
         // small samsung device
         @media screen and (max-width: 376px) and (min-height: 680px) and (max-height: 740px) {
-          transform: translateY(-14vw);
+          transform: translateY(-14dvw);
         }
       }
     }
@@ -702,13 +702,13 @@ body {
 
       .text {
         &__1 {
-          font-size: 6vw;
+          font-size: 6dvw;
           line-height: 1;
           text-transform: uppercase;
         }
 
         &__2 {
-          font-size: 12vw;
+          font-size: 12dvw;
           line-height: 0.8;
           text-transform: uppercase;
         }
@@ -750,89 +750,89 @@ body {
       position: absolute;
 
       &__1 {
-        height: 100vw;
-        width: 100vw;
-        transform: translateX(-40vw);
+        height: 100dvw;
+        width: 100dvw;
+        transform: translateX(-40dvw);
 
         @media screen and (max-width: 1024px) {
           height: 1500px;
           width: 1500px;
-          transform: translateX(-100vw) translateY(500px);
+          transform: translateX(-100dvw) translateY(500px);
         }
 
         @media screen and (max-width: 768px) {
           height: 900px;
           width: 900px;
-          transform: translateX(-100vw) translateY(500px);
+          transform: translateX(-100dvw) translateY(500px);
         }
 
         @media screen and (max-width: 376px) {
-          transform: translateX(-100vw) translateY(300px);
+          transform: translateX(-100dvw) translateY(300px);
         }
       }
 
       &__2 {
-        height: 80vw;
-        width: 80vw;
-        transform: translateX(60vw) translateY(-40vw);
+        height: 80dvw;
+        width: 80dvw;
+        transform: translateX(60dvw) translateY(-40dvw);
         z-index: 9;
 
         @media screen and (max-width: 1024px) {
           height: 1200px;
           width: 1200px;
-          transform: translateX(30vw) translateY(-400px);
+          transform: translateX(30dvw) translateY(-400px);
         }
 
         @media screen and (max-width: 768px) {
           height: 700px;
           width: 700px;
-          transform: translateX(-10vw) translateY(-200px);
+          transform: translateX(-10dvw) translateY(-200px);
         }
       }
 
       &__3 {
-        height: 70vw;
-        width: 70vw;
-        transform: translateX(60vw) translateY(-10vw);
+        height: 70dvw;
+        width: 70dvw;
+        transform: translateX(60dvw) translateY(-10dvw);
 
         @media screen and (max-width: 1024px) {
           height: 1200px;
           width: 1200px;
-          transform: translateX(10vw) translateY(-10vw);
+          transform: translateX(10dvw) translateY(-10dvw);
         }
 
         @media screen and (max-width: 768px) {
           height: 600px;
           width: 600px;
 
-          transform: translateX(20vw) translateY(-10vw);
+          transform: translateX(20dvw) translateY(-10dvw);
         }
       }
 
       &__4 {
-        height: 40vw;
-        width: 40vw;
-        transform: translateX(55vw);
+        height: 40dvw;
+        width: 40dvw;
+        transform: translateX(55dvw);
 
         @media screen and (max-width: 1024px) {
           height: 700px;
           width: 700px;
 
-          transform: translateX(-20vw);
+          transform: translateX(-20dvw);
         }
 
         @media screen and (max-width: 768px) {
           height: 400px;
           width: 400px;
 
-          transform: translateX(-40vw);
+          transform: translateX(-40dvw);
         }
       }
 
       &__5 {
-        height: 80vw;
-        width: 80vw;
-        transform: translateX(-100vw);
+        height: 80dvw;
+        width: 80dvw;
+        transform: translateX(-100dvw);
 
         @media screen and (max-width: 1024px) {
           height: 800px;
@@ -850,28 +850,28 @@ body {
       }
 
       &__6 {
-        height: 110vw;
-        width: 110vw;
-        transform: translateX(-75vw);
+        height: 110dvw;
+        width: 110dvw;
+        transform: translateX(-75dvw);
 
         @media screen and (max-width: 1024px) {
           height: 1800px;
           width: 1800px;
-          transform: translateX(-155vw) translateY(-500px);
+          transform: translateX(-155dvw) translateY(-500px);
         }
 
         @media screen and (max-width: 768px) {
           height: 1200px;
           width: 1200px;
 
-          transform: translateX(-205vw);
+          transform: translateX(-205dvw);
         }
       }
 
       &__7 {
-        height: 65vw;
-        width: 65vw;
-        transform: translateX(50vw);
+        height: 65dvw;
+        width: 65dvw;
+        transform: translateX(50dvw);
 
         @media screen and (max-width: 1024px) {
           height: 800px;
@@ -885,15 +885,15 @@ body {
       }
 
       &__8 {
-        height: 110vw;
-        width: 110vw;
-        transform: translateX(30vw);
+        height: 110dvw;
+        width: 110dvw;
+        transform: translateX(30dvw);
 
         @media screen and (max-width: 1024px) {
           height: 1200px;
           width: 1200px;
 
-          transform: translateX(0vw);
+          transform: translateX(0dvw);
         }
 
         @media screen and (max-width: 768px) {
@@ -903,14 +903,14 @@ body {
       }
 
       &__9 {
-        height: 65vw;
-        width: 65vw;
-        transform: translateX(-7vw);
+        height: 65dvw;
+        width: 65dvw;
+        transform: translateX(-7dvw);
 
         @media screen and (max-width: 1024px) {
           height: 1000px;
           width: 1000px;
-          transform: translateX(-70vw);
+          transform: translateX(-70dvw);
         }
 
         @media screen and (max-width: 768px) {
@@ -927,26 +927,26 @@ body {
       z-index: 11;
 
       .gear {
-        height: 200vw;
-        width: 200vw;
+        height: 200dvw;
+        width: 200dvw;
         background-image: url('../images/gear.svg');
         background-position: center;
         background-size: contain;
         background-repeat: no-repeat;
         position: absolute;
-        top: -80vw;
-        left: -45vw;
+        top: -80dvw;
+        left: -45dvw;
 
         @media screen and (max-width: 1024px) {
           height: 2400px;
           width: 2400px;
-          left: -95vw;
+          left: -95dvw;
         }
 
         @media screen and (max-width: 768px) {
           height: 1400px;
           width: 1400px;
-          left: -95vw;
+          left: -95dvw;
         }
       }
 
@@ -958,33 +958,33 @@ body {
         .text {
           &__1 {
             width: 100%;
-            font-size: 17vw;
+            font-size: 17dvw;
             text-transform: uppercase;
             line-height: 0.5;
           }
 
           &__2 {
-            font-size: 9vw;
+            font-size: 9dvw;
             text-transform: uppercase;
             padding-left: 40%;
           }
 
           &__3 {
-            padding-right: 27vw;
-            padding-left: 40vw;
-            padding-right: 30vw;
+            padding-right: 27dvw;
+            padding-left: 40dvw;
+            padding-right: 30dvw;
             line-height: 1;
 
             @media screen and (max-width: 1024px) {
               bottom: 20%;
-              padding-left: 10vw;
-              padding-right: 10vw;
+              padding-left: 10dvw;
+              padding-right: 10dvw;
             }
 
             @media screen and (max-width: 768px) {
               bottom: 20%;
-              padding-left: 10vw;
-              padding-right: 10vw;
+              padding-left: 10dvw;
+              padding-right: 10dvw;
             }
           }
         }
@@ -1018,8 +1018,8 @@ body {
 
     &--1 {
       bottom: 74%;
-      right: 50vw;
-      width: 12vw;
+      right: 50dvw;
+      width: 12dvw;
       font-size: 1.4rem;
       text-align: right;
 
@@ -1036,21 +1036,21 @@ body {
         font-size: 1rem;
         width: 25%;
         bottom: 60%;
-        right: 55vw;
+        right: 55dvw;
       }
 
       // smaller device
       @media screen and (max-width: 376px) {
         font-size: 1rem;
         width: 40%;
-        right: 55vw;
+        right: 55dvw;
       }
     }
 
     &--2 {
       bottom: 95%;
-      left: 65vw;
-      width: 14vw;
+      left: 65dvw;
+      width: 14dvw;
       font-size: 1.4rem;
       text-align: left;
 
@@ -1064,7 +1064,7 @@ body {
         width: 35%;
         bottom: 90%;
         right: unset;
-        left: 11vw;
+        left: 11dvw;
         text-align: right;
       }
 
@@ -1073,13 +1073,13 @@ body {
         width: 40%;
         bottom: 90%;
         left: unset;
-        right: 55vw;
+        right: 55dvw;
       }
     }
 
     &--3 {
       bottom: 105%;
-      right: 50vw;
+      right: 50dvw;
       font-size: 3rem;
       height: 40%;
       text-align: right;
@@ -1098,7 +1098,7 @@ body {
       @media screen and (max-width: 768px) {
         font-size: 2rem;
         bottom: 110%;
-        right: 55vw;
+        right: 55dvw;
       }
     }
 

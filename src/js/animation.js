@@ -181,7 +181,6 @@ tl.fromTo(
     },
     '<'
   )
-  .to('.theme-changer', { autoAlpha: 0, duration: 3 }, '<')
   .to(
     letterI,
     {
@@ -230,7 +229,8 @@ tl.fromTo(
       },
     },
     '<'
-  );
+  )
+  .to('.theme-changer', { autoAlpha: 0, duration: 3 }, '-=1');
 // .to(
 //   letterI,
 //   {
@@ -246,11 +246,23 @@ tl.fromTo(
   scene2,
   { y: '-150vh', autoAlpha: 1 },
   { y: '0vh', autoAlpha: 1, duration: 5 },
-  '-=3'
+  '-=5'
 )
-  .set('.animation-container', { backgroundColor: '#0000e0' }, '<')
-  .set(letterI, { backgroundColor: '#f749d4' }, '<')
-  .set('#intro-title', { color: '#f749d4' }, '<')
+  .to(
+    '.animation-container',
+    { backgroundColor: '#0000e0', duration: 3, ease: 'power4.inOut' },
+    '<'
+  )
+  .to(
+    letterI,
+    { backgroundColor: '#f749d4', duration: 3, ease: 'power4.inOut' },
+    '<'
+  )
+  .to(
+    '#intro-title',
+    { color: '#f749d4', duration: 3, ease: 'power4.inOut' },
+    '<'
+  )
   // .fromTo(
   //   s2Circles,
   //   {

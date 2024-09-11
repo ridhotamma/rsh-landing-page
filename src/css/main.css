@@ -325,6 +325,7 @@ q::after {
   position: fixed;
   left: 0;
   justify-content: flex-end;
+  mix-blend-mode: normal;
 }
 .navbar .hamburger-menu {
   display: inline-block;
@@ -332,7 +333,6 @@ q::after {
   width: 25px;
   height: 35px;
   position: relative;
-  mix-blend-mode: difference;
 }
 .navbar .hamburger-menu .line {
   display: block;
@@ -342,7 +342,6 @@ q::after {
   margin: 5px 0;
   transition: all 0.3s ease;
   border-radius: 10px;
-  mix-blend-mode: difference;
 }
 .navbar .hamburger-menu--active .line:nth-child(1) {
   transform: translateY(8px) rotate(45deg);

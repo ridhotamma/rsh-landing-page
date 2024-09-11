@@ -34,18 +34,17 @@ const tl = gsap.timeline({
     scrub: 1,
     pin: true,
     end: '+=18000',
+    onEnter: () => {
+      tl.tweenFromTo(0, 'autoScroll').then(() => {
+        console.log("AUTO SCROLL IS COMPLETED")
+        document.body.style.overflow = 'auto';
+      });
+      playBounce();
+    },
   },
 });
 
-const tlAutoScroll = gsap.timeline({
-  paused: true,
-  onComplete: () => {
-    tl.scrollTrigger.enable();
-    playBounce();
-  },
-});
-
-gsap.set(scene1, { autoAlpha: 0 });
+// gsap.set(scene1, { autoAlpha: 0 });
 gsap.set(scene2, { autoAlpha: 0 });
 gsap.set(scene3, { autoAlpha: 0 });
 gsap.set(scene4, { autoAlpha: 0 });
@@ -86,28 +85,25 @@ function stopBounce() {
 
 // scene 1
 // start auto scroll
-tlAutoScroll
-  .set('.loading-container', { autoAlpha: 0, delay: 1 })
-  .set(scene1, { autoAlpha: 1 })
-  .fromTo(
-    scene1,
-    {
-      y: '120vh',
-    },
-    {
-      y: '0vh',
-      duration: 1.5,
-    }
-  )
+tl.fromTo(
+  scene1,
+  {
+    y: '120vh',
+  },
+  {
+    y: '0vh',
+    duration: 3,
+  }
+)
   .to(letterI, {
     scaleY: isMobile || isTablet ? 12 : 4,
     transformOrigin: 'bottom',
-    duration: 1.5,
+    duration: 3,
     ease: 'power4.inOut',
   })
   .to(scene1, {
     y: '18vh',
-    duration: 1.5,
+    duration: 3,
     ease: 'power4.inOut',
   })
   .fromTo(
@@ -118,18 +114,18 @@ tlAutoScroll
     },
     {
       y: 0,
-      duration: 1.5,
+      duration: 3,
       autoAlpha: 1,
       ease: 'power4.inOut',
     },
     '<'
   )
-  .to(scene1, { y: '30vh', duration: 1.5, ease: 'power4.inOut' })
+  .to(scene1, { y: '30vh', duration: 3, ease: 'power4.inOut' })
   .to(
     letterI,
     {
       scaleY: isMobile || isTablet ? 20 : 8,
-      duration: 1.5,
+      duration: 3,
       ease: 'power4.inOut',
     },
     '<'
@@ -142,7 +138,7 @@ tlAutoScroll
     },
     {
       y: 0,
-      duration: 1.5,
+      duration: 3,
       autoAlpha: 1,
       ease: 'power4.inOut',
     },
@@ -150,7 +146,7 @@ tlAutoScroll
   )
   .to(scene1, {
     y: '55vh',
-    duration: 1.5,
+    duration: 3,
     ease: 'power4.inOut',
   })
   .fromTo(
@@ -161,7 +157,7 @@ tlAutoScroll
     },
     {
       y: 0,
-      duration: 1.5,
+      duration: 3,
       autoAlpha: 1,
       ease: 'power4.inOut',
     },
@@ -175,23 +171,24 @@ tlAutoScroll
     },
     {
       y: 0,
-      duration: 1.5,
+      duration: 3,
       autoAlpha: 1,
       ease: 'power4.inOut',
     },
     '<'
   )
-  .to(logo, { autoAlpha: 1, duration: 1.5, ease: 'power4.inOut' }, '<')
-  .to('.theme-changer', { autoAlpha: 0, duration: 1.5 }, '<')
+  .to(logo, { autoAlpha: 1, duration: 3, ease: 'power4.inOut' }, '<')
+  .to('.theme-changer', { autoAlpha: 0, duration: 3 }, '<')
   .to(
     letterI,
     {
       scaleY: isMobile || isTablet ? 32 : 12,
-      duration: 1.5,
+      duration: 3,
       ease: 'power4.inOut',
     },
     '<'
-  );
+  )
+  .add('autoScroll');
 // end auto scroll
 
 tl.fromTo(
@@ -779,7 +776,9 @@ tl.to(letterI, {
 
 document.addEventListener('DOMContentLoaded', () => {
   ScrollTrigger.refresh();
-  tlAutoScroll.play();
   pulseCircles();
-  tl.scrollTrigger.disable();
+  document.body.style.overflow = 'hidden';
+  gsap.to(window, {
+    scrollTo: { y: 4500 },
+  });
 });

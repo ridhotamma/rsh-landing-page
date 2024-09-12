@@ -37,11 +37,11 @@ const tl = gsap.timeline({
     pin: true,
     end: '+=18000',
     onEnter: () => {
-      // tl.tweenFromTo(0, 'autoScroll').then(() => {
-      //   document.body.style.overflow = 'auto';
-      //   gsap.to(logo, { autoAlpha: 1, duration: 3, ease: 'power4.inOut' });
-      //   playBounce();
-      // });
+      tl.tweenFromTo(0, 'autoScroll').then(() => {
+        document.body.style.overflow = 'auto';
+        gsap.to(logo, { autoAlpha: 1, duration: 3, ease: 'power4.inOut' });
+        playBounce();
+      });
 
       gsap.set('.loading-container', { autoAlpha: 0, delay: 1 });
       gsap.set(scene1, { autoAlpha: 1 });
@@ -812,8 +812,8 @@ tl.to(letterI, {
 document.addEventListener('DOMContentLoaded', () => {
   ScrollTrigger.refresh();
   playPulse();
-  // document.body.style.overflow = 'hidden';
-  // gsap.to(window, {
-  //   scrollTo: { y: 5000 },
-  // });
+  document.body.style.overflow = 'hidden';
+  gsap.to(window, {
+    scrollTo: { y: 5000 },
+  });
 });

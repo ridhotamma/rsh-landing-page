@@ -211,7 +211,7 @@ tl.fromTo(
     { y: '-100dvh', duration: 3, ease: 'power4.inOut' },
     '<'
   )
-  .to('.logo > svg > path', { fill: 'white', duration: 3 }, '<')
+  // .to('.logo > svg > path', { fill: 'white', duration: 3 }, '<')
   .fromTo(
     chevronArrow,
     {

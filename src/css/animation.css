@@ -188,7 +188,7 @@ body::-webkit-scrollbar {
   opacity: 0;
 }
 .logo svg path {
-  fill: #f5e400;
+  fill: white;
 }
 @media screen and (max-width: 768px) {
   .logo svg {
@@ -303,7 +303,7 @@ body::-webkit-scrollbar {
   }
 }
 .scene__1 h2 {
-  font-size: 8dvw;
+  font-size: 9.2dvw;
   color: #f749d4;
 }
 .scene__2 {

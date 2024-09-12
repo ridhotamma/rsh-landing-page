@@ -17,7 +17,9 @@ const s2Text1 = document.querySelector('.scene__2 .description .text__1');
 const s2Text2 = document.querySelector('.scene__2 .description .text__2');
 const s2Text3 = document.querySelector('.scene__2 .description .text__3');
 const s2Text4 = document.querySelector('.scene__2 .description .text__4');
-const s2Circles = document.querySelectorAll('.scene__2 .circles .circle');
+const s2Circles = document.querySelectorAll(
+  '.scene__2 .circles .circle__pulse'
+);
 const [s2InnerCircle, ...s2OuterCircles] = s2Circles;
 
 const scene3 = document.querySelector('.scene__3');
@@ -35,11 +37,11 @@ const tl = gsap.timeline({
     pin: true,
     end: '+=18000',
     onEnter: () => {
-      tl.tweenFromTo(0, 'autoScroll').then(() => {
-        document.body.style.overflow = 'auto';
-        gsap.to(logo, { autoAlpha: 1, duration: 3, ease: 'power4.inOut' });
-        playBounce();
-      });
+      // tl.tweenFromTo(0, 'autoScroll').then(() => {
+      //   document.body.style.overflow = 'auto';
+      //   gsap.to(logo, { autoAlpha: 1, duration: 3, ease: 'power4.inOut' });
+      //   playBounce();
+      // });
 
       gsap.set('.loading-container', { autoAlpha: 0, delay: 1 });
       gsap.set(scene1, { autoAlpha: 1 });
@@ -53,17 +55,16 @@ gsap.set(scene3, { autoAlpha: 0 });
 gsap.set(scene4, { autoAlpha: 0 });
 gsap.set(scene5, { autoAlpha: 0 });
 
-function pulseCircles() {
-  gsap.to(s2OuterCircles, {
-    scale: 3.75,
-    opacity: 0,
-    duration: 3.6,
-    stagger: {
-      each: 0.6,
-      repeat: -1,
-    },
-  });
-}
+let pulseAnimation = gsap.to(s2OuterCircles, {
+  scale: 3.75,
+  opacity: 0,
+  duration: 3.6,
+  stagger: {
+    each: 0.6,
+    repeat: -1,
+  },
+  paused: true,
+});
 
 let chevronUpAnimation = gsap.fromTo(
   chevronUp,
@@ -84,6 +85,14 @@ function playBounce() {
 
 function stopBounce() {
   chevronUpAnimation.pause();
+}
+
+function playPulse() {
+  pulseAnimation.play();
+}
+
+function stopPulse() {
+  pulseAnimation.pause();
 }
 
 // scene 1
@@ -114,7 +123,7 @@ tl.fromTo(
     intro1,
     {
       autoAlpha: 0,
-      y: '100dvh',
+      y: '50dvh',
     },
     {
       y: 0,
@@ -138,7 +147,7 @@ tl.fromTo(
     intro2,
     {
       autoAlpha: 0,
-      y: '100dvh',
+      y: '50dvh',
     },
     {
       y: 0,
@@ -171,7 +180,7 @@ tl.fromTo(
     intro3,
     {
       autoAlpha: 0,
-      y: '100dvh',
+      y: '50dvh',
     },
     {
       y: 0,
@@ -278,24 +287,16 @@ tl.fromTo(
   // )
   .fromTo(
     s2Text1,
-    { yPercent: -100, autoAlpha: 0 },
-    { yPercent: 0, autoAlpha: 1, duration: 5, ease: 'power4.inOut' },
-    '<'
-  )
-  .fromTo(
-    s2Text2,
-    { xPercent: -100, autoAlpha: 0 },
-    { xPercent: 0, autoAlpha: 1, duration: 5, ease: 'power4.inOut' },
+    { yPercent: -100 },
+    { yPercent: 0, duration: 5, ease: 'power4.inOut' },
     '<'
   )
   .fromTo(
     [s2Text2, s2Text3, s2Text4],
-    { xPercent: -100, autoAlpha: 0 },
+    { xPercent: -100 },
     {
       xPercent: 0,
-      autoAlpha: 1,
       duration: 5,
-      stagger: 0.1,
       ease: 'power4.inOut',
     },
     '<'
@@ -306,7 +307,7 @@ tl.fromTo(
     ease: 'power4.inOut',
   })
   // .to(s2OuterCircles, { autoAlpha: 1, duration: 5, ease: 'power4.inOut' }, '<')
-  .to(s2OuterCircles, { yPercent: 100, duration: 6, ease: 'power4.inOut' }, '<')
+  // .to(s2OuterCircles, { yPercent: 100, duration: 6, ease: 'power4.inOut' }, '<')
   .to(
     document.querySelectorAll('.scene__2 .description'),
     {
@@ -316,8 +317,20 @@ tl.fromTo(
     },
     '<'
   )
+  .set(s2OuterCircles, { display: 'none' }, '-=5.5')
+  .set('.circles .circle__almond', { display: 'block' }, '<')
   .to(
-    s2OuterCircles,
+    '.circles .circle__almond',
+    { yPercent: 100, duration: 6, ease: 'power4.inOut' },
+    '<'
+  )
+  .to(
+    '.circles .circle__almond',
+    { autoAlpha: 1, duration: 3, ease: 'power4.inOut' },
+    '<'
+  )
+  .to(
+    '.circles .circle__almond',
     {
       width: 0,
       duration: 6,
@@ -325,6 +338,15 @@ tl.fromTo(
     },
     '<'
   )
+  // .to(
+  //   s2OuterCircles,
+  //   {
+  //     width: 0,
+  //     duration: 6,
+  //     ease: 'power4.inOut',
+  //   },
+  //   '<'
+  // )
   .set(scene2, { autoAlpha: 0 })
   .set(scene3, { autoAlpha: 1 });
 
@@ -536,7 +558,6 @@ tl.set('.circle__replace', { autoAlpha: 0 })
     {
       x: '100dvw',
       duration: 5,
-      autoAlpha: 0,
       stagger: 0.5,
       ease: 'power4.inOut',
     },
@@ -763,12 +784,10 @@ tl.to(letterI, {
     '.scene__4 .description > *',
     {
       x: (index) => (index === 0 ? '-100dvw' : '100dvw'),
-      autoAlpha: 0,
     },
     {
       x: 0,
       duration: 5,
-      autoAlpha: 1,
       stagger: 0.5,
     },
     '<'
@@ -792,9 +811,9 @@ tl.to(letterI, {
 
 document.addEventListener('DOMContentLoaded', () => {
   ScrollTrigger.refresh();
-  pulseCircles();
-  document.body.style.overflow = 'hidden';
-  gsap.to(window, {
-    scrollTo: { y: 5000 },
-  });
+  playPulse();
+  // document.body.style.overflow = 'hidden';
+  // gsap.to(window, {
+  //   scrollTo: { y: 5000 },
+  // });
 });

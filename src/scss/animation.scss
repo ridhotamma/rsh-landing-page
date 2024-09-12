@@ -108,6 +108,16 @@ body {
   height: 100%;
   background-color: transparent;
 
+  * {
+    -webkit-font-smoothing: antialiased;
+    -webkit-backface-visibility: hidden;
+    -webkit-transform-style: preserve-3d;
+    -webkit-transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+    transform: translate3d(0, 0, 0);
+  }
+
   &__1 {
     display: flex;
     justify-content: end;
@@ -312,6 +322,26 @@ body {
 
         &__6 {
           opacity: 0.8;
+        }
+
+        // HERE IS FOR CIRCLE ALMOND
+        &__7 {
+          opacity: 0.4;
+          scale: 1.5;
+        }
+
+        &__8 {
+          opacity: 0.4;
+          scale: 2;
+        }
+
+        &__9 {
+          opacity: 0.4;
+          scale: 2.5;
+        }
+
+        &__almond {
+          display: none;
         }
 
         @media screen and (max-width: 1024px) {
@@ -1026,6 +1056,7 @@ body {
       width: 12dvw;
       font-size: 1.4rem;
       text-align: right;
+      z-index: -1;
 
       @media screen and (min-width: 1500px) {
         bottom: 80%;
@@ -1057,6 +1088,7 @@ body {
       width: 14dvw;
       font-size: 1.4rem;
       text-align: left;
+      z-index: -1;
 
       @media screen and (max-width: 1024px) {
         width: 25%;
@@ -1089,6 +1121,7 @@ body {
       text-align: right;
       line-height: 0.8;
       font-weight: bold;
+      z-index: -1;
 
       @media screen and (min-width: 1500px) {
         bottom: 110%;

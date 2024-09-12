@@ -78,14 +78,14 @@ body {
   left: 3%;
   top: 3%;
   z-index: 10;
-  // mix-blend-mode: difference;
+  mix-blend-mode: difference;
   z-index: 81;
   visibility: hidden;
   opacity: 0;
 
   svg {
     path {
-      fill: $color-yellow;
+      fill: white;
     }
   }
 

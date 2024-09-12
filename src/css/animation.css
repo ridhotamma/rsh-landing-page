@@ -182,12 +182,13 @@ body::-webkit-scrollbar {
   left: 3%;
   top: 3%;
   z-index: 10;
+  mix-blend-mode: difference;
   z-index: 81;
   visibility: hidden;
   opacity: 0;
 }
 .logo svg path {
-  fill: #f5e400;
+  fill: white;
 }
 @media screen and (max-width: 768px) {
   .logo svg {

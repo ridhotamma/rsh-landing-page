@@ -114,7 +114,7 @@ tl.fromTo(
     intro1,
     {
       autoAlpha: 0,
-      y: '100dvh',
+      y: '50dvh',
     },
     {
       y: 0,
@@ -138,7 +138,7 @@ tl.fromTo(
     intro2,
     {
       autoAlpha: 0,
-      y: '100dvh',
+      y: '50dvh',
     },
     {
       y: 0,
@@ -171,7 +171,7 @@ tl.fromTo(
     intro3,
     {
       autoAlpha: 0,
-      y: '100dvh',
+      y: '50dvh',
     },
     {
       y: 0,
@@ -211,7 +211,7 @@ tl.fromTo(
     { y: '-100dvh', duration: 3, ease: 'power4.inOut' },
     '<'
   )
-  .to('.logo > svg > path', { fill: 'white', duration: 3 }, '<')
+  // .to('.logo > svg > path', { fill: 'white', duration: 3 }, '<')
   .fromTo(
     chevronArrow,
     {
@@ -278,22 +278,15 @@ tl.fromTo(
   // )
   .fromTo(
     s2Text1,
-    { yPercent: -100, autoAlpha: 0 },
-    { yPercent: 0, autoAlpha: 1, duration: 5, ease: 'power4.inOut' },
-    '<'
-  )
-  .fromTo(
-    s2Text2,
-    { xPercent: -100, autoAlpha: 0 },
-    { xPercent: 0, autoAlpha: 1, duration: 5, ease: 'power4.inOut' },
+    { yPercent: -100 },
+    { yPercent: 0, duration: 5, ease: 'power4.inOut' },
     '<'
   )
   .fromTo(
     [s2Text2, s2Text3, s2Text4],
-    { xPercent: -100, autoAlpha: 0 },
+    { xPercent: -100 },
     {
       xPercent: 0,
-      autoAlpha: 1,
       duration: 5,
       stagger: 0.1,
       ease: 'power4.inOut',
@@ -306,7 +299,7 @@ tl.fromTo(
     ease: 'power4.inOut',
   })
   // .to(s2OuterCircles, { autoAlpha: 1, duration: 5, ease: 'power4.inOut' }, '<')
-  .to(s2OuterCircles, { yPercent: 100, duration: 6, ease: 'power4.inOut' }, '<')
+  // .to(s2OuterCircles, { yPercent: 100, duration: 6, ease: 'power4.inOut' }, '<')
   .to(
     document.querySelectorAll('.scene__2 .description'),
     {
@@ -320,6 +313,7 @@ tl.fromTo(
     s2OuterCircles,
     {
       width: 0,
+      height: 0,
       duration: 6,
       ease: 'power4.inOut',
     },

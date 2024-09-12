@@ -78,7 +78,7 @@ body {
   left: 3%;
   top: 3%;
   z-index: 10;
-  mix-blend-mode: difference;
+  // mix-blend-mode: difference;
   z-index: 81;
   visibility: hidden;
   opacity: 0;
@@ -107,6 +107,16 @@ body {
   width: 100%;
   height: 100%;
   background-color: transparent;
+
+  * {
+    -webkit-font-smoothing: antialiased;
+    -webkit-backface-visibility: hidden;
+    -webkit-transform-style: preserve-3d;
+    -webkit-transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+    transform: translate3d(0, 0, 0);
+  }
 
   &__1 {
     display: flex;
@@ -202,7 +212,7 @@ body {
     }
 
     h2 {
-      font-size: 8dvw;
+      font-size: 9.25dvw;
       color: $color-pink;
     }
   }
@@ -1026,6 +1036,7 @@ body {
       width: 12dvw;
       font-size: 1.4rem;
       text-align: right;
+      z-index: -1;
 
       @media screen and (min-width: 1500px) {
         bottom: 80%;
@@ -1057,6 +1068,7 @@ body {
       width: 14dvw;
       font-size: 1.4rem;
       text-align: left;
+      z-index: -1;
 
       @media screen and (max-width: 1024px) {
         width: 25%;
@@ -1089,6 +1101,7 @@ body {
       text-align: right;
       line-height: 0.8;
       font-weight: bold;
+      z-index: -1;
 
       @media screen and (min-width: 1500px) {
         bottom: 110%;

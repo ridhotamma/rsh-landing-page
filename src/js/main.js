@@ -20,7 +20,7 @@ function updateDeviceType() {
   const isMobileDevice =
     /android|iphone|ipod|blackberry|iemobile|opera mini/i.test(userAgent);
   const isMobileWidth = window.innerWidth <= maxMobileWidth;
-  isMobile = false
+  isMobile = isMobileDevice || isMobileWidth;
 
   const isTabletDevice = /ipad|android(?!.*mobile)/i.test(userAgent);
   const isTabletWidth =

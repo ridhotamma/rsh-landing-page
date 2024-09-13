@@ -556,7 +556,6 @@ tl.set('.circle__replace', { autoAlpha: 0 })
     {
       x: '100dvw',
       duration: 5,
-      autoAlpha: 0,
       stagger: 0.5,
       ease: 'power4.inOut',
     },
@@ -783,12 +782,10 @@ tl.to(letterI, {
     '.scene__4 .description > *',
     {
       x: (index) => (index === 0 ? '-100dvw' : '100dvw'),
-      autoAlpha: 0,
     },
     {
       x: 0,
       duration: 5,
-      autoAlpha: 1,
       stagger: 0.5,
     },
     '<'

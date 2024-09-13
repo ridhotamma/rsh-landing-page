@@ -632,7 +632,7 @@ body::-webkit-scrollbar {
 .scene__3 .circles-vertical__inner {
   height: 100%;
   width: 3.5dvw;
-  transform: translateY(-1.75dvw);
+  transform: translateY(-5.5dvw);
 }
 .scene__3 .circles-vertical__inner .circle__dot {
   background-color: #f749d4;
@@ -770,16 +770,6 @@ body::-webkit-scrollbar {
   .scene__3 .circles-vertical__inner .circle__replace {
     min-height: 8dvw;
     min-width: 8dvw;
-  }
-}
-@media screen and (max-width: 1650px) {
-  .scene__3 .circles-vertical__inner {
-    transform: translateY(-5.5vw);
-  }
-}
-@media screen and (max-width: 1550px) {
-  .scene__3 .circles-vertical__inner {
-    transform: translateY(-5vw);
   }
 }
 @media screen and (max-width: 1450px) {

@@ -542,7 +542,7 @@ body {
       &__inner {
         height: 100%;
         width: 3.5dvw;
-        transform: translateY(calc(-1.75dvw));
+        transform: translateY(-5.5dvw);
 
         .circle {
           &__dot {
@@ -674,14 +674,6 @@ body {
               min-width: 8dvw;
             }
           }
-        }
-
-        @media screen and (max-width: 1650px) {
-          transform: translateY(-5.5vw);
-        }
-
-        @media screen and (max-width: 1550px) {
-          transform: translateY(-5vw);
         }
 
         @media screen and (max-width: 1450px) {

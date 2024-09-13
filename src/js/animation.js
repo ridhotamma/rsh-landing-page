@@ -35,12 +35,13 @@ const tl = gsap.timeline({
     pin: true,
     end: '+=18000',
     onEnter: () => {
-      tl.tweenFromTo(0, 'autoScroll').then(() => {
-        document.body.style.overflow = 'auto';
-        gsap.to(logo, { autoAlpha: 1, duration: 3, ease: 'power4.inOut' });
-        playBounce();
-      });
+      // tl.tweenFromTo(0, 'autoScroll').then(() => {
+      //   document.body.style.overflow = 'auto';
+      //   gsap.to(logo, { autoAlpha: 1, duration: 3, ease: 'power4.inOut' });
+      //   playBounce();
+      // });
 
+      playBounce();
       gsap.set('.loading-container', { autoAlpha: 0, delay: 1 });
       gsap.set(scene1, { autoAlpha: 1 });
     },
@@ -54,27 +55,53 @@ gsap.set(scene4, { autoAlpha: 0 });
 gsap.set(scene5, { autoAlpha: 0 });
 
 function pulseCircles() {
-  gsap.to(s2OuterCircles, {
-    scale: 3.75,
-    opacity: 0,
-    duration: 3.6,
-    stagger: {
-      each: 0.6,
-      repeat: -1,
+  gsap.fromTo(
+    s2OuterCircles,
+    {
+      scale: (index) => {
+        if (index === 1) return 1.4;
+        if (index === 2) return 1.8;
+        if (index === 3) return 2.2;
+        if (index === 4) return 2.8;
+        if (index === 5) return 3.2;
+      },
     },
-  });
+    {
+      scale: (index) => {
+        if (index === 1) return 1.8;
+        if (index === 2) return 2.2;
+        if (index === 3) return 2.6;
+        if (index === 4) return 3.2;
+        if (index === 5) return 3.6;
+      },
+      duration: 0.8,
+      ease: 'power4.inOut',
+      stagger: {
+        each: 0.05,
+        from: 'start',
+        repeat: -1,
+        yoyo: true,
+      },
+    }
+  );
 }
 
 let chevronUpAnimation = gsap.fromTo(
-  chevronUp,
-  { y: 0 },
+  chevronArrow,
+  { y: 0, opacity: 1 },
   {
-    y: -50,
-    duration: 0.5,
     ease: 'power3.inOut',
-    repeat: -1,
-    yoyo: true,
+    stagger: {
+      each: 0.1,
+      repeat: -1,
+    },
     paused: true,
+    keyframes: [
+      { y: -50, duration: 0.8 },
+      { opacity: 0, duration: 0.8 },
+      { y: 0, duration: 0.8 },
+      { opacity: 1, duration: 0.8 },
+    ],
   }
 );
 
@@ -787,7 +814,7 @@ tl.to(letterI, {
 document.addEventListener('DOMContentLoaded', () => {
   ScrollTrigger.refresh();
   pulseCircles();
-  document.body.style.overflow = 'hidden';
+  // document.body.style.overflow = 'hidden';
   gsap.to(window, {
     scrollTo: { y: 5000 },
   });

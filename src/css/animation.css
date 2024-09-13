@@ -394,19 +394,19 @@ body::-webkit-scrollbar {
   position: absolute;
 }
 .scene__2 .circles .circle__2 {
-  opacity: 0.8;
+  opacity: 0.3;
 }
 .scene__2 .circles .circle__3 {
-  opacity: 0.8;
+  opacity: 0.3;
 }
 .scene__2 .circles .circle__4 {
-  opacity: 0.8;
+  opacity: 0.3;
 }
 .scene__2 .circles .circle__5 {
-  opacity: 0.8;
+  opacity: 0.3;
 }
 .scene__2 .circles .circle__6 {
-  opacity: 0.8;
+  opacity: 0.3;
 }
 @media screen and (max-width: 768px) {
   .scene__2 .circles .circle {

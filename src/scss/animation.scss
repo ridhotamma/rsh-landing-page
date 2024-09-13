@@ -677,11 +677,15 @@ body {
         }
 
         @media screen and (max-width: 1650px) {
-          transform: translateY(calc(8dvw - 30%));
+          transform: translateY(-5.5vw);
+        }
+
+        @media screen and (max-width: 1550px) {
+          transform: translateY(-5vw);
         }
 
         @media screen and (max-width: 1450px) {
-          transform: translateY(calc(8dvw - 17.5%));
+          transform: translateY(-1.75vw);
         }
 
         @media screen and (max-width: 1024px) {

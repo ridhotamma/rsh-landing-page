@@ -35,13 +35,12 @@ const tl = gsap.timeline({
     pin: true,
     end: '+=18000',
     onEnter: () => {
-      // tl.tweenFromTo(0, 'autoScroll').then(() => {
-      //   document.body.style.overflow = 'auto';
-      //   gsap.to(logo, { autoAlpha: 1, duration: 3, ease: 'power4.inOut' });
-      //   playBounce();
-      // });
+      tl.tweenFromTo(0, 'autoScroll').then(() => {
+        document.body.style.overflow = 'auto';
+        gsap.to(logo, { autoAlpha: 1, duration: 3, ease: 'power4.inOut' });
+        playBounce();
+      });
 
-      playBounce();
       gsap.set('.loading-container', { autoAlpha: 0, delay: 1 });
       gsap.set(scene1, { autoAlpha: 1 });
     },
@@ -489,7 +488,7 @@ tl.set('.circle__replace', { autoAlpha: 0 })
       '.scene__3 .circles .circle__random:nth-child(5)',
       '.scene__3 .circles .circle__random:nth-child(6)',
     ],
-    { y: '-100dvh', duration: 3, ease: 'power4.inOut' },
+    { y: '-100dvh', duration: 3, ease: 'power1.out', },
     '<'
   )
   .to(
@@ -497,7 +496,7 @@ tl.set('.circle__replace', { autoAlpha: 0 })
     {
       xPercent: -60,
       duration: 2,
-      ease: 'power4.inOut',
+      ease: 'power1.out',
     },
     '<'
   )
@@ -511,7 +510,7 @@ tl.set('.circle__replace', { autoAlpha: 0 })
       scale: 0.4,
       backgroundColor: '#f749d4',
       duration: 3,
-      ease: 'power4.inOut',
+      ease: 'power1.out',
     },
     '<'
   )
@@ -525,7 +524,7 @@ tl.set('.circle__replace', { autoAlpha: 0 })
       xPercent: -100,
       backgroundColor: '#f749d4',
       duration: 3,
-      ease: 'power4.inOut',
+      ease: 'power1.out',
     },
     '<'
   )
@@ -549,7 +548,7 @@ tl.set('.circle__replace', { autoAlpha: 0 })
   )
   .to(
     '.animation-container',
-    { backgroundColor: '#0000e0', duration: 3, ease: 'power4.inOut' },
+    { backgroundColor: '#0000e0', duration: 3, ease: 'power1.out' },
     '<'
   )
   .from(
@@ -592,7 +591,7 @@ tl.set('.circle__replace', { autoAlpha: 0 })
       width: isMobile || isTablet ? '38dvw' : '28dvw',
       height: isMobile || isTablet ? '38dvw' : '28dvw',
       duration: 5,
-      ease: 'power4.inOut',
+      ease: 'power1.out',
     },
     '<'
   )
@@ -605,7 +604,7 @@ tl.set('.circle__replace', { autoAlpha: 0 })
       width: isMobile || isTablet ? '38dvw' : '28dvw',
       height: isMobile || isTablet ? '38dvw' : '28dvw',
       duration: 5,
-      ease: 'power4.inOut',
+      ease: 'power1.out',
     },
     '<'
   )
@@ -617,7 +616,7 @@ tl.set('.circle__replace', { autoAlpha: 0 })
       width: isMobile || isTablet ? '38dvw' : '28dvw',
       height: isMobile || isTablet ? '38dvw' : '28dvw',
       duration: 5,
-      ease: 'power4.inOut',
+      ease: 'power1.out',
     },
     '<'
   )
@@ -629,7 +628,7 @@ tl.set('.circle__replace', { autoAlpha: 0 })
       width: isMobile || isTablet ? '38dvw' : '28dvw',
       height: isMobile || isTablet ? '38dvw' : '28dvw',
       duration: 5,
-      ease: 'power4.inOut',
+      ease: 'power1.out',
     },
     '<'
   )
@@ -642,7 +641,7 @@ tl.set('.circle__replace', { autoAlpha: 0 })
       width: isMobile || isTablet ? '38dvw' : '28dvw',
       height: isMobile || isTablet ? '38dvw' : '28dvw',
       duration: 5,
-      ease: 'power4.inOut',
+      ease: 'power1.out',
     },
     '<'
   )
@@ -655,7 +654,7 @@ tl.set('.circle__replace', { autoAlpha: 0 })
       width: isMobile || isTablet ? '38dvw' : '28dvw',
       height: isMobile || isTablet ? '38dvw' : '28dvw',
       duration: 5,
-      ease: 'power4.inOut',
+      ease: 'power1.out',
     },
     '<'
   )
@@ -668,7 +667,7 @@ tl.set('.circle__replace', { autoAlpha: 0 })
       width: isMobile || isTablet ? '38dvw' : '28dvw',
       height: isMobile || isTablet ? '38dvw' : '28dvw',
       duration: 5,
-      ease: 'power4.inOut',
+      ease: 'power1.out',
     },
     '<'
   );
@@ -814,7 +813,7 @@ tl.to(letterI, {
 document.addEventListener('DOMContentLoaded', () => {
   ScrollTrigger.refresh();
   pulseCircles();
-  // document.body.style.overflow = 'hidden';
+  document.body.style.overflow = 'hidden';
   gsap.to(window, {
     scrollTo: { y: 5000 },
   });

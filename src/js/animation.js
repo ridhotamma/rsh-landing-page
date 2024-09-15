@@ -109,7 +109,7 @@ function playBounce() {
 }
 
 function stopBounce() {
-  chevronUpAnimation.pause();
+  chevronUpAnimation.pause(0);
 }
 
 // scene 1
@@ -488,14 +488,14 @@ tl.set('.circle__replace', { autoAlpha: 0 })
       '.scene__3 .circles .circle__random:nth-child(5)',
       '.scene__3 .circles .circle__random:nth-child(6)',
     ],
-    { y: '-100dvh', duration: 3, ease: 'power1.out', },
+    { y: '-100dvh', duration: 4, ease: 'power1.out', },
     '<'
   )
   .to(
     '.scene__3 .circles .circle__random:nth-child(5)',
     {
       xPercent: -60,
-      duration: 2,
+      duration: 3,
       ease: 'power1.out',
     },
     '<'
@@ -509,7 +509,7 @@ tl.set('.circle__replace', { autoAlpha: 0 })
     {
       scale: 0.4,
       backgroundColor: '#f749d4',
-      duration: 3,
+      duration: 4,
       ease: 'power1.out',
     },
     '<'
@@ -523,7 +523,7 @@ tl.set('.circle__replace', { autoAlpha: 0 })
       y: '-100dvh',
       xPercent: -100,
       backgroundColor: '#f749d4',
-      duration: 3,
+      duration: 4,
       ease: 'power1.out',
     },
     '<'
@@ -589,7 +589,7 @@ tl.set('.circle__replace', { autoAlpha: 0 })
       yPercent: isMobile || isTablet ? 13 : -1,
       width: isMobile || isTablet ? '38dvw' : '28dvw',
       height: isMobile || isTablet ? '38dvw' : '28dvw',
-      duration: 5,
+      duration: 6,
       ease: 'power1.out',
     },
     '<'
@@ -602,7 +602,7 @@ tl.set('.circle__replace', { autoAlpha: 0 })
       yPercent: isMobile || isTablet ? 93 : 92,
       width: isMobile || isTablet ? '38dvw' : '28dvw',
       height: isMobile || isTablet ? '38dvw' : '28dvw',
-      duration: 5,
+      duration: 6,
       ease: 'power1.out',
     },
     '<'
@@ -614,7 +614,7 @@ tl.set('.circle__replace', { autoAlpha: 0 })
       yPercent: isMobile || isTablet ? -40 : -30,
       width: isMobile || isTablet ? '38dvw' : '28dvw',
       height: isMobile || isTablet ? '38dvw' : '28dvw',
-      duration: 5,
+      duration: 6,
       ease: 'power1.out',
     },
     '<'
@@ -626,7 +626,7 @@ tl.set('.circle__replace', { autoAlpha: 0 })
       yPercent: isMobile || isTablet ? -171 : -151,
       width: isMobile || isTablet ? '38dvw' : '28dvw',
       height: isMobile || isTablet ? '38dvw' : '28dvw',
-      duration: 5,
+      duration: 6,
       ease: 'power1.out',
     },
     '<'
@@ -639,7 +639,7 @@ tl.set('.circle__replace', { autoAlpha: 0 })
       yPercent: isMobile || isTablet ? -92 : -59,
       width: isMobile || isTablet ? '38dvw' : '28dvw',
       height: isMobile || isTablet ? '38dvw' : '28dvw',
-      duration: 5,
+      duration: 6,
       ease: 'power1.out',
     },
     '<'
@@ -652,7 +652,7 @@ tl.set('.circle__replace', { autoAlpha: 0 })
       yPercent: isMobile || isTablet ? -12 : 34,
       width: isMobile || isTablet ? '38dvw' : '28dvw',
       height: isMobile || isTablet ? '38dvw' : '28dvw',
-      duration: 5,
+      duration: 6,
       ease: 'power1.out',
     },
     '<'
@@ -665,7 +665,7 @@ tl.set('.circle__replace', { autoAlpha: 0 })
       yPercent: isMobile || isTablet ? -195 : -195,
       width: isMobile || isTablet ? '38dvw' : '28dvw',
       height: isMobile || isTablet ? '38dvw' : '28dvw',
-      duration: 5,
+      duration: 6,
       ease: 'power1.out',
     },
     '<'

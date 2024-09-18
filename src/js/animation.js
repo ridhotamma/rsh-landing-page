@@ -136,7 +136,7 @@ tl.fromTo(
     y: '18dvh',
     duration: 3,
     ease: 'power4.inOut',
-  })
+  }, '-=1')
   .fromTo(
     intro1,
     {

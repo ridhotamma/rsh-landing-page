@@ -37,7 +37,7 @@ const tl = gsap.timeline({
     onEnter: () => {
       tl.tweenFromTo(0, 'autoScroll').then(() => {
         document.body.style.overflow = 'auto';
-        gsap.to(logo, { autoAlpha: 1, duration: 3, ease: 'power4.inOut' });
+        // gsap.to(logo, { autoAlpha: 1, duration: 3, ease: 'power4.inOut' });
         playBounce();
       });
 
@@ -125,12 +125,13 @@ tl.fromTo(
     delay: 1,
   }
 )
+  .to(logo, { autoAlpha: 1, duration: 3 }, '-=1')
   .to(letterI, {
     scaleY: isMobile || isTablet ? 12 : 4,
     transformOrigin: 'bottom',
     duration: 3,
     ease: 'power4.inOut',
-  })
+  }, '-=2')
   .to(scene1, {
     y: '18dvh',
     duration: 3,
@@ -488,7 +489,7 @@ tl.set('.circle__replace', { autoAlpha: 0 })
       '.scene__3 .circles .circle__random:nth-child(5)',
       '.scene__3 .circles .circle__random:nth-child(6)',
     ],
-    { y: '-100dvh', duration: 4, ease: 'power1.out', },
+    { y: '-100dvh', duration: 4, ease: 'power1.out' },
     '<'
   )
   .to(

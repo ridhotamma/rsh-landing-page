@@ -295,6 +295,11 @@ body::-webkit-scrollbar {
     margin: 0;
   }
 }
+@media screen and (max-width: 768px) {
+  .scene__1 h1 .letter-i .chevron {
+    bottom: 120vh;
+  }
+}
 .scene__1 h2 {
   font-size: 9.25dvw;
   color: #f749d4;

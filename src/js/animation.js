@@ -33,7 +33,7 @@ const tl = gsap.timeline({
     end: 'bottom top',
     scrub: 1,
     pin: true,
-    end: '+=18000',
+    end: '+=20000',
     onEnter: () => {
       tl.tweenFromTo(0, 'autoScroll').then(() => {
         document.body.style.overflow = 'auto';
@@ -244,7 +244,7 @@ tl.fromTo(
   { y: '55dvh' },
   {
     y: '200dvh',
-    duration: 3,
+    duration: 5,
     ease: 'power4.inOut',
     onStart: () => {
       stopBounce();
@@ -254,7 +254,7 @@ tl.fromTo(
   .fromTo(
     chevronUp,
     { y: '0dvh' },
-    { y: '-100dvh', duration: 3, ease: 'power4.inOut' },
+    { y: '-100dvh', duration: 5, ease: 'power4.inOut' },
     '<'
   )
   // .to('.logo > svg > path', { fill: 'white', duration: 3 }, '<')
@@ -267,7 +267,7 @@ tl.fromTo(
     {
       yPercent: 120,
       autoAlpha: 0,
-      duration: 3,
+      duration: 8,
       ease: 'power4.inOut',
       stagger: {
         each: 0.2,
@@ -291,8 +291,8 @@ tl.fromTo(
 tl.fromTo(
   scene2,
   { y: '-150dvh', autoAlpha: 1 },
-  { y: '0dvh', autoAlpha: 1, duration: 5 },
-  '-=5'
+  { y: '0dvh', autoAlpha: 1, duration: 6 },
+  '-=8'
 )
   .to(
     '.animation-container',
@@ -325,7 +325,7 @@ tl.fromTo(
   .fromTo(
     s2Text1,
     { yPercent: -100 },
-    { yPercent: 0, duration: 5, ease: 'power4.inOut' },
+    { yPercent: 0, duration: 7, ease: 'power4.inOut' },
     '<'
   )
   .fromTo(
@@ -333,7 +333,7 @@ tl.fromTo(
     { xPercent: -100 },
     {
       xPercent: 0,
-      duration: 5,
+      duration: 7,
       stagger: 0.1,
       ease: 'power4.inOut',
     },

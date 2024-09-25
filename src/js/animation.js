@@ -39,6 +39,7 @@ const tl = gsap.timeline({
         document.body.style.overflow = 'auto';
         gsap.to(logo, { autoAlpha: 1, duration: 3, ease: 'power4.inOut' });
         playBounce();
+        removeSceneOneAnimation()
       });
 
       gsap.set('.loading-container', { autoAlpha: 0, delay: 1 });
@@ -110,6 +111,25 @@ function playBounce() {
 
 function stopBounce() {
   chevronUpAnimation.pause(0);
+}
+
+function removeSceneOneAnimation() {
+  const tweens = tl.getChildren();
+  const tweenToRemove = tweens.find(
+    (tween) =>
+      tween.vars.yoyo === undefined &&
+      tween.vars.y === '0dvh' &&
+      tween.targets()[0] === scene1
+  );
+
+  if (tweenToRemove) {
+    tl.remove(tweenToRemove);
+    console.log('Animation for scene1 initial movement removed successfully.');
+  } else {
+    console.log('Could not find the specific animation to remove.');
+  }
+
+  gsap.set(scene1, { y: '55dvh' });
 }
 
 // scene 1
@@ -488,7 +508,7 @@ tl.set('.circle__replace', { autoAlpha: 0 })
       '.scene__3 .circles .circle__random:nth-child(5)',
       '.scene__3 .circles .circle__random:nth-child(6)',
     ],
-    { y: '-100dvh', duration: 4, ease: 'power1.out', },
+    { y: '-100dvh', duration: 4, ease: 'power1.out' },
     '<'
   )
   .to(
